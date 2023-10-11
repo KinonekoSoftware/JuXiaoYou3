@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <RootNamespace>Acorisoft.Miga.Doc</RootNamespace>
+        <OutDir>../../Builds/Miga</OutDir>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+		<GenerateTargetFrameworkAttribute>false</GenerateTargetFrameworkAttribute>
+		<Platforms>x86;x64;ARM64</Platforms>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Update="DocDocSR.resx">
+        <Generator>ResXFileCodeGenerator</Generator>
+        <LastGenOutput>DocDocSR.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+      <EmbeddedResource Update="DocSR.resx">
+        <Generator>PublicResXFileCodeGenerator</Generator>
+        <LastGenOutput>DocSR.Designer.cs</LastGenOutput>
+      </EmbeddedResource>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Update="DocDocSR.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DocSR.resx</DependentUpon>
+      </Compile>
+      <Compile Update="DocSR.Designer.cs">
+        <DesignTime>True</DesignTime>
+        <AutoGen>True</AutoGen>
+        <DependentUpon>DocSR.resx</DependentUpon>
+      </Compile>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Refactors" />
+      <Folder Include="Utils" />
+    </ItemGroup>
+</Project>

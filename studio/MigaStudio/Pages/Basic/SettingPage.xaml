@@ -1,0 +1,231 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.SettingPage"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:res="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio"
+                     xmlns:thisModels="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models"
+                     xmlns:studio="urn:acorisoft/studio"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:fs="urn:acorisoft/studio"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters;assembly=SubSystem"
+                     xmlns:sss="clr-namespace:Acorisoft.FutureGL.MigaStudio.Utilities;assembly=SubSystem"
+                     mc:Ignorable="d"
+                     d:DesignHeight="720"
+                     d:DesignWidth="1280"
+                     d:DataContext="{d:DesignInstance Type={x:Type local:SettingViewModel}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+        <local:SettingViewModelProxy x:Key="ViewModel" ViewModel="{Binding}" />
+        <DataTemplate x:Key="Enumeration">
+            <TextBlock Text="{Binding Converter={StaticResource Translation}}" />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModels:FolderCounter}">
+            <fs:ActionButton BorderThickness="0"
+                             CornerRadius="12"
+                             Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.OpenCommand}"
+                             CommandParameter="{Binding }"
+                             Margin="0 0 0 10"
+                             Icon="{StaticResource FeatherIcon.Box}"
+                             IconSize="31">
+                <DockPanel Margin="16 0 0 0">
+                    <TextBlock DockPanel.Dock="Top"
+                               FontSize="15"
+                               Text="{Binding Name,Mode=OneWay}" />
+
+                    <DockPanel Margin="0 2 0 0">
+                        <TextBlock DockPanel.Dock="Right"
+                                   TextAlignment="Right"
+                                   Margin="16 0 0 0"
+                                   Text="{Binding SizeString,Mode=OneWay}"
+                                   VerticalAlignment="Center"
+                                   Width="72" />
+
+                        <ProgressBar Minimum="0"
+                                     Maximum="100"
+                                     Value="{Binding Percent,Mode=OneWay}" />
+                    </DockPanel>
+                </DockPanel>
+            </fs:ActionButton>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModels:DatabaseCounter}">
+            <DockPanel>
+                <fs:ActionButton DockPanel.Dock="Top"
+                                 Background="{f:Brush BackgroundLevel2}"
+                                 BorderThickness="0"
+                                 Cursor="Hand"
+                                 Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.OpenCommand}"
+                                 CommandParameter="{Binding }"
+                                 CornerRadius="8"
+                                 Icon="{StaticResource FeatherIcon.Folder}"
+                                 IconSize="32">
+                    <TextBlock DockPanel.Dock="Top"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="16 8">
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0} ({1})">
+                                <Binding Path="Name" />
+                                <Binding Path="SizeString" Mode="OneWay" />
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </fs:ActionButton>
+                <ScrollViewer Margin="0 16 0 0">
+                    <ItemsControl ItemsSource="{Binding Counters,Mode=OneWay}" />
+                </ScrollViewer>
+            </DockPanel>
+        </DataTemplate>
+
+        <studio:SettingItemTemplateSelector x:Key="SettingItemSelector">
+            <studio:SettingItemTemplateSelector.Resources>
+                <ResourceDictionary>
+                    <DataTemplate x:Key="ComboBox"
+                                  DataType="{x:Type studio:ISettingComboBox}">
+                        <studio:SettingControl Title="{Binding MainTitle,Mode=OneWay}"
+                                               Intro="{Binding SubTitle,Mode=OneWay}">
+                            <ComboBox HorizontalAlignment="Right"
+                                      MinWidth="240"
+                                      ItemsSource="{Binding Collection}"
+                                      ItemTemplate="{StaticResource Enumeration}"
+                                      SelectedItem="{Binding Value,Mode=TwoWay}"
+                                      VerticalAlignment="Top" />
+                        </studio:SettingControl>
+                    </DataTemplate>
+                    <DataTemplate x:Key="Slider"
+                                  DataType="{x:Type studio:SettingSlider}">
+                        <studio:SettingControl Title="{Binding MainTitle,Mode=OneWay}"
+                                               Intro="{Binding SubTitle,Mode=OneWay}">
+                            <DockPanel Margin="0 8 0 0"
+                                       HorizontalAlignment="Right"
+                                       VerticalAlignment="Top">
+                                <Slider Width="160"
+                                        Minimum="{Binding Minimum}"
+                                        Maximum="{Binding Maximum}"
+                                        Value="{Binding Value,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                                <TextBlock Margin="16 0 0 0"
+                                           VerticalAlignment="Center"
+                                           Width="100"
+                                           TextTrimming="CharacterEllipsis">
+                                    <TextBlock.Text>
+                                        <MultiBinding StringFormat="{}{0} {1}">
+                                            <Binding Path="Value" Mode="OneWay" />
+                                            <Binding Path="Unit" Mode="OneWay" />
+                                        </MultiBinding>
+                                    </TextBlock.Text>
+                                </TextBlock>
+                            </DockPanel>
+                        </studio:SettingControl>
+                    </DataTemplate>
+                </ResourceDictionary>
+            </studio:SettingItemTemplateSelector.Resources>
+        </studio:SettingItemTemplateSelector>
+    </UserControl.Resources>
+    <f:ShadowTabControl TabStripPlacement="Left"
+                        Margin="16"
+                        Padding="32 0 96 0">
+        <f:ShadowTabItem Header="常规"
+                         IsFilled="True"
+                         Icon="{StaticResource IC.Setting}">
+            <DockPanel>
+                <TextBlock DockPanel.Dock="Top"
+                           FontSize="32"
+                           FontWeight="Bold"
+                           Text="常规设置" />
+                <ScrollViewer IsTabStop="False"
+                              Focusable="False"
+                              Margin="0 32 0 0">
+                    <ItemsControl ItemsSource="{Binding Items,Mode=OneWay}"
+                                  ItemTemplateSelector="{StaticResource SettingItemSelector}" />
+                </ScrollViewer>
+            </DockPanel>
+        </f:ShadowTabItem>
+        <f:ShadowTabItem Header="高级"
+                         Icon="{StaticResource IC.Setting}"
+                         IsFilled="True">
+            <local:SettingAdvancedView />
+        </f:ShadowTabItem>
+        <f:ShadowTabItem Header="字体"
+                         Icon="{StaticResource IC.Setting}"
+                         IsFilled="True"
+                         Visibility="Collapsed" />
+        <f:ShadowTabItem Header="许可证"
+                         Icon="{StaticResource IC.Setting}"
+                         IsFilled="True"
+                         Visibility="Collapsed" />
+
+        <f:ShadowTabItem Header="关于"
+                         Icon="{StaticResource IC.Setting}"
+                         IsFilled="True">
+            <ScrollViewer>
+                <StackPanel>
+                    <HeaderedContentControl Header="联系我们"
+                                            Margin="0 0 0 48"
+                                            Padding="16 8">
+                        <f:SpacingStackPanel Orientation="Horizontal"
+                                             Gap="8">
+                            <f:CallToAction Content="查看官网"
+                                            CornerRadius="24"
+                                            Command="{x:Static sss:FileIO.OpenLinkCommand}"
+                                            CommandParameter="app.HomePage"
+                                            Margin="32 0"
+                                            Height="48"
+                                            Width="192"/>
+                        </f:SpacingStackPanel>
+                    </HeaderedContentControl>
+                    <f:ForestIsland Header="反馈"
+                                    Margin="0 0 0 48"
+                                    Padding="0 8">
+                        <f:ForestIsland.Resources>
+                            <Style TargetType="{x:Type ftk:StateButton}" BasedOn="{StaticResource ClearStyle.StateButton}">
+                                <Setter Property="HorizontalContentAlignment" Value="Left"/>
+                            </Style>
+                        </f:ForestIsland.Resources>
+                        <StackPanel>
+                            <TextBlock Margin="0 0 0 16"
+                                       Foreground="{f:Brush ForegroundLevel2}"
+                                       Text="如果你在使用过程中遇到问题，需要反馈BUG的话，请根据BUG的表现选择下面的选项，然后点击“反馈”按钮，待退出橘小柚之后会自动的提示!"
+                                       TextWrapping="Wrap"/>
+                            <DockPanel>
+                                <f:CallToAction DockPanel.Dock="Right"
+                                                Click="Button_BugReport"
+                                                Content="反馈"
+                                                CornerRadius="24"
+                                                Margin="32 0"
+                                                Height="48"
+                                                Width="256"/>
+                                <f:SpacingStackPanel Orientation="Vertical"
+                                                     Gap="8">
+                                    <RadioButton x:Name="CannotUseBug" Content="部分功能无法使用?"/>
+                                    <RadioButton x:Name="CrashBugButCanContinue" Content="部分功能无法使用并且闪退！但是重启之后仍然可以运行！"/>
+                                    <RadioButton x:Name="CrashBug" Content="无法继续使用！"/>
+                                </f:SpacingStackPanel>
+                            </DockPanel>
+                        </StackPanel>
+                    </f:ForestIsland>
+
+                    <f:ForestIsland Header="版本"
+                                    Margin="0 0 0 48"
+                                    Padding="0 8">
+                        <StackPanel>
+                            <TextBlock Margin="0 8"
+                                       Text="{x:Static this:App.ApplicationAssemblyVersion}"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Margin="0 8"
+                                       Text="{x:Static this:App.ApplicationAssemblyFileVersion}"
+                                       VerticalAlignment="Center"/>
+                            <TextBlock Margin="0 8"
+                                       Text="{x:Static this:App.ApplicationVersion}"
+                                       VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </f:ForestIsland>
+                </StackPanel>
+            </ScrollViewer>
+        </f:ShadowTabItem>
+    </f:ShadowTabControl>
+</f:ForestUserControl>

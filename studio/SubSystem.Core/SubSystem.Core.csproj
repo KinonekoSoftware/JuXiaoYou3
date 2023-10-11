@@ -1,0 +1,65 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <OutDir>../../Builds/SubSystem</OutDir>
+        <RootNamespace>Acorisoft.FutureGL.MigaStudio</RootNamespace>
+        <UseWPF>true</UseWPF>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <AssemblyVersion>3.0.0</AssemblyVersion>
+        <FileVersion>3.0.0.0</FileVersion>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <LangVersion>latest</LangVersion>
+        <Deterministic>False</Deterministic>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+        <NoWarn>CS7035</NoWarn>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\frameworks\MigaDB.Share\MigaDB.Share.csproj" />
+      <ProjectReference Include="..\..\frameworks\MigaDB\MigaDB.csproj" />
+      <ProjectReference Include="..\..\frameworks\MigaUtils\MigaUtils.csproj" />
+      <ProjectReference Include="..\MigaStudio.UI\MigaStudio.UI.csproj" />
+        <ProjectReference Condition="'$(Configuration)'=='DEBUG'" Include="..\..\generators\MigaStudio.TestGen\MigaStudio.TestGen.csproj" OutputItemType="analyzer" ReferenceOutputAssembly="false" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
+      <PackageReference Include="Markdig" Version="0.31.0" />
+      <PackageReference Include="NReco.Text.AhoCorasickDoubleArrayTrie" Version="1.1.1" />
+      <PackageReference Include="TagLibSharp" Version="2.3.0" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+      <Page Update="Resources\DataTemplates\Document.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Resources\DataTemplates\ModuleBlockDataTemplates.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Resources\DataTemplates\ModuleBlockEditTemplates.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Resources\DataTemplates\ModuleBlockReadOnlyTemplates.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Resources\DataTemplates\PresentationDataUI.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+
+    <Import Project="..\..\frameworks\MigaStudio.Version\MigaStudio.Version.projitems" Label="Shared" />
+</Project>

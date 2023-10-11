@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\prototype\MigaStudio.UI\MigaStudio.UI.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Controls\Forest.Controls.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest\Forest.csproj" />
+    </ItemGroup>
+
+</Project>

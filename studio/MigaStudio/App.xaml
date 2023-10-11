@@ -1,0 +1,35 @@
+﻿<s:TabApp x:Class="Acorisoft.FutureGL.MigaStudio.App"
+          x:TypeArguments="vm:AppViewModel, vm:TabShell, v:TabShellView, vm:LaunchViewController, v:LaunchView"
+          xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+          xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+          xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio"
+          xmlns:shell="urn:acorisoft/forest/shell"
+          xmlns:vm="clr-namespace:Acorisoft.FutureGL.MigaStudio.ViewModels"
+          xmlns:v="clr-namespace:Acorisoft.FutureGL.MigaStudio.Views"
+          xmlns:convs="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters;assembly=SubSystem"
+          xmlns:convs2="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters"
+          xmlns:f="urn:acorisoft/forest/ui"
+          xmlns:fs="urn:acorisoft/forest/shell"
+          xmlns:s="urn:acorisoft/studio"
+          StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MigaStudio.UI;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Forest.Controls;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/MigaStudio;component/Resources/ContentTemplates/ListBoxItem.xaml" />
+                <ResourceDictionary Source="/ICSharpCode.AvalonEdit;component/TextEditor.xaml" />
+                <ResourceDictionary Source="/ICSharpCode.AvalonEdit;component/Search/DropDownButton.xaml" />
+                <ResourceDictionary Source="/ICSharpCode.AvalonEdit;component/Search/SearchPanel.xaml" />
+                <ResourceDictionary Source="/SubSystem.Core;component/Controls/Editors/Completion/CompletionList.xaml" />
+                <ResourceDictionary Source="/SubSystem.Core;component/Controls/Editors/Completion/InsightWindow.xaml" />
+                <!-- <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Styles/Wpf.Ui.xaml" /> -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Styles/Controls/ProgressBar.xaml" /> -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Styles/Controls/ComboBox.xaml" /> -->
+            </ResourceDictionary.MergedDictionaries>
+            
+            <convs:TranslationConverter x:Key="Translation"/>
+        </ResourceDictionary>
+    </Application.Resources>
+</s:TabApp>

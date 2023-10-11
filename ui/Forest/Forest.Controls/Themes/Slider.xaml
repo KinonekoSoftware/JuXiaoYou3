@@ -1,0 +1,178 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:f="urn:acorisoft/forest/ui">
+    <Style x:Key="ClearStyle.Slider.Button" TargetType="{x:Type RepeatButton}">
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RepeatButton}">
+                    <Border Background="#00FFFFFF" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style x:Key="ClearStyle.Slider.Thumb" TargetType="{x:Type Thumb}">
+        <Setter Property="Height" Value="16" />
+        <Setter Property="Width" Value="16" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Background" Value="{f:Brush HighlightA4}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type Thumb}">
+                    <Ellipse x:Name="Ellipse" Fill="{TemplateBinding Background}"
+                             Stroke="#00FFFFFF" 
+                             StrokeThickness="0" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <ControlTemplate x:Key="ClearStyle.Slider.Horizontal" TargetType="{x:Type Slider}">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" MinHeight="{TemplateBinding MinHeight}" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TickBar x:Name="TopTick" 
+                     Grid.Row="0" 
+                     Height="6"
+                     Fill="{f:Brush AdaptiveLevel3}"
+                     Placement="Top" 
+                     SnapsToDevicePixels="True"
+                     Visibility="Collapsed" />
+            
+            <Border x:Name="TrackBackground" 
+                    Grid.Row="1" 
+                    Background="{f:Brush AdaptiveLevel3}"                    
+                    Height="4"
+                    Margin="0 1"
+                    CornerRadius="2">
+            </Border>
+            <Track x:Name="PART_Track" Grid.Row="1">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton Command="Slider.DecreaseLarge" Style="{StaticResource ClearStyle.Slider.Button}" />
+                </Track.DecreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb x:Name="Thumb" Style="{StaticResource ClearStyle.Slider.Thumb}" />
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton Command="Slider.IncreaseLarge" Style="{StaticResource ClearStyle.Slider.Button}" />
+                </Track.IncreaseRepeatButton>
+            </Track>
+            <TickBar x:Name="BottomTick" 
+                     Grid.Row="2"
+                     Height="6"
+                     Fill="{f:Brush AdaptiveLevel3}"
+                     Placement="Bottom"
+                     SnapsToDevicePixels="True"
+                     Visibility="Collapsed" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="TickPlacement" Value="TopLeft">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="BottomRight">
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="Both">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="Thumb" Property="Background" Value="{f:Brush HighlightA3}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <ControlTemplate x:Key="ClearStyle.Slider.Vertical" TargetType="{x:Type Slider}">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" />
+                <ColumnDefinition Width="Auto" MinWidth="{TemplateBinding MinWidth}" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+            <TickBar x:Name="TopTick" 
+                     Width="6" 
+                     Fill="{f:Brush AdaptiveLevel3}" 
+                     Placement="Left" 
+                     SnapsToDevicePixels="True"
+                     Visibility="Collapsed" />
+            <Border x:Name="TrackBackground" 
+                    Grid.Column="1" 
+                    Background="{f:Brush AdaptiveLevel3}"   
+                    Width="4"
+                    Margin="1 0"
+                    CornerRadius="2">
+            </Border>
+            <Track x:Name="PART_Track" Grid.Column="1">
+                <Track.DecreaseRepeatButton>
+                    <RepeatButton Command="Slider.DecreaseLarge" Style="{StaticResource ClearStyle.Slider.Button}" />
+                </Track.DecreaseRepeatButton>
+                <Track.Thumb>
+                    <Thumb x:Name="Thumb" Style="{StaticResource ClearStyle.Slider.Thumb}" />
+                </Track.Thumb>
+                <Track.IncreaseRepeatButton>
+                    <RepeatButton Command="Slider.IncreaseLarge" Style="{StaticResource ClearStyle.Slider.Button}" />
+                </Track.IncreaseRepeatButton>
+            </Track>
+            <TickBar x:Name="BottomTick" Grid.Column="2" 
+                     Width="6" 
+                     Fill="{f:Brush AdaptiveLevel3}" 
+                     Placement="Right" 
+                     SnapsToDevicePixels="True"
+                     Visibility="Collapsed" />
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="TickPlacement" Value="TopLeft">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="BottomRight">
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="TickPlacement" Value="Both">
+                <Setter TargetName="TopTick" Property="Visibility" Value="Visible" />
+                <Setter TargetName="BottomTick" Property="Visibility" Value="Visible" />
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="True">
+                <Setter TargetName="Thumb" Property="Background" Value="{f:Brush HighlightA3}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <Style TargetType="{x:Type f:Slider}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Style.Triggers>
+            <Trigger Property="Orientation" Value="Horizontal">
+                <Setter Property="MinWidth" Value="104" />
+                <Setter Property="MinHeight" Value="21" />
+                <Setter Property="Template" Value="{StaticResource ClearStyle.Slider.Horizontal}" />
+            </Trigger>
+            <Trigger Property="Orientation" Value="Vertical">
+                <Setter Property="MinWidth" Value="21" />
+                <Setter Property="MinHeight" Value="104" />
+                <Setter Property="Template" Value="{StaticResource ClearStyle.Slider.Vertical}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    <Style TargetType="{x:Type Slider}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Style.Triggers>
+            <Trigger Property="Orientation" Value="Horizontal">
+                <Setter Property="MinWidth" Value="104" />
+                <Setter Property="MinHeight" Value="21" />
+                <Setter Property="Template" Value="{StaticResource ClearStyle.Slider.Horizontal}" />
+            </Trigger>
+            <Trigger Property="Orientation" Value="Vertical">
+                <Setter Property="MinWidth" Value="21" />
+                <Setter Property="MinHeight" Value="104" />
+                <Setter Property="Template" Value="{StaticResource ClearStyle.Slider.Vertical}" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+</ResourceDictionary>

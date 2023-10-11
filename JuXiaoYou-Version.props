@@ -1,0 +1,10 @@
+﻿<Project>
+    <PropertyGroup>
+        <Authors>罗易斯（Luoyisi）</Authors>
+        <AssemblyVersion>3.0.3</AssemblyVersion>
+        <FileVersion>3.0.3</FileVersion>
+        <Copyright>All rights reserverd by Luoyisi</Copyright>
+        <InformationalVersion>3.0.0+Preview7</InformationalVersion>
+        <IncludeSourceRevisionInInformationalVersion>True</IncludeSourceRevisionInInformationalVersion>
+    </PropertyGroup>
+</Project>

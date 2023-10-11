@@ -1,0 +1,70 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>Acorisoft.FutureGL.MigaStudio</RootNamespace>
+        <OutDir>../../Builds/Studio</OutDir>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <LangVersion>latest</LangVersion>
+        <Deterministic>False</Deterministic>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+        <NoWarn>CS7035</NoWarn>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" />
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" />
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\frameworks\MigaDB.Share\MigaDB.Share.csproj" />
+      <ProjectReference Include="..\..\frameworks\MigaDB\MigaDB.csproj" />
+      <ProjectReference Include="..\..\frameworks\MigaUtils\MigaUtils.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Controls\Forest.Controls.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Fonts\Forest.Fonts.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest\Forest.csproj" />
+        <ProjectReference Condition="'$(Configuration)'=='DEBUG'" Include="..\..\generators\MigaStudio.TestGen\MigaStudio.TestGen.csproj" OutputItemType="analyzer" ReferenceOutputAssembly="false" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DryIoc.dll" Version="4.8.2" />
+      <PackageReference Include="gong-wpf-dragdrop" Version="3.2.1" />
+      <PackageReference Include="GraphShape.Controls" Version="1.2.2" />
+      <PackageReference Include="NAudio" Version="2.1.0" />
+      <PackageReference Include="NetCore5.0.Microsoft.Expression.Drawing" Version="1.0.0" />
+      <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
+      <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
+      <PackageReference Include="System.Reactive" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="Themes\Generic.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Resources\ContentTemplates\ListBoxItem.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Utilities\CloudMap.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="ViewModels\Editors" />
+    </ItemGroup>
+
+    <Import Project="..\..\frameworks\MigaStudio.Version\MigaStudio.Version.projitems" Label="Shared" />
+</Project>

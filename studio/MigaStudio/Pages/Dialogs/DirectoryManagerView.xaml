@@ -1,0 +1,111 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.DirectoryManagerView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:fs="urn:acorisoft/studio"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:thisModels="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:DirectoryManagerViewModel}, IsDesignTimeCreatable=True}"
+                     Height="480"
+                     Width="576"
+                     UseLayoutRounding="True"
+                     SnapsToDevicePixels="True">
+    <UserControl.Resources>
+        <thisVM:DirectoryManagerViewModelProxy x:Key="ViewModel" ViewModel="{Binding}" />
+        <DataTemplate DataType="{x:Type thisModels:FolderCounter}">
+            <fs:ActionButton BorderThickness="0"
+                             CornerRadius="12"
+                             Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.OpenCommand}"
+                             CommandParameter="{Binding }"
+                             Margin="0 0 0 10"
+                             Icon="{StaticResource FeatherIcon.Box}"
+                             IconSize="31">
+                <DockPanel>
+                    <TextBlock DockPanel.Dock="Top"
+                               FontSize="15"
+                               Text="{Binding Name,Mode=OneWay}" />
+
+                    <DockPanel Margin="0 8 0 0">
+                        <TextBlock DockPanel.Dock="Right"
+                                   TextAlignment="Right"
+                                   Margin="16 0 0 0"
+                                   Text="{Binding SizeString,Mode=OneWay}"
+                                   VerticalAlignment="Center"
+                                   Width="72" />
+
+                        <ProgressBar Minimum="0"
+                                     Maximum="100"
+                                     Value="{Binding Percent,Mode=OneWay}" />
+                    </DockPanel>
+                </DockPanel>
+            </fs:ActionButton>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModels:DatabaseCounter}">
+            <DockPanel>
+                <fs:ActionButton DockPanel.Dock="Top"
+                                 Background="{f:Brush BackgroundLevel2}"
+                                 BorderThickness="0"
+                                 Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.OpenCommand}"
+                                 CommandParameter="{Binding }"
+                                 CornerRadius="8"
+                                 Icon="{StaticResource FeatherIcon.Folder}"
+                                 IconSize="32">
+                    <TextBlock DockPanel.Dock="Top"
+                               FontSize="18"
+                               FontWeight="Bold"
+                               Margin="16 8">
+                        <TextBlock.Text>
+                            <MultiBinding StringFormat="{}{0} ({1})">
+                                <Binding Path="Name" />
+                                <Binding Path="SizeString" Mode="OneWay" />
+                            </MultiBinding>
+                        </TextBlock.Text>
+                    </TextBlock>
+                </fs:ActionButton>
+                <ScrollViewer Margin="0 16 0 0">
+                    <ItemsControl ItemsSource="{Binding Counters,Mode=OneWay}" />
+                </ScrollViewer>
+            </DockPanel>
+        </DataTemplate>
+    </UserControl.Resources>
+    <f:DialogPage CancelCommand="{Binding CancelCommand}"
+                  Title="{Binding Title}"
+                  Purpose="Notification">
+        <ftk:TabControl Padding="0 8 0 0">
+            <ftk:TabItem Header="{Binding Self.Name}"
+                         Padding="16 8"
+                         Content="{Binding Self}" />
+            <ftk:TabItem Header="{Binding Database.Name}"
+                         Padding="16 8"
+                         Content="{Binding Database}" />
+            <ftk:TabItem Header="{f:Language global.Help}"
+                         Padding="16 8">
+                <UniformGrid Columns="2"
+                             Rows="2"
+                             Height="160"
+                             VerticalAlignment="Top">
+                    <fs:ActionButton Margin="4"
+                                     Content="普通BUG反馈"
+                                     Padding="24"/>
+
+                    <fs:ActionButton Margin="4"
+                                     Content="特殊BUG反馈"
+                                     Padding="24"/>
+                    <fs:ActionButton Margin="4"
+                                     Content="离谱BUG反馈"
+                                     Padding="24"/>
+                    <fs:ActionButton Margin="4"
+                                     Content="如何反馈？"
+                                     Padding="24"/>
+                </UniformGrid>
+            </ftk:TabItem>
+        </ftk:TabControl>
+    </f:DialogPage>
+</f:ForestUserControl>

@@ -1,0 +1,173 @@
+﻿# 开源字体的许可声明
+
+橘小柚的开发过程中，离不开第三方优秀的开源项目，特别是第三方开源的字体！根据部分字体的免费使用协议，我们需要在显著的地方中提到所用到的字体。
+
+
+
+## 清松手寫體1
+
+因为`清松手寫體1`的设计非常契合手写体，非常适合展现手写内容。
+
+### 简介
+
+【清松手寫體】 「清松手寫體」是游清松在稿紙上用原子筆手寫，透過「守寫字」網站產生出初稿字型檔，再透過字型軟體後製加工而成的手寫字型。
+
+特色： 世界上唯一可以讓使用者無條件提出增字要求的免費字型！ 持續更新、持續創作！ 個人/企業使用100%完全免費！ 任何型式的商用，只要是合法的也100%完全免費！ 目前已經釋出5套不同風格的清松手寫體
+
+原作者： 游清松
+
+### 联系方式
+
+原作者：游清松
+GitHub地址：https://github.com/jasonhandwriting/JasonHandwriting
+Facebook社團： https://www.facebook.com/groups/549661292148791/
+
+### 许可范围
+
+關於「清松手寫體」的授權範圍，如下所示...
+
+所有權：
+這套字型是透過「守寫字」網站產生出原稿，再經團長後製而成的。字體所有權歸作者跟守寫字平台共同所有。
+
+允許範圍的如下：
+1. 個人、公司行號之電腦/手機/平板免費使用
+2. 在其他網站分流(需註明「順其字然」社團)
+3. 可商用
+　3.1 實體印刷
+　　3.2 電子產品相關
+　　　3.2.1 電子刊物
+　　　3.2.2 YouTuber 創作者
+　　　3.2.3 Line 貼圖創作者
+　　　3.2.4 電影或MV
+　　　3.2.5 行動裝置之APP程式
+　　　3.2.6 其他(日後再補充)
+　　3.3 內嵌到電子書
+　　3.4 作為Web Font使用
+　　3.5 將字型搭售在其他正版軟體裡
+
+上述允許範圍中，除了 3.5 需告知團長外(一定會同意)，其餘可以直接使用。
+
+不允許範圍如下：
+1. 不允許修改字體或重製成新的字體
+2. 不允許登記商標
+3. 不允許獨立販(轉)售字型
+
+#我來自台灣
+#台灣最美的風景是文字
+#要讓台灣的好被全世界看見
+
+## 思源宋体
+
+Copyright 2017-2022 Adobe (http://www.adobe.com/), with Reserved Font
+Name 'Source'. Source is a trademark of Adobe in the United States
+and/or other countries.
+
+This Font Software is licensed under the SIL Open Font License,
+Version 1.1.
+
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font
+creation efforts of academic and linguistic communities, and to
+provide a free and open framework in which fonts may be shared and
+improved in partnership with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded,
+redistributed and/or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply to
+any document created using the fonts or their derivatives.
+
+DEFINITIONS
+"Font Software" refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+"Reserved Font Name" refers to any names specified as such after the
+copyright statement(s).
+
+"Original Version" refers to the collection of Font Software
+components as distributed by the Copyright Holder(s).
+
+"Modified Version" refers to any derivative made by adding to,
+deleting, or substituting -- in part or in whole -- any of the
+components of the Original Version, by changing formats or by porting
+the Font Software to a new environment.
+
+"Author" refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION & CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed,
+modify, redistribute, and sell modified and unmodified copies of the
+Font Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components, in
+Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and/or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the
+corresponding Copyright Holder. This restriction only applies to the
+primary font name as presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created using
+the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+
+## 阿里巴巴普惠体
+
+版权申明：
+
+1、阿里巴巴普惠体（中文字体，指定5款字重），Alibaba Sans（西文字体，指定11款字重），以下合称阿里巴巴字体，允许任何个人和企业免费使用，包括商用用途，但禁止用于违法用途。
+Alibaba PuHuiTi (5 specific Chinese font styles), Alibaba Sans (11 specific English font styles), collectively referred to as “Alibaba Font”, is made available for download solely for use by individuals and corporates for free, including for commercial uses. Any illegal activities are expressly prohibited. 
+
+
+
+2、阿里巴巴字体版权归属阿里巴巴（中国）有限公司，未经授权，任何人和第三方媒介不得上传、发布、转载字体文件，禁止售卖，违者必究。
+Alibaba Font is the copyrighted work of Alibaba (China) Co., Ltd. No such font may be uploaded, published, reproduced and made available for sale, without Alibaba’s express prior written consent. Violators will be prosecuted to the full extent of the law.
+
+
+
+3、为确保字体文件不被篡改，保障用户可以安全使用，请务必从阿里巴巴字体官方指定通道下载。
+To ensure that the font files are not tampered, and can be used safely by users, please download the font files from Alibaba’s official channels.   

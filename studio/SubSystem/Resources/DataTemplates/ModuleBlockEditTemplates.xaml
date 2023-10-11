@@ -1,0 +1,854 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:subTemp="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models.Modules"
+                    xmlns:ftk="urn:acorisoft/forest/toolkits"
+                    xmlns:t="clr-namespace:Acorisoft.FutureGL.MigaDB.Data.Templates.Modules;assembly=MigaDB"
+                    xmlns:color="clr-namespace:ColorPicker;assembly=Forest.Controls"
+                    xmlns:f="urn:acorisoft/forest/ui"
+                    xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/BasicIcon.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/MaterialDesignIcon.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/MigaStudio.UI;component/Controls/Controls.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <thisConverters:String2BooleanConverter x:Key="String2Boolean" />
+    <thisConverters:BlockNameConverter x:Key="BlockName" />
+    <thisConverters:String2IntConverter x:Key="String2Int" />
+    <thisConverters:ReferenceSourceConverter x:Key="RefSource" />
+    <!--
+        @ param: TargetBlock
+        @ member:
+            1. AudioBlock
+            2. VideoBlock
+            3. MusicBlock
+            4. FileBlock
+            5. ImageBlock
+            6. ReferenceBlock
+    -->
+    <DataTemplate DataType="{x:Type subTemp:AudioBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:VideoBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:FileBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:ImageBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:MusicBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:ReferenceBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <!--
+        @ param: BasicBlock
+        @ member:
+            1. SingleLineBlock
+            2. MultiLineBlock
+            3. ColorBlock
+            4. NumberBlock
+            5. SliderBlock
+            6. 
+    -->
+
+    <DataTemplate DataType="{x:Type subTemp:SingleLineBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.suffix}"
+                                          Margin="4"
+                                          Text="{Binding Suffix,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding Fallback,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:MultiLineBlockEditUI}">
+        <Border Background="Transparent"
+                Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding Fallback,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <TextBlock Text="{f:Language global.characterlimit}"
+                           Margin="4"
+                           FontSize="16"
+                           Foreground="{f:ForegroundBrush}" />
+
+                <f:HeaderedMultiLine Margin="4 4 4 8"
+                                     Text="{Binding CharacterLimited,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:ColorBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <TextBlock Text="{f:Language global.fallback}"
+                           FontSize="16"
+                           Foreground="{f:ForegroundBrush}"
+                           Margin="4 16 0 0" />
+
+                <color:PortableColorPicker Margin="4 8"
+                                           HorizontalAlignment="Left"
+                                           Height="48"
+                                           Width="48"
+                                           SelectedColor="{Binding Fallback,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:NumberBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="3">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.minimum}"
+                                          Margin="4"
+                                          Text="{Binding Minimum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.maximum}"
+                                          Margin="4"
+                                          Text="{Binding Maximum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.suffix}"
+                                          Margin="4"
+                                          Text="{Binding Suffix,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding Fallback,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:SliderBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="3">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.minimum}"
+                                          Margin="4"
+                                          Text="{Binding Minimum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.maximum}"
+                                          Margin="4"
+                                          Text="{Binding Maximum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.suffix}"
+                                          Margin="4"
+                                          Text="{Binding Suffix,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding Fallback,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <!--
+        @ param: OptionBlock
+        @ member:
+            1. StarBlock
+            2. HeartBlock
+            3. SwitchBlock
+            4. BinaryBlock
+            5. DegreeBlock
+            
+    -->
+
+    <DataTemplate DataType="{x:Type subTemp:StarBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:HeartBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:SwitchBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:BinaryBlockEditUI}">
+        <Border Background="Transparent"
+                Width="640">
+            <StackPanel>
+                <UniformGrid Columns="3">
+                    <f:HeaderedSingleLine Header="{f:Language global.positive}"
+                                          Margin="4"
+                                          Text="{Binding Positive,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.negative}"
+                                          Margin="4"
+                                          Text="{Binding Negative,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:DegreeBlockEditUI}">
+        <Border Background="Transparent"
+                Height="320"
+                Width="640">
+            <StackPanel>
+                <UniformGrid Columns="3">
+                    <f:HeaderedSingleLine Header="{f:Language global.minimum}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                    <f:HeaderedSingleLine Header="{f:Language global.minimum}"
+                                          Margin="4"
+                                          Text="{Binding Minimum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.maximum}"
+                                          Margin="4"
+                                          Text="{Binding Maximum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.positive}"
+                                          Margin="4"
+                                          Text="{Binding Positive,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.negative}"
+                                          Margin="4"
+                                          Text="{Binding Negative,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.divideline}"
+                                          Margin="4"
+                                          Text="{Binding DivideLine,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="96"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap"/>
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+
+    <!--
+        @ param: CounterBlock
+        @ member:
+            1. RateBlock
+            2. LikabilityBlock
+    -->
+    <DataTemplate DataType="{x:Type subTemp:LikabilityBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="3">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding Fallback,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.minimum}"
+                                          Margin="4"
+                                          Text="{Binding Minimum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.maximum}"
+                                          Margin="4"
+                                          Text="{Binding Maximum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:RateBlockEditUI}">
+        <Border Background="Transparent" Width="640">
+            <StackPanel>
+                <UniformGrid Columns="3">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding Fallback,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.minimum}"
+                                          Margin="4"
+                                          Text="{Binding Minimum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.maximum}"
+                                          Margin="4"
+                                          Text="{Binding Maximum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+        </Border>
+    </DataTemplate>
+
+
+    <!--
+        @ param: GroupBlock
+        @ member:
+            1. RadioBlock
+            2. SequenceBlock
+            3. GroupBlock
+            4. OptionItem
+    -->
+
+    <DataTemplate DataType="{x:Type subTemp:SequenceBlockEditUI}">
+        <Grid Background="Transparent"
+              Height="320"
+              Width="768">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="384" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding Fallback,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </UniformGrid>
+
+                <f:ToggleSwitch Content="{f:Language global.diffValue}"
+                                Margin="4 8"
+                                IsChecked="{Binding AllowDiffValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                Visibility="Collapsed" />
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+            <f:ForestSection Grid.Column="1"
+                             Header="{f:Language global.content}"
+
+                             Margin="8 4">
+                <f:ForestSection.ToolBar>
+                    <StackPanel HorizontalAlignment="Right"
+                                Orientation="Horizontal"
+                                Margin="0 0 0 4">
+                        <ftk:ToolButton Command="{Binding AddCommand}"
+                                        Icon="{StaticResource FeatherIcon.Plus}" />
+                        <ftk:ToolButton Command="{Binding EditCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Edit}" />
+                        <ftk:ToolButton Command="{Binding RemoveCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Trash}" />
+                        <ftk:ToolButton Command="{Binding UpCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Up}" />
+                        <ftk:ToolButton Command="{Binding DownCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Down}" />
+                    </StackPanel>
+                </f:ForestSection.ToolBar>
+                <f:ListBox x:Name="Item"
+                           SelectedValue="{Binding Fallback,Mode=TwoWay}"
+                           SelectedValuePath="Value"
+                           ItemsSource="{Binding Items,Mode=OneWay}">
+                    <f:ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="8"
+                                       Text="{Binding Value,Mode=OneWay}"
+                                       TextTrimming="CharacterEllipsis" />
+                        </DataTemplate>
+                    </f:ListBox.ItemTemplate>
+                </f:ListBox>
+            </f:ForestSection>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:GroupBlockEditUI}">
+        <Grid Background="Transparent" Width="768">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="384" />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                      Margin="4"
+                                      Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                      Margin="4"
+                                      Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+            <f:ForestSection Grid.Column="1"
+                             Header="{f:Language global.content}"
+
+                             Margin="16 0">
+                <f:ForestSection.ToolBar>
+                    <StackPanel HorizontalAlignment="Right"
+                                Orientation="Horizontal"
+                                Margin="0 0 0 4">
+                        <ftk:ToolButton Command="{Binding AddCommand}"
+                                        Icon="{StaticResource FeatherIcon.Plus}" />
+                        <ftk:ToolButton Command="{Binding EditCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Edit}" />
+                        <ftk:ToolButton Command="{Binding RemoveCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Trash}" />
+                        <ftk:ToolButton Command="{Binding UpCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Up}" />
+                        <ftk:ToolButton Command="{Binding DownCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Down}" />
+                    </StackPanel>
+                </f:ForestSection.ToolBar>
+                <f:ListBox x:Name="Item"
+                           ItemsSource="{Binding Items,Mode=OneWay}">
+                    <f:ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="8"
+                                       TextTrimming="CharacterEllipsis">
+                                <TextBlock.Text>
+                                    <MultiBinding Converter="{StaticResource BlockName}">
+                                        <Binding />
+                                        <Binding Path="Name" Mode="OneWay" />
+                                    </MultiBinding>
+                                </TextBlock.Text>
+                            </TextBlock>
+                        </DataTemplate>
+                    </f:ListBox.ItemTemplate>
+                </f:ListBox>
+            </f:ForestSection>
+        </Grid>
+    </DataTemplate>
+
+    <!--
+        @ param: ChartBlock
+        @ member:
+            1. RadarBlock
+            2. HistogramBlock
+    -->
+
+
+    <DataTemplate DataType="{x:Type subTemp:RadarBlockEditUI}">
+        <Grid Background="Transparent" Width="768">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition Width="2*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.minimum}"
+                                          Margin="4"
+                                          Text="{Binding Minimum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, Converter={StaticResource String2Int}}" />
+                    <f:HeaderedSingleLine Header="{f:Language global.maximum}"
+                                          Margin="4"
+                                          Text="{Binding Maximum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding FallbackValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, Converter={StaticResource String2Int}}" />
+                </UniformGrid>
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+            <f:ForestSection Grid.Column="1"
+
+                             Margin="16 0">
+                <f:ForestSection.ToolBar>
+                    <StackPanel HorizontalAlignment="Right"
+                                Orientation="Horizontal"
+                                Margin="0 0 0 4">
+                        <ftk:ToolButton Command="{Binding AddCommand}"
+                                        Icon="{StaticResource FeatherIcon.Plus}" />
+                        <ftk:ToolButton Command="{Binding EditCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Edit}" />
+                        <ftk:ToolButton Command="{Binding RemoveCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Trash}" />
+                        <ftk:ToolButton Command="{Binding UpCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Up}" />
+                        <ftk:ToolButton Command="{Binding DownCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Down}" />
+                    </StackPanel>
+                </f:ForestSection.ToolBar>
+                <f:ListBox x:Name="Item"
+                           ItemsSource="{Binding Axis,Mode=OneWay}">
+                    <f:ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="8"
+                                       Text="{Binding Mode=OneWay}"
+                                       TextTrimming="CharacterEllipsis" />
+                        </DataTemplate>
+                    </f:ListBox.ItemTemplate>
+                </f:ListBox>
+            </f:ForestSection>
+        </Grid>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type subTemp:HistogramBlockEditUI}">
+        <Grid Background="Transparent" Width="768">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="384" />
+                <ColumnDefinition Width="3*" />
+            </Grid.ColumnDefinitions>
+            <StackPanel>
+                <UniformGrid Columns="2">
+                    <f:HeaderedSingleLine Header="{f:Language global.name}"
+                                          Margin="4"
+                                          Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.metadata}"
+                                          Margin="4"
+                                          Text="{Binding Metadata,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.minimum}"
+                                          Margin="4"
+                                          Text="{Binding Minimum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, Converter={StaticResource String2Int}}" />
+                    <f:HeaderedSingleLine Header="{f:Language global.maximum}"
+                                          Margin="4"
+                                          Text="{Binding Maximum,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, Converter={StaticResource String2Int}}" />
+
+                    <f:HeaderedSingleLine Header="{f:Language global.fallback}"
+                                          Margin="4"
+                                          Text="{Binding FallbackValue,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, Converter={StaticResource String2Int}}" />
+                </UniformGrid>
+
+                <f:HeaderedMultiLine Header="{f:Language global.tooltips}"
+                                     Margin="4"
+                                     Height="128"
+                                     Text="{Binding ToolTips,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap" />
+            </StackPanel>
+            <f:ForestSection Header="{f:Language global.content}"
+                             Grid.Column="1"
+
+                             Margin="16 0">
+                <f:ForestSection.ToolBar>
+                    <StackPanel HorizontalAlignment="Right"
+                                Orientation="Horizontal"
+                                Margin="0 0 0 4">
+                        <ftk:ToolButton Command="{Binding AddCommand}"
+                                        Icon="{StaticResource FeatherIcon.Plus}" />
+                        <ftk:ToolButton Command="{Binding EditCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Edit}" />
+                        <ftk:ToolButton Command="{Binding RemoveCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Trash}" />
+                        <ftk:ToolButton Command="{Binding UpCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Up}" />
+                        <ftk:ToolButton Command="{Binding DownCommand}"
+                                        CommandParameter="{Binding ElementName=Item,Mode=OneWay,Path=SelectedItem}"
+                                        Icon="{StaticResource FeatherIcon.Down}" />
+                    </StackPanel>
+                </f:ForestSection.ToolBar>
+                <f:ListBox x:Name="Item"
+                           ItemsSource="{Binding Axis,Mode=OneWay}">
+                    <f:ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="8"
+                                       Text="{Binding Mode=OneWay}"
+                                       TextTrimming="CharacterEllipsis" />
+                        </DataTemplate>
+                    </f:ListBox.ItemTemplate>
+                </f:ListBox>
+            </f:ForestSection>
+        </Grid>
+    </DataTemplate>
+</ResourceDictionary>

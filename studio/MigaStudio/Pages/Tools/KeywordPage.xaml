@@ -1,0 +1,137 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.KeywordPage"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:thisModel="clr-namespace:Acorisoft.FutureGL.MigaDB.Data.Keywords;assembly=MigaDB"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:studio="urn:acorisoft/studio"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:KeywordViewModel}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+        <f:BindingProxy x:Key="ViewModel" ViewModel="{Binding}"/>
+
+        <HierarchicalDataTemplate DataType="{x:Type thisModel:DirectoryRootUI}"
+                                  ItemsSource="{Binding Children}">
+            <Border Background="{x:Static f:Xaml.Transparent}">
+                <Border.ContextMenu>
+                    <f:ContextMenu>
+                        <f:MenuItem Header="{f:Language global.Add}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.AddCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Plus}"
+                                    IconSize="17"/>
+                        <f:MenuItem Header="{f:Language global.Edit}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.EditCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Edit}"
+                                    IconSize="17"/>
+                        <f:MenuItem Header="{f:Language global.Remove}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.RemoveCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Trash}"
+                                    IconSize="17"/>
+                        <f:MenuItem Header="{f:Language global.ShiftUp}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.ShiftUpCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Up}"
+                                    IconSize="17"/>
+                        <f:MenuItem Header="{f:Language global.ShiftDown}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.ShiftDownCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Down}"
+                                    IconSize="17"/>
+                    </f:ContextMenu>
+                </Border.ContextMenu>
+                <TextBlock Margin="8"
+                           Text="{Binding Name,Mode=OneWay}"
+                           VerticalAlignment="Center"/>
+            </Border>
+        </HierarchicalDataTemplate>
+
+
+        <HierarchicalDataTemplate DataType="{x:Type thisModel:DirectoryNodeUI}"
+                                  ItemsSource="{Binding Children}">
+            <Border Background="{x:Static f:Xaml.Transparent}">
+                <Border.ContextMenu>
+                    <f:ContextMenu>
+                        <f:MenuItem Header="{f:Language global.Add}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.AddCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Plus}"
+                                    IconSize="17"/>
+                        <f:MenuItem Header="{f:Language global.Edit}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.EditCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Edit}"
+                                    IconSize="17"/>
+                        <f:MenuItem Header="{f:Language global.Remove}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.RemoveCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Trash}"
+                                    IconSize="17"/>
+                        <f:MenuItem Header="{f:Language global.ShiftUp}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.ShiftUpCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Up}"
+                                    IconSize="17"/>
+                        <f:MenuItem Header="{f:Language global.ShiftDown}"
+                                        Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.ShiftDownCommand}"
+                                        CommandParameter="{Binding}"
+                                        Icon="{StaticResource FeatherIcon.Down}"
+                                    IconSize="17"/>
+                    </f:ContextMenu>
+                </Border.ContextMenu>
+                <TextBlock Margin="8"
+                           Text="{Binding Name,Mode=OneWay}"
+                           VerticalAlignment="Center"/>
+            </Border>
+        </HierarchicalDataTemplate>
+
+    </UserControl.Resources>
+    <f:EmptyContentControl DockPanel.Dock="Left"
+                               NotEmpty="True"
+                               HorizontalAlignment="Left"
+                               Width="768">
+        <f:ForestSection Header="目录"
+                             Margin="16 16 32 16">
+            <f:ForestSection.ToolBar>
+                <StackPanel Orientation="Horizontal"
+                                HorizontalAlignment="Right"
+                                Margin="0 0 0 4">
+                    <ftk:ToolButton Content="{f:Language global.Add}"
+                                        Command="{Binding AddCommand}"
+                                        Icon="{StaticResource FeatherIcon.Plus}"
+                                        ShowText="True"/>
+                    <ftk:ToolButton Content="{f:Language global.Edit}"
+                                        Command="{Binding EditCommand}"
+                                        CommandParameter="{Binding Selected,Mode=OneWay}"
+                                        Icon="{StaticResource FeatherIcon.Edit}"
+                                        ShowText="True"/>
+                    <ftk:ToolButton Content="{f:Language global.Remove}"
+                                        Command="{Binding RemoveCommand}"
+                                        CommandParameter="{Binding Selected,Mode=OneWay}"
+                                        Icon="{StaticResource FeatherIcon.Trash}"
+                                        ShowText="True"/>
+                    <ftk:ToolButton Content="{f:Language global.ShiftUp}"
+                                        Command="{Binding ShiftUpCommand}"
+                                        CommandParameter="{Binding Selected,Mode=OneWay}"
+                                        Icon="{StaticResource FeatherIcon.Up}"
+                                        ShowText="True"/>
+                    <ftk:ToolButton Content="{f:Language global.ShiftDown}"
+                                        Command="{Binding ShiftDownCommand}"
+                                        CommandParameter="{Binding Selected,Mode=OneWay}"
+                                        Icon="{StaticResource FeatherIcon.Down}"
+                                        ShowText="True"/>
+                </StackPanel>
+            </f:ForestSection.ToolBar>
+            <f:TreeView BindableSelectedItem="{Binding Selected,Mode=TwoWay}"
+                            ItemsSource="{Binding Root,Mode=OneWay}"/>
+
+        </f:ForestSection>
+    </f:EmptyContentControl>
+</f:ForestUserControl>

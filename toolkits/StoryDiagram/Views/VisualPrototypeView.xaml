@@ -1,0 +1,305 @@
+﻿<Grid x:Class="StoryDiagram.Views.VisualPrototypeView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:local="clr-namespace:StoryDiagram.Views"
+      xmlns:f="urn:acorisoft/forest/ui"
+      xmlns:fs="urn:acorisoft/forest/shell"
+      xmlns:ftk="urn:acorisoft/forest/toolkits"
+      xmlns:thisControls="clr-namespace:StoryDiagram.Controls"
+      mc:Ignorable="d"
+      d:DesignHeight="300" d:DesignWidth="300">
+
+    <thisControls:StoryboardCanvas Gridline="{f:Brush BackgroundLevel2}">
+
+    </thisControls:StoryboardCanvas>
+    <WrapPanel Orientation="Horizontal"
+               Margin="40">
+        <HeaderedContentControl Header="所有节点"
+                                Margin="0 0 40 0">
+            <StackPanel Width="240">
+                <Border Background="{f:Brush Theme=Info100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="人物对话"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Background="{f:Brush Theme=Success100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="场景旁白"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Background="{f:Brush Theme=SlateGray100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="情报线索"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Background="{f:Brush Theme=Warning100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="故事发展"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Background="Gray"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="剧情开始"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Background="Gray"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="剧情结束"
+                               VerticalAlignment="Center" />
+                </Border>
+            </StackPanel>
+        </HeaderedContentControl>
+
+        <HeaderedContentControl Header="节点的状态"
+                                Margin="0 0 40 0">
+            <StackPanel Width="240">
+                <Border Background="{f:Brush Theme=SlateGray100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="可见"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Background="{f:Brush Theme=SlateGray200}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="不可见"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Background="{f:Brush Theme=SlateGray300}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="暗线"
+                               VerticalAlignment="Center" />
+                </Border>
+            </StackPanel>
+        </HeaderedContentControl>
+
+        <HeaderedContentControl Header="完整的故事"
+                                Margin="0 0 120 0">
+            <Canvas Width="240">
+
+                <Line X1="20"
+                      X2="20"
+                      Y1="0"
+                      Y2="80"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2" />
+
+                <Line X1="20"
+                      X2="20"
+                      Y1="80"
+                      Y2="160"
+                      StrokeDashArray="2 2"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2"
+                      Opacity="0.65" />
+
+                <Line X1="20"
+                      X2="20"
+                      Y1="160"
+                      Y2="240"
+                      StrokeDashArray="2 2"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2"
+                      Opacity="0.65" />
+
+                <Line X1="20"
+                      X2="20"
+                      Y1="240"
+                      Y2="320"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2" />
+
+                <Border Canvas.Top="0"
+                        Background="{f:Brush Theme=SlateGray100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="开头"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Canvas.Top="80"
+                        Background="{f:Brush Theme=SlateGray200}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="中间故事1"
+                               VerticalAlignment="Center" />
+                </Border>
+                <Border Canvas.Top="160"
+                        Background="{f:Brush Theme=SlateGray200}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="中间故事2"
+                               VerticalAlignment="Center" />
+                </Border>
+                <Border Canvas.Top="240"
+                        Background="{f:Brush Theme=SlateGray200}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="中间故事3"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Canvas.Top="320"
+                        Background="{f:Brush Theme=SlateGray100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="结尾"
+                               VerticalAlignment="Center" />
+                </Border>
+            </Canvas>
+        </HeaderedContentControl>
+
+
+        <HeaderedContentControl Header="完整的链条"
+                                Margin="0 0 40 0">
+            <Canvas Width="240">
+
+                <Line X1="0"
+                      X2="120"
+                      Y1="60"
+                      Y2="60"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2" />
+
+                <Line X1="120"
+                      X2="120"
+                      Y1="0"
+                      Y2="80"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2" />
+
+                <Line X1="120"
+                      X2="120"
+                      Y1="80"
+                      Y2="160"
+                      StrokeDashArray="2 2"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2"
+                      Opacity="0.65" />
+
+                <Line X1="120"
+                      X2="120"
+                      Y1="160"
+                      Y2="240"
+                      StrokeDashArray="2 2"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2"
+                      Opacity="0.65" />
+
+                <Line X1="120"
+                      X2="120"
+                      Y1="240"
+                      Y2="320"
+                      Stroke="{f:Brush Theme=Info100}"
+                      StrokeThickness="2" />
+
+                <Border Canvas.Top="40"
+                        Background="{f:Brush Theme=SlateGray100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="故事切入"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Canvas.Left="100"
+                        Canvas.Top="0"
+                        Background="{f:Brush Theme=SlateGray100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="开头"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Canvas.Left="100"
+                        Canvas.Top="80"
+                        Background="{f:Brush Theme=SlateGray200}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="中间故事1"
+                               VerticalAlignment="Center" />
+                </Border>
+                <Border Canvas.Left="100"
+                        Canvas.Top="160"
+                        Background="{f:Brush Theme=SlateGray200}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="中间故事2"
+                               VerticalAlignment="Center" />
+                </Border>
+                <Border Canvas.Left="100"
+                        Canvas.Top="240"
+                        Background="{f:Brush Theme=SlateGray200}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="中间故事3"
+                               VerticalAlignment="Center" />
+                </Border>
+
+                <Border Canvas.Left="100"
+                        Canvas.Top="320"
+                        Background="{f:Brush Theme=SlateGray100}"
+                        CornerRadius="3"
+                        Height="40"
+                        Margin="0 0 0 40"
+                        Padding="8">
+                    <TextBlock Text="结尾"
+                               VerticalAlignment="Center" />
+                </Border>
+            </Canvas>
+        </HeaderedContentControl>
+    </WrapPanel>
+</Grid>

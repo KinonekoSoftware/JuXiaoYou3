@@ -1,0 +1,120 @@
+﻿<UserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.Documents.SkillBasicView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Documents"
+             xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Documents"
+             xmlns:thisSubView="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models"
+             xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Documents"
+             xmlns:f="urn:acorisoft/forest/ui"
+             xmlns:ftk="urn:acorisoft/forest/toolkits"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance Type={x:Type thisVM:DocumentEditorVMBase}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+        <thisVM:DocumentEditorViewModelProxy x:Key="ViewModel" ViewModel="{Binding}" />
+    </UserControl.Resources>
+    <ftk:TabControl Padding="0 16 0 0">
+        <ftk:TabItem Header="基本信息"
+                     Padding="16 8">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Top">
+                    <UniformGrid Columns="3">
+                        <f:HeaderedSingleLine Header="名字"
+                                              Margin="4"
+                                              Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                              TextWrapping="Wrap" />
+
+                        <f:HeaderedSingleLine Header="稀有度"
+                                              Margin="4"
+                                              Text="{Binding Rarity,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                        
+                        <f:HeaderedSingleLine Header="昵称"
+                                              Margin="4"
+                                              Text="{Binding NickName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                              TextWrapping="Wrap" />
+                    </UniformGrid>
+                    
+                    <f:HeaderedMultiLine Header="弱点"
+                                         Margin="4 12"
+                                         Text="{Binding Weakness,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" 
+                                         TextWrapping="Wrap" />
+                </StackPanel>
+
+               
+
+                <f:HeaderedMultiLine Header="介绍"
+                                     Margin="4 12"
+                                     Text="{Binding Intro,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                     TextWrapping="Wrap"  />
+            </DockPanel>
+        </ftk:TabItem>
+
+        <ftk:TabItem Header="标签"
+                     Padding="16 8">
+            <HeaderedContentControl DockPanel.Dock="Top"
+                                    Background="{f:Brush BackgroundLevel2}"
+                                    Margin="0 8">
+                <HeaderedContentControl.Header>
+                    <DockPanel>
+                        <Border DockPanel.Dock="Top"
+                                Background="{f:Brush BackgroundLevel1}"
+                                BorderBrush="{f:Brush HighlightB3}"
+                                BorderThickness="3 1 1 1"
+                                CornerRadius="6"
+                                Effect="{StaticResource MenuItem.ShadowEffect}"
+                                Padding="16">
+                            <TextBlock Text="添加标签能够帮你更好的分类设定，如果输入的是目录的名字，则会自动添加到该目录下面" />
+                        </Border>
+
+                        <f:CallToAction Content="{f:Language global.new}"
+                                        Command="{Binding AddKeywordCommand}"
+                                        HorizontalAlignment="Left"
+                                        Margin="0 16 0 0"
+                                        Icon="{StaticResource FeatherIcon.Plus}"
+                                        Palette="HighlightPalette2"/>
+                    </DockPanel>
+                </HeaderedContentControl.Header>
+
+
+                <ItemsControl Margin="0 16 0 0"
+                              ItemsSource="{Binding Keywords,Mode=OneWay}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Background="{f:Brush HighlightA4}"
+                                    CornerRadius="3"
+                                    Margin="4"
+                                    Padding="16 8 8 8">
+                                <DockPanel>
+                                    <f:LooklessButton DockPanel.Dock="Right"
+                                                      Command="{Binding Source={StaticResource ViewModel},Path=ViewModel.RemoveKeywordCommand}"
+                                                      CommandParameter="{Binding}"
+                                                      Height="28"
+                                                      Width="28">
+                                        <Path Data="{StaticResource FeatherIcon.Close}"
+                                              Stroke="{f:Brush ForegroundInHighlight}"
+                                              StrokeThickness="1"
+                                              Stretch="Uniform"
+                                              Height="11"
+                                              Width="11" />
+                                    </f:LooklessButton>
+
+                                    <TextBlock Foreground="{f:Brush ForegroundInHighlight}"
+                                               FontSize="14"
+                                               Text="{Binding Name,Mode=OneWay}"
+                                               VerticalAlignment="Center" />
+                                </DockPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </HeaderedContentControl>
+        </ftk:TabItem>
+    </ftk:TabControl>
+</UserControl>

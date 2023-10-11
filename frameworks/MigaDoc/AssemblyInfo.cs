@@ -1,0 +1,10 @@
+﻿[assembly:InternalsVisibleTo("MigaDoc.Tests")]
+[assembly:InternalsVisibleTo("MigaTools.Tests")]
+
+[assembly: System.Reflection.AssemblyCompanyAttribute("Acorisoft")]
+[assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
+[assembly: System.Reflection.AssemblyFileVersionAttribute("2.0.1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("2.0.1")]
+[assembly: System.Reflection.AssemblyProductAttribute("MigaDoc")]
+[assembly: System.Reflection.AssemblyTitleAttribute("MigaDoc")]
+[assembly: System.Reflection.AssemblyVersionAttribute("2.0.1.0")]

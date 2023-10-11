@@ -1,0 +1,44 @@
+﻿<ScrollViewer x:Class="Acorisoft.FutureGL.MigaStudio.Pages.SettingAdvancedView"
+              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+              xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+              xmlns:res="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources"
+              xmlns:thisModels="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models"
+              xmlns:studio="urn:acorisoft/studio"
+              xmlns:f="urn:acorisoft/forest/ui"
+              xmlns:fs="urn:acorisoft/studio"
+              xmlns:ftk="urn:acorisoft/forest/toolkits"
+              xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters;assembly=SubSystem"
+              mc:Ignorable="d"
+              d:DesignHeight="720"
+              d:DesignWidth="1280"
+              d:DataContext="{d:DesignInstance Type={x:Type local:SettingViewModel}, IsDesignTimeCreatable=True}">
+
+    <StackPanel>
+        <HeaderedContentControl Header="统计">
+            <UniformGrid Columns="2">
+                <ContentControl Content="{Binding Self}"
+                                Margin="16 4" />
+                <ContentControl Content="{Binding DatabaseCounter}"
+                                Margin="16 4" />
+            </UniformGrid>
+        </HeaderedContentControl>
+        
+        
+                    
+        <HeaderedContentControl Header="内存占用"
+                                Margin="0 0 0 48"
+                                Padding="0 8">
+            <StackPanel>
+                <TextBlock Margin="0 8"
+                           Text="{Binding MemoryUsage,StringFormat={}内存占用：{0}}"
+                           VerticalAlignment="Center"/>
+                <f:CallToAction Content="释放"
+                                Command="{Binding ReleaseMemoryCommand}"
+                                Icon="{StaticResource FeatherIcon.Trash}"/>
+            </StackPanel>
+        </HeaderedContentControl>
+    </StackPanel>
+</ScrollViewer>

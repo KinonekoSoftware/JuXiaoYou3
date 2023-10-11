@@ -1,0 +1,24 @@
+﻿<shell:ForestWindow x:Class="Acorisoft.FutureGL.MigaStudio.Pages.Commons.ImageView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                xmlns:shell="urn:acorisoft/forest/shell"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Commons"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Commons"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:ImageViewModel}, IsDesignTimeCreatable=True}"
+        Style="{StaticResource ForestWindow}"
+                     Height="640"
+                     Width="720">
+    <shell:ForestWindow.TitleBar>
+        <shell:TitleBar HorizontalAlignment="Right"/>
+    </shell:ForestWindow.TitleBar>
+    <ScrollViewer HorizontalScrollBarVisibility="Auto"
+                  VerticalScrollBarVisibility="Auto">
+        <Image Source="{Binding Source,Mode=OneWay}"
+               Stretch="None"/>
+    </ScrollViewer>
+</shell:ForestWindow>

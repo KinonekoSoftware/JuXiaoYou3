@@ -1,0 +1,28 @@
+﻿<s:TabBaseWindow x:Class="Acorisoft.FutureGL.MigaStudio.MainWindow"
+                 x:TypeArguments="vm:AppViewModel"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio"
+                 xmlns:vm="clr-namespace:Acorisoft.FutureGL.MigaStudio.ViewModels"
+                 xmlns:f="urn:acorisoft/forest/ui"
+                 xmlns:fs="urn:acorisoft/forest/shell"
+                 xmlns:s="urn:acorisoft/studio"
+                 xmlns:p="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                 mc:Ignorable="d"
+                 AllowDrop="True"
+                 Title="{f:Language global.appName}"
+                 MinWidth="1280"
+                 MinHeight="720"
+                 ExtendToTitleBar="True"
+                 UseLayoutRounding="True"
+                 SnapsToDevicePixels="True"
+                 d:DataContext="{d:DesignInstance Type={x:Type vm:AppViewModel}, IsDesignTimeCreatable=True}">
+    <f:Drawer x:Name="MainDrawer">
+        <fs:DialogHost x:Name="MainDialogHost">
+            <fs:EmptyContentHost ClipToBounds="True"
+                                 ViewModel="{Binding CurrentController,Mode=OneWay}" />
+        </fs:DialogHost>
+    </f:Drawer>
+</s:TabBaseWindow>

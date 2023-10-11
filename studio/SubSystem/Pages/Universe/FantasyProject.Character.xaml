@@ -1,0 +1,97 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.Universe.FantasyProjectCharacterPage"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:studio="urn:acorisoft/studio"
+                     xmlns:thisModel="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models;assembly=MigaStudio.UI"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Universe"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Universe"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:FantasyProjectCharacterViewModel}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+        <ImageBrush x:Key="Avatar_1" ImageSource="E:\企划\橘小柚\社区\美术\罗易斯_1.png"/>
+        <ImageBrush x:Key="Avatar_2" ImageSource="E:\企划\橘小柚\社区\美术\罗易斯_2.png"/>
+        <ImageBrush x:Key="Avatar_3" ImageSource="E:\企划\橘小柚\社区\美术\罗易斯_3.png"/>
+        <ImageBrush x:Key="Avatar_4" ImageSource="E:\企划\橘小柚\社区\美术\罗易斯_4.png"/>
+        <ImageBrush x:Key="Avatar_5" ImageSource="E:\企划\橘小柚\社区\美术\罗易斯_5.png"/>
+    </UserControl.Resources>
+
+    <f:ForestIsland DockPanel.Dock="Left"
+                        Header="角色绑定"
+                        Margin="16 0">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+            </Grid.RowDefinitions>
+
+            <Border BorderBrush="{f:Brush BorderBrush}"
+                        BorderThickness="1"
+                        CornerRadius="8"
+                        Padding="16">
+                <TextBlock Text="角色绑定，指的是已经确定剧情会组成一起的角色组。例如：CP、主角团等等"/>
+            </Border>
+
+            <ScrollViewer Grid.Row="2"
+                          Margin="0 16 0 0">
+                <StackPanel>
+
+                    <!-- CP组 -->
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto"
+                                              MaxWidth="256"/>
+                            <ColumnDefinition Width="1*" />
+                            <ColumnDefinition Width="160" />
+                        </Grid.ColumnDefinitions>
+
+                        <Ellipse Grid.Column="0"
+                                     Grid.Row="0"
+                                     Grid.RowSpan="2"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Top"
+                                     Height="32" 
+                                     Width="32"
+                                     Fill="{StaticResource Avatar_1}"/>
+
+                        <Ellipse Grid.Column="0"
+                                     Margin="18 0 0 0"
+                                     HorizontalAlignment="Left"
+                                     VerticalAlignment="Top"
+                                     Height="32" 
+                                     Width="32"
+                                     Fill="{StaticResource Avatar_2}"/>
+
+                        <TextBlock Grid.Column="1"
+                                       Margin="16 0"
+                                       FontSize="18"
+                                       FontWeight="Bold"
+                                       Text="XXX BL组"
+                                       VerticalAlignment="Center"/>
+
+
+                        <TextBlock Grid.Column="2"
+                                       Margin="16 16 16 0"
+                                       Text="XXX BL组"/>
+                    </Grid>
+
+                    <!-- 多角恋组 -->
+                    <Grid>
+
+                    </Grid>
+
+
+                    <!-- 主角组 -->
+                    <Grid>
+
+                    </Grid>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+    </f:ForestIsland>
+</f:ForestUserControl>

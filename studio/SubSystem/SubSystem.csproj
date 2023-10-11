@@ -1,0 +1,113 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <OutDir>../../Builds/SubSystem</OutDir>
+        <RootNamespace>Acorisoft.FutureGL.MigaStudio</RootNamespace>
+        <UseWPF>true</UseWPF>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <AssemblyVersion>3.0.0</AssemblyVersion>
+        <FileVersion>3.0.0.0</FileVersion>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <LangVersion>latest</LangVersion>
+        <Deterministic>False</Deterministic>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+        <NoWarn>CS7035</NoWarn>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\frameworks\MigaDB\MigaDB.csproj" />
+        <ProjectReference Include="..\..\frameworks\MigaUtils\MigaUtils.csproj" />
+        <ProjectReference Include="..\..\ui\Forest\Forest.Controls\Forest.Controls.csproj" />
+        <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj" />
+        <ProjectReference Include="..\..\ui\Forest\Forest\Forest.csproj" />
+        <ProjectReference Include="..\MigaStudio.UI\MigaStudio.UI.csproj" />
+        <ProjectReference Include="..\SubSystem.Core\SubSystem.Core.csproj" />
+        <!--<ProjectReference Include="..\..\generators\MigaStudio.TestGen\MigaStudio.TestGen.csproj" OutputItemType="analyzer" ReferenceOutputAssembly="false"/>-->
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AvalonEdit" Version="6.3.0.90" />
+        <PackageReference Include="NetCore5.0.Microsoft.Expression.Drawing" Version="1.0.0" />
+        <PackageReference Include="gong-wpf-dragdrop" Version="3.2.1" />
+        <PackageReference Include="Gu.Wpf.FlipView" Version="2.0.2" />
+        <PackageReference Include="NAudio" Version="2.1.0" />
+        <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
+        <PackageReference Include="TagLibSharp" Version="2.3.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Languages\SubSystem.cn.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\SubSystem.en.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\SubSystem.fr.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\SubSystem.jp.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\SubSystem.kr.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\SubSystem.ru.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Pages\Commons\Inspirations" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Page Update="Pages\Commons\Dialogs\Dialog.NewSurveyView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Commons\Dialogs\Dialog.ManageSurveyView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Universe\Universe\UniversalIntroductionView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Relatives\CharacterRelativeView.Detail.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Commons\Dialogs\Dialog.MultiDocumentPickerView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Commons\ImageEditView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Commons\ImageView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Commons\OptionSelectionView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Universe\Dialogs\NewTimelineView.xaml">
+          <Generator>MSBuild:Compile</Generator>
+          <XamlRuntime>Wpf</XamlRuntime>
+          <SubType>Designer</SubType>
+        </Page>
+    </ItemGroup>
+    <Import Project="..\..\frameworks\MigaStudio.Version\MigaStudio.Version.projitems" Label="Shared" />
+</Project>

@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <UseWPF>true</UseWPF>
+        <Authors>罗易斯（Luoyisi）</Authors>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.beta1</FileVersion>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <Title>Forest</Title>
+        <Description>Forest是一个UI框架，用于JuXiaoYou</Description>
+        <Copyright>All copy reserved by Luoyisi</Copyright>
+        <PackageProjectUrl>https://gitee.com/acorisoft/juxiaoyou</PackageProjectUrl>
+        <PackageLicenseUrl>https://gitee.com/acorisoft/juxiaoyou</PackageLicenseUrl>
+        <PackageIcon>ico.png</PackageIcon>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+      <None Remove="PuHuiTi.otf" />
+      <Resource Include="avatar.png" />
+      <None Remove="SourceHanSerifCN.otf" />
+      <Resource Include="SourceHanSerifCN.otf" />
+      <None Remove="清松手寫體1.ttf" />
+      <Resource Include="清松手寫體1.ttf" />
+      <None Remove="afd.png" />
+      <Resource Include="afd.png" />
+      <None Remove="album.png" />
+      <Resource Include="album.png" />
+    </ItemGroup>
+
+</Project>

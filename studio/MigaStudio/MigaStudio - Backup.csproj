@@ -1,0 +1,196 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <UseWPF>true</UseWPF>
+        <OutDir>../../Builds/JuXiaoYou</OutDir>
+        <RootNamespace>Acorisoft.FutureGL.MigaStudio</RootNamespace>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <ApplicationIcon>ico_2.ico</ApplicationIcon>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+        <LangVersion>latest</LangVersion>
+        <Deterministic>False</Deterministic>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\frameworks\MigaDB.Share\MigaDB.Share.csproj"/>
+        <ProjectReference Include="..\..\frameworks\MigaDB\MigaDB.csproj"/>
+        <ProjectReference Include="..\..\frameworks\MigaUtils\MigaUtils.csproj"/>
+        <ProjectReference Include="..\..\generators\MigaGen.App\MigaGen.App.csproj" OutputItemType="analyzer" ReferenceOutputAssembly="false"/>
+        <!--        <ProjectReference Condition="'$(Configuration)'=='DEBUG'" Include="..\..\generators\MigaStudio.TestGen\MigaStudio.TestGen.csproj" OutputItemType="analyzer" ReferenceOutputAssembly="false" />-->
+        <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj"/>
+        <ProjectReference Include="..\MigaStudio.UI\MigaStudio.UI.csproj"/>
+        <ProjectReference Include="..\SubSystem\SubSystem.csproj"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Update="Languages\cn.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\en.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\fr.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\jp.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\kr.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\ru.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\定制你的橘小柚.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Languages\customize JuXiaoYou.txt">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Pages\Interactions\2.png">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="GraphShape.Controls" Version="1.2.2"/>
+        <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1"/>
+        <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Page Update="Views\QuickStartView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Resources\ContentTemplates\ListBoxItem.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Dialogs\RepairToolView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Dialogs\ModeSwitchView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Tools\KeywordPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Services\ColorServicePage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Services\CompareServicePage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Services\RankServicePage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Tools\BookmarkPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Dialogs\DirectoryManagerView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Basic\SettingPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Home\InspirationPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Home\ComposeGalleryPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Home\DocumentGalleryPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Startup\StartupPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Basic\Placeholder.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Inspirations\InspirationPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Inspirations\StoryboardSegmentsPage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\HomePage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Universe\UniversePage.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Universe\UniverseAlbumView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Universe\UniverseComposeView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Test\CharacterChannel.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Test\CharacterContract.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+        <Page Update="Pages\Universe\UniverseMoreView.xaml">
+            <Generator>MSBuild:Compile</Generator>
+            <XamlRuntime>Wpf</XamlRuntime>
+            <SubType>Designer</SubType>
+        </Page>
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Models\Socials\"/>
+    </ItemGroup>
+
+</Project>

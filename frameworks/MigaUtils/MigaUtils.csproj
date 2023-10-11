@@ -1,0 +1,47 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>disable</Nullable>
+        <OutDir>../../Builds/Base</OutDir>
+        <RootNamespace>Acorisoft.FutureGL.MigaUtils</RootNamespace>
+        <Configurations>Debug;Release</Configurations>
+        <LangVersion>latest</LangVersion>
+        <PackageIcon>橘小柚_9.png</PackageIcon>
+        <Description>Forest是一个UI框架，用于JuXiaoYou</Description>
+        <Copyright>all copyright reserved by luoyisi</Copyright>
+    </PropertyGroup>
+    <ItemGroup>
+        <None Include="F:\Repository\FutureGL\assets\橘小柚_9.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NUGET|AnyCPU'">
+      <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NUGET|x86'">
+      <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+      <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x86'" />
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <LangVersion>preview</LangVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x86'" />
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="7.0.4" />
+      <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    </ItemGroup>
+
+</Project>

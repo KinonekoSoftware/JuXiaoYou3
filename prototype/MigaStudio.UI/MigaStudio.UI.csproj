@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>Acorisoft.FutureGL.MigaStudio</RootNamespace>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\frameworks\MigaUtils\MigaUtils.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Controls\Forest.Controls.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest\Forest.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="DryIoc.dll" Version="4.8.2" />
+      <PackageReference Include="gong-wpf-dragdrop" Version="3.2.1" />
+      <PackageReference Include="GraphShape.Controls" Version="1.2.2" />
+      <PackageReference Include="NAudio" Version="2.1.0" />
+      <PackageReference Include="NetCore5.0.Microsoft.Expression.Drawing" Version="1.0.0" />
+      <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
+      <PackageReference Include="SixLabors.ImageSharp" Version="2.1.3" />
+      <PackageReference Include="System.Reactive" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="Themes\Generic.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Resources\ContentTemplates\ListBoxItem.xaml">
+        <Generator>MSBuild:Compile</Generator>
+      </Page>
+    </ItemGroup>
+
+</Project>

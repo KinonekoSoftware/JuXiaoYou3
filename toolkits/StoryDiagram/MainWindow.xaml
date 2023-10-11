@@ -1,0 +1,200 @@
+﻿<fs:ForestWindow x:Class="StoryDiagram.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:f="urn:acorisoft/forest/ui"
+                 xmlns:fs="urn:acorisoft/forest/shell"
+                 xmlns:ftk="urn:acorisoft/forest/toolkits"
+                 xmlns:local="clr-namespace:StoryDiagram"
+                 xmlns:thisView="clr-namespace:StoryDiagram.Views"
+                 xmlns:thisVM="clr-namespace:StoryDiagram.ViewModels"
+                 xmlns:thisControls="clr-namespace:StoryDiagram.Controls"
+                 mc:Ignorable="d"
+                 Title="MainWindow"
+                 MinHeight="720"
+                 MinWidth="1280">
+    <fs:ForestWindow.TitleBar>
+        <fs:TitleBar HorizontalAlignment="Right" />
+    </fs:ForestWindow.TitleBar>
+    <Window.DataContext>
+        <thisVM:AppViewModel />
+    </Window.DataContext>
+    <Window.Resources>
+        <ImageBrush x:Key="Avatar" ImageSource="E:\2.png" />
+        <DrawingBrush x:Key="MyGridBrushResource"
+                      Viewport="0,0,40,40"
+                      ViewportUnits="Absolute"
+                      TileMode="Tile">
+            <DrawingBrush.Drawing>
+                <DrawingGroup>
+                    <DrawingGroup.Children>
+                        <GeometryDrawing Geometry="M0,0 L10,0 10,0.1, 0,0.1Z" Brush="Gray" />
+                        <GeometryDrawing Geometry="M0,0 L0,10 0.1,10, 0.1,0Z" Brush="Gray" />
+                    </DrawingGroup.Children>
+                </DrawingGroup>
+            </DrawingBrush.Drawing>
+        </DrawingBrush>
+    </Window.Resources>
+    <ftk:TabControl>
+        <ftk:TabItem Header="视觉原型">
+            <thisView:VisualPrototypeView/>
+        </ftk:TabItem>
+        <ftk:TabItem Header="界面原型">
+            <ftk:TabItem.Resources>
+                <Style TargetType="{x:Type ftk:ToolButton}" BasedOn="{StaticResource ClearStyle.ToolButton}">
+                    <Setter Property="Foreground" Value="{f:ForegroundBrush}" />
+                    <Setter Property="Margin" Value="0 0 0 4" />
+                    <Setter Property="IconSize" Value="23" />
+                    <Setter Property="Height" Value="48" />
+                    <Setter Property="Width" Value="48" />
+                </Style>
+            </ftk:TabItem.Resources>
+            <f:Drawer IsRightOpen="True">
+                <f:Drawer.RightContent>
+                    <Border Background="{f:BackgroundBrush}"
+                            Padding="16"
+                            Width="840">
+                        <ScrollViewer>
+                            <StackPanel>
+                                <f:HeaderedSingleLine Margin="0 0 0 16"
+                                                      Header="故事名"/>
+
+                                <f:HeaderedMultiLine  Height="160"
+                                                      Header="故事"
+                                                      Margin="0 0 0 16"
+                                                      />
+
+                                <f:ForestIsland Header="人物">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Ellipse Fill="{StaticResource Avatar}"
+                                                 Margin="4"
+                                                 Height="48"
+                                                 Width="48" />
+                                        <Ellipse Fill="{StaticResource Avatar}"
+                                                 Margin="4"
+                                                 Height="48"
+                                                 Width="48" />
+                                        <Ellipse Fill="{StaticResource Avatar}"
+                                                 Margin="4"
+                                                 Height="48"
+                                                 Width="48" />
+                                        <Ellipse Fill="{StaticResource Avatar}"
+                                                 Margin="4"
+                                                 Height="48"
+                                                 Width="48" /> 
+                                    </StackPanel>
+                                </f:ForestIsland>
+                            </StackPanel>
+                        </ScrollViewer>
+                    </Border>
+                </f:Drawer.RightContent>
+                <Grid>
+                    <thisControls:StoryboardCanvas Gridline="{f:Brush BackgroundLevel2}">
+                        <Line X1="60"
+                              X2="60"
+                              Y1="0"
+                              Y2="80"
+                              Stroke="{f:Brush Theme=Info100}"
+                              StrokeThickness="2" />
+
+                        <Line X1="60"
+                              X2="60"
+                              Y1="80"
+                              Y2="160"
+                              StrokeDashArray="2 2"
+                              Stroke="{f:Brush Theme=Info100}"
+                              StrokeThickness="2"
+                              Opacity="0.65" />
+
+                        <Line X1="60"
+                              X2="60"
+                              Y1="160"
+                              Y2="240"
+                              StrokeDashArray="2 2"
+                              Stroke="{f:Brush Theme=Info100}"
+                              StrokeThickness="2"
+                              Opacity="0.65" />
+
+                        <Line X1="60"
+                              X2="60"
+                              Y1="240"
+                              Y2="320"
+                              Stroke="{f:Brush Theme=Info100}"
+                              StrokeThickness="2" />
+
+                        <Border Canvas.Top="0"
+                                Canvas.Left="40"
+                                Background="{f:Brush Theme=SlateGray100}"
+                                CornerRadius="3"
+                                Height="40"
+                                Margin="0 0 0 40"
+                                Padding="8">
+                            <TextBlock Text="开头"
+                                       VerticalAlignment="Center" />
+                        </Border>
+
+                        <Border Canvas.Top="80"
+                                Canvas.Left="40"
+                                Background="{f:Brush Theme=SlateGray200}"
+                                CornerRadius="3"
+                                Height="40"
+                                Margin="0 0 0 40"
+                                Padding="8">
+                            <TextBlock Text="中间故事1"
+                                       VerticalAlignment="Center" />
+                        </Border>
+                        <Border Canvas.Top="160"
+                                Canvas.Left="40"
+                                Background="{f:Brush Theme=SlateGray200}"
+                                CornerRadius="3"
+                                Height="40"
+                                Margin="0 0 0 40"
+                                Padding="8">
+                            <TextBlock Text="中间故事2"
+                                       VerticalAlignment="Center" />
+                        </Border>
+                        <Border Canvas.Top="240"
+                                Canvas.Left="40"
+                                Background="{f:Brush Theme=SlateGray200}"
+                                CornerRadius="3"
+                                Height="40"
+                                Margin="0 0 0 40"
+                                Padding="8">
+                            <TextBlock Text="中间故事3"
+                                       VerticalAlignment="Center" />
+                        </Border>
+
+                        <Border Canvas.Top="320"
+                                Canvas.Left="40"
+                                Background="{f:Brush Theme=SlateGray100}"
+                                CornerRadius="3"
+                                Height="40"
+                                Margin="0 0 0 40"
+                                Padding="8">
+                            <TextBlock Text="结尾"
+                                       VerticalAlignment="Center" />
+                        </Border>
+                    </thisControls:StoryboardCanvas>
+
+                    <StackPanel Background="{f:BackgroundBrush}"
+                                Effect="{StaticResource Ui.Shadow2}"
+                                HorizontalAlignment="Right"
+                                VerticalAlignment="Top"
+                                Margin="16">
+                        <ftk:ToolButton Icon="{StaticResource FeatherIcon.Camera}"
+                                        IconSize="23" />
+                        <ftk:ToolButton Icon="{StaticResource FeatherIcon.Camera}" />
+                        <ftk:ToolButton Icon="{StaticResource FeatherIcon.Camera}" />
+                        <ftk:ToolButton Icon="{StaticResource FeatherIcon.Camera}" />
+                        <ftk:ToolButton Icon="{StaticResource FeatherIcon.Camera}" />
+                        <ftk:ToolButton Icon="{StaticResource FeatherIcon.Camera}" />
+                    </StackPanel>
+                </Grid>
+            </f:Drawer>
+        </ftk:TabItem>
+        <ftk:TabItem Header="故事片段">
+            <thisView:StoryFragmentView/>
+        </ftk:TabItem>
+    </ftk:TabControl>
+</fs:ForestWindow>

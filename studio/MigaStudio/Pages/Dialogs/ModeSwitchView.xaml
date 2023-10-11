@@ -1,0 +1,76 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.ModeSwitchView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:utils="clr-namespace:Acorisoft.FutureGL.MigaUtils;assembly=MigaUtils"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300"
+                     d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:ModeSwitchViewModel}, IsDesignTimeCreatable=True}"
+                     Height="480"
+                     Width="960">
+    <Border Background="{f:BackgroundBrush}"
+            Padding="32">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="1*" />
+            </Grid.ColumnDefinitions>
+
+            <f:ForestIsland Grid.Row="1"
+                            Grid.Column="0"
+                            Header="{Binding Title,Mode=OneWay}">
+
+                <f:ShadowListBox ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                                 ItemsSource="{Binding Controllers,Mode=OneWay}"
+                                 SelectedItem="{Binding Selected,Mode=TwoWay}">
+                    <f:ShadowListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </f:ShadowListBox.ItemsPanel>
+                    <f:ShadowListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Margin="8"
+                                       Text="{Binding Name}" />
+                        </DataTemplate>
+                    </f:ShadowListBox.ItemTemplate>
+                </f:ShadowListBox>
+
+            </f:ForestIsland>
+            <f:ForestIsland Grid.Column="1"
+                            Grid.Row="0"
+                            Grid.RowSpan="2"
+                            Header="描述"
+                            Padding="0 16 0 0">
+                <TextBlock FontSize="15"
+                           Foreground="{f:Brush Theme=ForegroundLevel2}"
+                           LineHeight="28"
+                           Text="{Binding Selected.Intro,Mode=OneWay}"
+                           TextWrapping="Wrap" />
+            </f:ForestIsland>
+
+
+            <f:DialogButton Grid.Row="2"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            Height="48"
+                            Icon="{StaticResource FeatherIcon.Checked}"
+                            IconSize="29"
+                            Content="{x:Static f:Language.CompleteText}"
+                            Command="{Binding CompletedCommand}"
+                            Purpose="CallToAction"
+                            Width="256" />
+        </Grid>
+    </Border>
+</f:ForestUserControl>

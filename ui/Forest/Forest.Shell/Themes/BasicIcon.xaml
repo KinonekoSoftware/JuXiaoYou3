@@ -1,0 +1,387 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <GeometryGroup x:Key="FeatherIcon.Close">
+        <GeometryGroup.Children>
+            <LineGeometry StartPoint="18,6" EndPoint="6,18" />
+            <LineGeometry StartPoint="6,6" EndPoint="18,18" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+
+    <GeometryGroup x:Key="FeatherIcon.Plus">
+        <GeometryGroup.Children>
+            <LineGeometry StartPoint="12,5" EndPoint="12,19" />
+            <LineGeometry StartPoint="5,12" EndPoint="19,12" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Share2">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="3" RadiusY="3" Center="18,5" />
+            <EllipseGeometry RadiusX="3" RadiusY="3" Center="6,12" />
+            <EllipseGeometry RadiusX="3" RadiusY="3" Center="18,19" />
+            <LineGeometry StartPoint="8.59,13.51" EndPoint="15.42,17.49" />
+            <LineGeometry StartPoint="15.41,6.51" EndPoint="8.59,10.49" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Share">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M4,12L4,20A2,2,0,0,0,6,22L18,22A2,2,0,0,0,20,20L20,12</Geometry>
+            <Geometry>F1 M24,24z M0,0z M16,6L16,6 12,2 8,6</Geometry>
+            <LineGeometry StartPoint="12,2" EndPoint="12,15" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Trash">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M3,6L3,6 5,6 21,6</Geometry>
+            <Geometry>F1 M24,24z M0,0z M19,6L19,20A2,2,0,0,1,17,22L7,22A2,2,0,0,1,5,20L5,6 M8,6L8,4A2,2,0,0,1,10,2L14,2A2,2,0,0,1,16,4L16,6</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Mic">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M12,1A3,3,0,0,0,9,4L9,12A3,3,0,0,0,15,12L15,4A3,3,0,0,0,12,1z</Geometry>
+            <Geometry>F1 M24,24z M0,0z M19,10L19,12A7,7,0,0,1,5,12L5,10</Geometry>
+            <LineGeometry StartPoint="12,19" EndPoint="12,23" />
+            <LineGeometry StartPoint="8,23" EndPoint="16,23" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Gift">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M20,12L20,12 20,22 4,22 4,12</Geometry>
+            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="2,7,20,5" />
+            <LineGeometry StartPoint="12,22" EndPoint="12,7" />
+            <Geometry>F1 M24,24z M0,0z M12,7L7.5,7A2.5,2.5,0,0,1,7.5,2C11,2,12,7,12,7z</Geometry>
+            <Geometry>F1 M24,24z M0,0z M12,7L16.5,7A2.5,2.5,0,0,0,16.5,2C13,2,12,7,12,7z</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <!--<GeometryGroup x:Key="FeatherIcon.Type">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M4,7L4,7 4,4 20,4 20,7</Geometry>
+            <LineGeometry StartPoint="9,20" EndPoint="15,20" />
+            <LineGeometry StartPoint="12,4" EndPoint="12,20" />
+        </GeometryGroup.Children>
+    </GeometryGroup>-->
+    <GeometryGroup x:Key="FeatherIcon.Image">
+        <GeometryGroup.Children>
+            <RectangleGeometry RadiusX="2" RadiusY="2" Rect="3,3,18,18" />
+            <EllipseGeometry RadiusX="1.5" RadiusY="1.5" Center="8.5,8.5" />
+            <Geometry>F1 M24,24z M0,0z M21,15L21,15 16,10 5,21</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Clock">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="10" RadiusY="10" Center="12,12" />
+            <Geometry>F1 M24,24z M0,0z M12,6L12,6 12,12 16,14</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Login">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M15,3L19,3A2,2,0,0,1,21,5L21,19A2,2,0,0,1,19,21L15,21</Geometry>
+            <Geometry>F1 M24,24z M0,0z M10,17L10,17 15,12 10,7</Geometry>
+            <LineGeometry StartPoint="15,12" EndPoint="3,12" />
+            </GeometryGroup.Children>
+    </GeometryGroup>
+
+    <GeometryGroup x:Key="FeatherIcon.LogOut">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M9,21L5,21A2,2,0,0,1,3,19L3,5A2,2,0,0,1,5,3L9,3</Geometry>
+            <Geometry>F1 M24,24z M0,0z M16,17L16,17 21,12 16,7</Geometry>
+            <LineGeometry StartPoint="21,12" EndPoint="9,12" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Video">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M23,7L23,7 16,12 23,17 23,7z</Geometry>
+            <RectangleGeometry RadiusX="2" RadiusY="2" Rect="1,5,15,14" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <Geometry x:Key="FeatherIcon.Phone">F1 M24,24z M0,0z M22,16.92L22,19.92A2,2,0,0,1,19.82,21.92A19.79,19.79,0,0,1,11.19,18.85A19.5,19.5,0,0,1,5.19,12.85A19.79,19.79,0,0,1,2.12,4.18A2,2,0,0,1,4.11,2L7.11,2A2,2,0,0,1,9.11,3.72A12.84,12.84,0,0,0,9.81,6.53A2,2,0,0,1,9.36,8.64L8.09,9.91A16,16,0,0,0,14.09,15.91L15.36,14.64A2,2,0,0,1,17.47,14.19A12.84,12.84,0,0,0,20.28,14.89A2,2,0,0,1,22,16.92z</Geometry>
+    <GeometryGroup x:Key="FeatherIcon.Emoji">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="10" RadiusY="10" Center="12,12" />
+            <Geometry>F1 M24,24z M0,0z M8,14C8,14 9.5,16 12,16 14.5,16 16,14 16,14</Geometry>
+            <LineGeometry StartPoint="9,9" EndPoint="10,9" />
+            <LineGeometry StartPoint="15,9" EndPoint="16,9" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Archive">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M21,8L21,8 21,21 3,21 3,8</Geometry>
+            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="1,3,22,5" />
+            <LineGeometry StartPoint="10,12" EndPoint="14,12" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.At">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="4" RadiusY="4" Center="12,12" />
+            <Geometry>F1 M24,24z M0,0z M16,8L16,13A3,3,0,0,0,22,13L22,12A10,10,0,1,0,18.08,19.94</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Book">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M4,19.5A2.5,2.5,0,0,1,6.5,17L20,17</Geometry>
+            <Geometry>F1 M24,24z M0,0z M6.5,2L20,2 20,22 6.5,22A2.5,2.5,0,0,1,4,19.5L4,4.5A2.5,2.5,0,0,1,6.5,2z</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Git.Merge">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="3" RadiusY="3" Center="18,18" />
+            <EllipseGeometry RadiusX="3" RadiusY="3" Center="6,6" />
+            <Geometry>F1 M24,24z M0,0z M6,21L6,9A9,9,0,0,0,15,18</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    
+    <GeometryGroup x:Key="FeatherIcon.Menu">
+        <GeometryGroup.Children>
+            <LineGeometry StartPoint="3,12" EndPoint="21,12" />
+            <LineGeometry StartPoint="3,6" EndPoint="21,6" />
+            <LineGeometry StartPoint="3,18" EndPoint="21,18" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.More.Horizontal">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="1" RadiusY="1" Center="12,12" />
+            <EllipseGeometry RadiusX="1" RadiusY="1" Center="19,12" />
+            <EllipseGeometry RadiusX="1" RadiusY="1" Center="5,12" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.More.Vertical">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="1" RadiusY="1" Center="12,12" />
+            <EllipseGeometry RadiusX="1" RadiusY="1" Center="12,5" />
+            <EllipseGeometry RadiusX="1" RadiusY="1" Center="12,19" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Save">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M19,21L5,21A2,2,0,0,1,3,19L3,5A2,2,0,0,1,5,3L16,3 21,8 21,19A2,2,0,0,1,19,21z</Geometry>
+            <Geometry>F1 M24,24z M0,0z M17,21L17,21 17,13 7,13 7,21</Geometry>
+            <Geometry>F1 M24,24z M0,0z M7,3L7,3 7,8 15,8</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Edit">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M11,4L4,4A2,2,0,0,0,2,6L2,20A2,2,0,0,0,4,22L18,22A2,2,0,0,0,20,20L20,13</Geometry>
+            <Geometry>F1 M24,24z M0,0z M18.5,2.5A2.121,2.121,0,0,1,21.5,5.5L12,15 8,16 9,12 18.5,2.5z</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Download">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M21,15L21,19A2,2,0,0,1,19,21L5,21A2,2,0,0,1,3,19L3,15</Geometry>
+            <Geometry>F1 M24,24z M0,0z M7,10L7,10 12,15 17,10</Geometry>
+            <LineGeometry StartPoint="12,15" EndPoint="12,3" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Settings">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="3" RadiusY="3" Center="12,12" />
+            <Geometry>F1 M24,24z M0,0z M19.4,15A1.65,1.65,0,0,0,19.73,16.82L19.79,16.88A2,2,0,0,1,19.79,19.71A2,2,0,0,1,16.96,19.71L16.9,19.65A1.65,1.65,0,0,0,15.08,19.32A1.65,1.65,0,0,0,14.08,20.83L14.08,21A2,2,0,0,1,12.08,23A2,2,0,0,1,10.08,21L10.08,20.91A1.65,1.65,0,0,0,9,19.4A1.65,1.65,0,0,0,7.18,19.73L7.12,19.79A2,2,0,0,1,4.29,19.79A2,2,0,0,1,4.29,16.96L4.35,16.9A1.65,1.65,0,0,0,4.68,15.08A1.65,1.65,0,0,0,3.17,14.08L3,14.08A2,2,0,0,1,1,12.08A2,2,0,0,1,3,10.08L3.09,10.08A1.65,1.65,0,0,0,4.6,9A1.65,1.65,0,0,0,4.27,7.18L4.21,7.12A2,2,0,0,1,4.21,4.29A2,2,0,0,1,7.04,4.29L7.1,4.35A1.65,1.65,0,0,0,8.92,4.68L9,4.68A1.65,1.65,0,0,0,10,3.17L10,3A2,2,0,0,1,12,1A2,2,0,0,1,14,3L14,3.09A1.65,1.65,0,0,0,15,4.6A1.65,1.65,0,0,0,16.82,4.27L16.88,4.21A2,2,0,0,1,19.71,4.21A2,2,0,0,1,19.71,7.04L19.65,7.1A1.65,1.65,0,0,0,19.32,8.92L19.32,9A1.65,1.65,0,0,0,20.83,10L21,10A2,2,0,0,1,23,12A2,2,0,0,1,21,14L20.91,14A1.65,1.65,0,0,0,19.4,15z</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.MinusCircle">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="10" RadiusY="10" Center="12,12" />
+            <LineGeometry StartPoint="8,12" EndPoint="16,12" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    
+    <GeometryGroup x:Key="FeatherIcon.PlusCircle">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="10" RadiusY="10" Center="12,12" />
+            <LineGeometry StartPoint="12,8" EndPoint="12,16" />
+            <LineGeometry StartPoint="8,12" EndPoint="16,12" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.File">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M13,2L6,2A2,2,0,0,0,4,4L4,20A2,2,0,0,0,6,22L18,22A2,2,0,0,0,20,20L20,9z</Geometry>
+            <Geometry>F1 M24,24z M0,0z M13,2L13,2 13,9 20,9</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+
+    <GeometryGroup x:Key="FeatherIcon.Update">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M23,6L23,6 13.5,15.5 8.5,10.5 1,18</Geometry>
+            <Geometry>F1 M24,24z M0,0z M17,6L17,6 23,6 23,12</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    
+    <GeometryGroup x:Key="FeatherIcon.Lock">
+        <GeometryGroup.Children>
+            <RectangleGeometry RadiusX="2" RadiusY="2" Rect="3,11,18,11" />
+            <Geometry>F1 M24,24z M0,0z M7,11L7,7A5,5,0,0,1,17,7L17,11</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    
+    <GeometryGroup x:Key="FeatherIcon.Unlock">
+        <GeometryGroup.Children>
+            <RectangleGeometry RadiusX="2" RadiusY="2" Rect="3,11,18,11" />
+            <Geometry>F1 M24,24z M0,0z M7,11L7,7A5,5,0,0,1,16.9,6</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    
+    <GeometryGroup x:Key="FeatherIcon.Box">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M21,16L21,8A2,2,0,0,0,20,6.27L13,2.27A2,2,0,0,0,11,2.27L4,6.27A2,2,0,0,0,3,8L3,16A2,2,0,0,0,4,17.73L11,21.73A2,2,0,0,0,13,21.73L20,17.73A2,2,0,0,0,21,16z</Geometry>
+            <Geometry>F1 M24,24z M0,0z M3.27,6.96L3.27,6.96 12,12.01 20.73,6.96</Geometry>
+            <LineGeometry StartPoint="12,22.08" EndPoint="12,12" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Layer">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M12,2L12,2 2,7 12,12 22,7 12,2z</Geometry>
+            <Geometry>F1 M24,24z M0,0z M2,17L2,17 12,22 22,17</Geometry>
+            <Geometry>F1 M24,24z M0,0z M2,12L2,12 12,17 22,12</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Search">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="8" RadiusY="8" Center="11,11" />
+            <LineGeometry StartPoint="21,21" EndPoint="16.65,16.65" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.ZoomIn">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="8" RadiusY="8" Center="11,11" />
+            <LineGeometry StartPoint="21,21" EndPoint="16.65,16.65" />
+            <LineGeometry StartPoint="11,8" EndPoint="11,14" />
+            <LineGeometry StartPoint="8,11" EndPoint="14,11" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.ZoomOut">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="8" RadiusY="8" Center="11,11" />
+            <LineGeometry StartPoint="21,21" EndPoint="16.65,16.65" />
+            <LineGeometry StartPoint="8,11" EndPoint="14,11" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Grid">
+        <GeometryGroup.Children>
+            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="3,3,7,7" />
+            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="14,3,7,7" />
+            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="14,14,7,7" />
+            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="3,14,7,7" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Clear">
+        <GeometryGroup.Children>
+            <EllipseGeometry RadiusX="10" RadiusY="10" Center="12,12" />
+            <LineGeometry StartPoint="15,9" EndPoint="9,15" />
+            <LineGeometry StartPoint="9,9" EndPoint="15,15" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Camera">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M23,19A2,2,0,0,1,21,21L3,21A2,2,0,0,1,1,19L1,8A2,2,0,0,1,3,6L7,6 9,3 15,3 17,6 21,6A2,2,0,0,1,23,8z</Geometry>
+            <EllipseGeometry RadiusX="4" RadiusY="4" Center="12,13" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Monitor">
+        <GeometryGroup.Children>
+            <RectangleGeometry RadiusX="2" RadiusY="2" Rect="2,3,20,14" />
+            <LineGeometry StartPoint="8,21" EndPoint="16,21" />
+            <LineGeometry StartPoint="12,17" EndPoint="12,21" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Upload">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M21,15L21,19A2,2,0,0,1,19,21L5,21A2,2,0,0,1,3,19L3,15</Geometry>
+            <Geometry>F1 M24,24z M0,0z M17,8L17,8 12,3 7,8</Geometry>
+            <LineGeometry StartPoint="12,3" EndPoint="12,15" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Type">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M4,7L4,7 4,4 20,4 20,7</Geometry>
+            <LineGeometry StartPoint="9,20" EndPoint="15,20" />
+            <LineGeometry StartPoint="12,4" EndPoint="12,20" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Inbox">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M22,12L22,12 16,12 14,15 10,15 8,12 2,12</Geometry>
+            <Geometry>F1 M24,24z M0,0z M5.45,5.11L2,12 2,18A2,2,0,0,0,4,20L20,20A2,2,0,0,0,22,18L22,12 18.55,5.11A2,2,0,0,0,16.76,4L7.24,4A2,2,0,0,0,5.45,5.11z</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.MapPin">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M21,10C21,17 12,23 12,23 12,23 3,17 3,10A9,9,0,0,1,21,10z</Geometry>
+            <EllipseGeometry RadiusX="3" RadiusY="3" Center="12,10" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.People">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M20,21L20,19A4,4,0,0,0,16,15L8,15A4,4,0,0,0,4,19L4,21</Geometry>
+            <EllipseGeometry RadiusX="4" RadiusY="4" Center="12,7" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.ArrowLeft">
+        <GeometryGroup.Children>
+            <LineGeometry StartPoint="19,12" EndPoint="5,12" />
+            <Geometry>F1 M24,24z M0,0z M12,19L12,19 5,12 12,5</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+
+    <GeometryGroup x:Key="FeatherIcon.ChevronsLeft">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M11,17L11,17 6,12 11,7</Geometry>
+            <Geometry>F1 M24,24z M0,0z M18,17L18,17 13,12 18,7</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+
+    <GeometryGroup x:Key="FeatherIcon.ChevronsRight">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M13,17L13,17 18,12 13,7</Geometry>
+            <Geometry>F1 M24,24z M0,0z M6,17L6,17 11,12 6,7</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+
+    <GeometryGroup x:Key="FeatherIcon.ArrowRight">
+        <GeometryGroup.Children>
+            <LineGeometry StartPoint="5,12" EndPoint="19,12" />
+            <Geometry>F1 M24,24z M0,0z M12,5L12,5 19,12 12,19</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.ArrowDown">
+        <GeometryGroup.Children>
+            <LineGeometry StartPoint="12,5" EndPoint="12,19" />
+            <Geometry>F1 M24,24z M0,0z M19,12L19,12 12,19 5,12</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.ArrowUp">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M5,12L5,12 12,5 19,12</Geometry>
+            <LineGeometry StartPoint="12,19" EndPoint="12,5" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Link">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M15,7L18,7A5,5,0,0,1,23,12A5,5,0,0,1,18,17L15,17 M9,17L6,17A5,5,0,0,1,1,12A5,5,0,0,1,6,7L9,7</Geometry>
+            <LineGeometry StartPoint="8,12" EndPoint="16,12" />
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <GeometryGroup x:Key="FeatherIcon.Refresh">
+        <GeometryGroup.Children>
+            <Geometry>F1 M24,24z M0,0z M23,4L23,4 23,10 17,10</Geometry>
+            <Geometry>F1 M24,24z M0,0z M1,20L1,20 1,14 7,14</Geometry>
+            <Geometry>F1 M24,24z M0,0z M3.51,9A9,9,0,0,1,18.36,5.64L23,10 M1,14L5.64,18.36A9,9,0,0,0,20.49,15</Geometry>
+        </GeometryGroup.Children>
+    </GeometryGroup>
+    <Geometry x:Key="FeatherIcon.Zag">F1 M24,24z M0,0z M13,2L13,2 3,14 12,14 11,22 21,10 12,10 13,2z</Geometry>
+    <Geometry x:Key="FeatherIcon.Hexagon">F1 M24,24z M0,0z M21,16L21,8A2,2,0,0,0,20,6.27L13,2.27A2,2,0,0,0,11,2.27L4,6.27A2,2,0,0,0,3,8L3,16A2,2,0,0,0,4,17.73L11,21.73A2,2,0,0,0,13,21.73L20,17.73A2,2,0,0,0,21,16z</Geometry>
+    <Geometry x:Key="FeatherIcon.Message">F1 M24,24z M0,0z M21,15A2,2,0,0,1,19,17L7,17 3,21 3,5A2,2,0,0,1,5,3L19,3A2,2,0,0,1,21,5z</Geometry>
+    <Geometry x:Key="FeatherIcon.Message.Circle">F1 M24,24z M0,0z M21,11.5A8.38,8.38,0,0,1,20.1,15.3A8.5,8.5,0,0,1,12.5,20A8.38,8.38,0,0,1,8.7,19.1L3,21 4.9,15.3A8.38,8.38,0,0,1,4,11.5A8.5,8.5,0,0,1,8.7,3.9A8.38,8.38,0,0,1,12.5,3L13,3A8.48,8.48,0,0,1,21,11L21,11.5z</Geometry>
+    <Geometry x:Key="FeatherIcon.Tools">F1 M24,24z M0,0z M14.7,6.3A1,1,0,0,0,14.7,7.7L16.3,9.3A1,1,0,0,0,17.7,9.3L21.47,5.53A6,6,0,0,1,13.53,13.47L6.62,20.38A2.12,2.12,0,0,1,3.62,17.38L10.53,10.47A6,6,0,0,1,18.47,2.53L14.71,6.29z</Geometry>
+    <Geometry x:Key="FeatherIcon.Favorite">F1 M24,24z M0,0z M14,9L14,5A3,3,0,0,0,11,2L7,11 7,22 18.28,22A2,2,0,0,0,20.28,20.3L21.66,11.3A2,2,0,0,0,19.66,9z M7,22L4,22A2,2,0,0,1,2,20L2,13A2,2,0,0,1,4,11L7,11</Geometry>
+    <Geometry x:Key="FeatherIcon.Star">F1 M24,24z M0,0z M12,2L12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26 12,2z</Geometry>
+    <Geometry x:Key="FeatherIcon.Heart">F1 M24,24z M0,0z M20.84,4.61A5.5,5.5,0,0,0,13.06,4.61L12,5.67 10.94,4.61A5.5,5.5,0,0,0,3.16,12.39L4.22,13.45 12,21.23 19.78,13.45 20.84,12.39A5.5,5.5,0,0,0,20.84,4.61z</Geometry>
+    <LineGeometry x:Key="Minus" StartPoint="5,12" EndPoint="19,12" />
+    <Geometry x:Key="FeatherIcon.Left">F1 M24,24z M0,0z M15,18L15,18 9,12 15,6</Geometry>
+    <Geometry x:Key="FeatherIcon.Right">F1 M24,24z M0,0z M9,18L9,18 15,12 9,6</Geometry>
+    <Geometry x:Key="FeatherIcon.Up">F1 M24,24z M0,0z M18,15L18,15 12,9 6,15</Geometry>
+    <Geometry x:Key="FeatherIcon.Down">F1 M24,24z M0,0z M6,9L6,9 12,15 18,9</Geometry>
+    <Geometry x:Key="FeatherIcon.Filter">F1 M24,24z M0,0z M22,3L22,3 2,3 10,12.46 10,19 14,21 14,12.46 22,3z</Geometry>
+    <Geometry x:Key="FeatherIcon.Checked">F1 M24,24z M0,0z M20,6L20,6 9,17 4,12</Geometry>
+    <Geometry x:Key="FeatherIcon.Command">F1 M24,24z M0,0z M18,3A3,3,0,0,0,15,6L15,18A3,3,0,0,0,18,21A3,3,0,0,0,21,18A3,3,0,0,0,18,15L6,15A3,3,0,0,0,3,18A3,3,0,0,0,6,21A3,3,0,0,0,9,18L9,6A3,3,0,0,0,6,3A3,3,0,0,0,3,6A3,3,0,0,0,6,9L18,9A3,3,0,0,0,21,6A3,3,0,0,0,18,3z</Geometry>
+    <Geometry x:Key="FeatherIcon.Minimum">F1 M24,24z M0,0z M8,3L8,6A2,2,0,0,1,6,8L3,8 M21,8L18,8A2,2,0,0,1,16,6L16,3 M16,21L16,18A2,2,0,0,1,18,16L21,16 M3,16L6,16A2,2,0,0,1,8,18L8,21</Geometry>
+    <Geometry x:Key="FeatherIcon.Folder">F1 M24,24z M0,0z M22,19A2,2,0,0,1,20,21L4,21A2,2,0,0,1,2,19L2,5A2,2,0,0,1,4,3L9,3 11,6 20,6A2,2,0,0,1,22,8z</Geometry>
+    <Geometry x:Key="FeatherIcon.Chat">F1 M24,24z M0,0z M21,15A2,2,0,0,1,19,17L7,17 3,21 3,5A2,2,0,0,1,5,3L19,3A2,2,0,0,1,21,5z</Geometry>
+</ResourceDictionary>

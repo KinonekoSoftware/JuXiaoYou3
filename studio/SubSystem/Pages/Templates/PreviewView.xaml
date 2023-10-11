@@ -1,0 +1,42 @@
+﻿<Grid x:Class="Acorisoft.FutureGL.MigaStudio.Pages.Templates.PresentationView"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:f="urn:acorisoft/forest/ui"
+      xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Templates"
+      xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Templates"
+      mc:Ignorable="d"
+      d:DesignHeight="300" d:DesignWidth="300"
+      d:DataContext="{d:DesignInstance Type={x:Type thisVM:IPresentationViewModel}, IsDesignTimeCreatable=True}"
+      Margin="32">
+    <Grid.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/SubSystem;component/Resources/DataTemplates/ModuleBlockDataTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Grid.Resources>
+    <StackPanel>
+        <TextBlock FontSize="32"
+                   Text="{Binding PresentationName,Mode=OneWay}" />
+        <TextBlock FontSize="14"
+                   Foreground="{f:Brush ForegroundLevel2}"
+                   Margin="0 4"
+                   Text="{Binding PresentationAuthorList,Mode=OneWay}" />
+        <TextBlock FontSize="14"
+                   Foreground="{f:Brush ForegroundLevel2}"
+                   Margin="0 4"
+                   Text="{Binding PresentationContractList,Mode=OneWay}" />
+        <TextBlock FontSize="14"
+                   Foreground="{f:Brush ForegroundLevel2}"
+                   MaxHeight="96"
+                   Margin="0 4"
+                   TextTrimming="CharacterEllipsis"
+                   Text="{Binding PresentationIntro,Mode=OneWay}" />
+
+        <ItemsControl Margin="0 12"
+                      ItemsSource="{Binding Presentations,Mode=OneWay,IsAsync=True}" />
+    </StackPanel>
+    <Border Background="Transparent" />
+</Grid>

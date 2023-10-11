@@ -1,0 +1,19 @@
+﻿<fs:ForestWindow x:Class="Acorisoft.FutureGL.Tools.MusicPlayer.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:local="clr-namespace:Acorisoft.FutureGL.Tools.MusicPlayer"
+                 xmlns:fs="urn:acorisoft/forest/shell"
+                 mc:Ignorable="d"
+                 ExtendToTitleBar="True"
+                 MaxHeight="640"
+                 MinHeight="640"
+                 MaxWidth="384"
+                 MinWidth="384">
+    <fs:ForestWindow.TitleBar>
+        <fs:TitleBar HorizontalAlignment="Right"
+                     VerticalAlignment="Top" />
+    </fs:ForestWindow.TitleBar>
+    <local:MusicPlayerView />
+</fs:ForestWindow>

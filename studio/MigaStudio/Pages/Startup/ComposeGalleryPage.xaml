@@ -1,0 +1,162 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.ComposeGalleryPage"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:thisModel="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models;assembly=MigaStudio.UI"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:studio="urn:acorisoft/studio"
+                     xmlns:doc="clr-namespace:Acorisoft.FutureGL.MigaDB.Documents;assembly=MigaDB"
+                     xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters;assembly=SubSystem"
+                     mc:Ignorable="d"
+                     Padding="16"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:ComposeGalleryViewModel}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+
+        <thisConverters:PageIndexConverter x:Key="PageIndex"/>
+        <thisVM:ComposeGalleryViewModelProxy x:Key="ViewModel" ViewModel="{Binding}" />
+        <DataTemplate DataType="{x:Type doc:ComposeCache}">
+            <studio:DocumentCard Background="{f:Brush BackgroundLevel1}"
+                                 Command="{Binding Source={StaticResource ViewModel}, Path=ViewModel.OpenComposeCommand}"
+                                 CommandParameter="{Binding}"
+                                 Id="{Binding Id,Mode=OneWay}"
+                                 Title="{Binding Name,Mode=OneWay}"
+                                 TimeOfCreated="{Binding TimeOfCreated,Mode=OneWay}"
+                                 TimeOfModified="{Binding TimeOfModified,Mode=OneWay}"
+                                 ContentLength="{Binding Length, Mode=OneWay,FallbackValue=0,TargetNullValue=0}"
+                                 Height="160"
+                                 Width="480">
+                <studio:DocumentCard.ContextMenu>
+                    <f:ContextMenu>
+                        <f:MenuItem Header="{f:Language global.Edit}"
+                                    Command="{Binding Source={StaticResource ViewModel}, Path=ViewModel.OpenComposeCommand}"
+                                    CommandParameter="{Binding}"
+                                    Icon="{StaticResource FeatherIcon.Edit}" />
+
+                        <Separator />
+
+                        <f:MenuItem Header="{f:Language global.Remove}"
+                                    Command="{Binding Source={StaticResource ViewModel}, Path=ViewModel.RemoveComposeCommand}"
+                                    CommandParameter="{Binding}"
+                                    Icon="{StaticResource FeatherIcon.MinusCircle}" />
+                    </f:ContextMenu>
+                </studio:DocumentCard.ContextMenu>
+            </studio:DocumentCard>
+        </DataTemplate>
+    </UserControl.Resources>
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Bottom"
+                    HorizontalAlignment="Center"
+                    Orientation="Horizontal"
+                    Height="48">
+            <ftk:ToolButton Content="{f:Language global.firstPage}"
+                            Command="{Binding FirstPageCommand}"
+                            Icon="{StaticResource FeatherIcon.ChevronsLeft}" />
+
+            <ftk:ToolButton Content="{f:Language global.previousPage}"
+                            Command="{Binding PreviousPageCommand}"
+                            Icon="{StaticResource FeatherIcon.Left}" />
+
+            <f:SingleLine BorderThickness="0"
+                          Margin="0 6"
+                          Text="{Binding EditablePageIndex,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged,Converter={StaticResource PageIndex}}"
+                          HorizontalAlignment="Center"
+                          HorizontalContentAlignment="Center"
+                          VerticalContentAlignment="Center"
+                          Width="64" />
+
+            <ftk:ToolButton Content="{f:Language global.nextPage}"
+                            Command="{Binding NextPageCommand}"
+                            Icon="{StaticResource FeatherIcon.Right}" />
+
+            <ftk:ToolButton Content="{f:Language global.lastPage}"
+                            Command="{Binding LastPageCommand}"
+                            Icon="{StaticResource FeatherIcon.ChevronsRight}" />
+        </StackPanel>
+
+        <f:ForestSection Header="写作">
+            <f:ForestSection.ToolBar>
+                <StackPanel HorizontalAlignment="Right"
+                            Margin="0 0 0 4"
+                            Orientation="Horizontal">
+                    <ftk:ToolButton Content="{f:Language global.add}"
+                                    Command="{Binding AddComposeCommand}"
+                                    Icon="{StaticResource FeatherIcon.Plus}"
+                                    ShowText="True" />
+
+                    <ftk:DropDownButton Content="{f:Language global.orderBy}"
+                                        Icon="{StaticResource FeatherIcon.Filter}"
+                                        ShowText="True">
+                        <ftk:DropDownButton.ContextMenu>
+                            <f:ContextMenu>
+                                <f:MenuItem Header="{f:Language global.ascendingByName}"
+                                            Command="{Binding SetOrderByMethodCommand}">
+                                    <f:MenuItem.CommandParameter>
+                                        <thisModel:OrderByMethods>AscendingByName</thisModel:OrderByMethods>
+                                    </f:MenuItem.CommandParameter>
+                                </f:MenuItem>
+                                <f:MenuItem Header="{f:Language global.descendingByName}"
+                                            Command="{Binding SetOrderByMethodCommand}">
+                                    <f:MenuItem.CommandParameter>
+                                        <thisModel:OrderByMethods>DescendingByName</thisModel:OrderByMethods>
+                                    </f:MenuItem.CommandParameter>
+                                </f:MenuItem>
+                                <f:MenuItem Header="{f:Language global.ascendingByTimeOfCreated}"
+                                            Command="{Binding SetOrderByMethodCommand}">
+                                    <f:MenuItem.CommandParameter>
+                                        <thisModel:OrderByMethods>AscendingByTimeOfCreated</thisModel:OrderByMethods>
+                                    </f:MenuItem.CommandParameter>
+                                </f:MenuItem>
+                                <f:MenuItem Header="{f:Language global.descendingByTimeOfCreated}"
+                                            Command="{Binding SetOrderByMethodCommand}">
+                                    <f:MenuItem.CommandParameter>
+                                        <thisModel:OrderByMethods>DescendingByTimeOfCreated</thisModel:OrderByMethods>
+                                    </f:MenuItem.CommandParameter>
+                                </f:MenuItem>
+                                <f:MenuItem Header="{f:Language global.ascendingByTimeOfModified}"
+                                            Command="{Binding SetOrderByMethodCommand}">
+                                    <f:MenuItem.CommandParameter>
+                                        <thisModel:OrderByMethods>AscendingByTimeOfModified</thisModel:OrderByMethods>
+                                    </f:MenuItem.CommandParameter>
+                                </f:MenuItem>
+                                <f:MenuItem Header="{f:Language global.descendingByTimeOfModified}"
+                                            Command="{Binding SetOrderByMethodCommand}">
+                                    <f:MenuItem.CommandParameter>
+                                        <thisModel:OrderByMethods>DescendingByTimeOfModified</thisModel:OrderByMethods>
+                                    </f:MenuItem.CommandParameter>
+                                </f:MenuItem>
+                            </f:ContextMenu>
+                        </ftk:DropDownButton.ContextMenu>
+                    </ftk:DropDownButton>
+
+                    <f:ClosableSingleLine f:XamlAssist.IsDeferred="True"
+                                          f:XamlAssist.Text="{Binding FilterString,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                          Margin="8 0"
+                                          KeyUp="SearchPage_OnKeyUp"
+                                          Watermark="{f:Language global.search}"
+                                          Width="192" />
+
+                    <ftk:ToolButton Content="{f:Language global.search}"
+                                    Command="{Binding SearchPageCommand}"
+                                    Icon="{StaticResource FeatherIcon.Search}"
+                                    ShowText="True" />
+                </StackPanel>
+            </f:ForestSection.ToolBar>
+            <ScrollViewer DockPanel.Dock="Top"
+                          HorizontalScrollBarVisibility="Disabled">
+                <ItemsControl ItemsSource="{Binding Collection,Mode=OneWay,IsAsync=True}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+            </ScrollViewer>
+
+
+        </f:ForestSection>
+    </DockPanel>
+</f:ForestUserControl>

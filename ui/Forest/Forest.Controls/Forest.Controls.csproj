@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <RootNamespace>Acorisoft.FutureGL.Forest</RootNamespace>
+        <OutDir>../../../Builds/Forest</OutDir>
+        <UseWPF>true</UseWPF>
+        <Configurations>Debug;Release</Configurations>
+        <Description>Forest是一个UI框架，用于JuXiaoYou</Description>
+        <Copyright>all copyright reserved by luoyisi</Copyright>
+        <PackageIcon>橘小柚_9.png</PackageIcon>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Forest\Forest.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="F:\Repository\FutureGL\assets\橘小柚_9.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+      <Resource Include="ColorPicker\Images\CircularHueGradient.png" />
+      <Resource Include="ColorPicker\Images\transparentbg_mini.png" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+    </ItemGroup>
+</Project>

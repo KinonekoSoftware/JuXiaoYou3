@@ -1,0 +1,42 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <RootNamespace>Acorisoft.FutureGL.Forest</RootNamespace>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Forest.Controls\Forest.Controls.csproj" />
+      <ProjectReference Include="..\Forest.Shell\Forest.Shell.csproj" />
+      <ProjectReference Include="..\Forest\Forest.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="WPF-UI" Version="2.0.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Languages\cn.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Languages\en.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Languages\fr.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Languages\jp.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Languages\kr.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Languages\ru.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

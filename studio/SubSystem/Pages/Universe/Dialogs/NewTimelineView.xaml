@@ -1,0 +1,30 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.Universe.Dialogs.NewTimelineView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Universe"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Universe.Dialogs"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:NewTimelineViewModel}, IsDesignTimeCreatable=True}"
+                     Height="360"
+                     Width="480">
+    <f:DialogPage CancelCommand="{Binding CancelCommand}"
+                  CompletedCommand="{Binding CompletedCommand}"
+                  Title="{Binding Title}">
+        <DockPanel>
+            <f:HeaderedSingleLine DockPanel.Dock="Top"
+                                  Header="名字"
+                                  Margin="0 6"
+                                  Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"/>
+            
+            <f:HeaderedMultiLine Header="介绍"
+                                 Margin="0 6"
+                                 Text="{Binding Intro,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}"
+                                 TextWrapping="Wrap"/>
+        </DockPanel>
+        
+    </f:DialogPage>
+</f:ForestUserControl>

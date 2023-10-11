@@ -1,0 +1,59 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.HomePage"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:model="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:fs="urn:acorisoft/forest/shell"
+                     xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters"
+                     xmlns:te="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Templates;assembly=SubSystem"
+                     xmlns:ps="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Services;assembly=SubSystem"
+                     mc:Ignorable="d"
+                     d:DesignHeight="720"
+                     d:DesignWidth="1280"
+                     d:DataContext="{d:DesignInstance Type={x:Type local:HomeViewModel}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+        <thisConverters:MainFeatureConverter x:Key="NameConverter"/>
+    </UserControl.Resources>
+    <DockPanel>
+        <f:ListBox DockPanel.Dock="Left"
+                   f:XamlAssist.GroupName="GroupId"
+                   SelectedItem="{Binding SelectedFeature,Mode=TwoWay}"
+                   ItemsSource="{Binding Features,Mode=OneWay}"
+                   Margin="16 16 8 16"
+                   Width="280">
+            <f:ListBox.ItemTemplate>
+                <DataTemplate DataType="{x:Type model:MainFeature}">
+                    <TextBlock Margin="4"
+                               Text="{Binding Converter={StaticResource NameConverter}}"/>
+                </DataTemplate>
+            </f:ListBox.ItemTemplate>
+            <f:ListBox.GroupStyle>
+                <GroupStyle>
+                    <GroupStyle.ContainerStyle>
+                        <Style TargetType="{x:Type GroupItem}">
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="{x:Type GroupItem}">
+                                        <DockPanel>
+                                            <TextBlock DockPanel.Dock="Top"
+                                                       FontWeight="Bold"
+                                                       Text="{Binding Name, Converter={StaticResource NameConverter}}"
+                                                       VerticalAlignment="Center" />
+                                            <ItemsPresenter Margin="24 8"/>
+                                        </DockPanel>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </GroupStyle.ContainerStyle>
+                </GroupStyle>
+            </f:ListBox.GroupStyle>
+        </f:ListBox>
+
+        <fs:ViewHost ViewModel="{Binding SelectedViewModel,Mode=OneWay}"/>
+    </DockPanel>
+</f:ForestUserControl>

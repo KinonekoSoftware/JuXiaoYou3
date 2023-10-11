@@ -1,0 +1,76 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.Forest.Views.ObsoleteView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.Forest.Views"
+             xmlns:app="clr-namespace:Acorisoft.FutureGL.Forest"
+             xmlns:f="urn:acorisoft/forest/ui"
+             mc:Ignorable="d"
+             d:DesignHeight="384"
+             d:DesignWidth="480"
+             d:DataContext="{d:DesignInstance Type={x:Type local:ObsoleteViewModel},IsDesignTimeCreatable = True}"
+             Width="480"
+                     Height="320"
+             MinHeight="320"
+                     MaxHeight="384">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/BasicIcon.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/Image.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/CommonStyles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <Border Background="{f:BackgroundBrush}"
+            CornerRadius="10"
+            BorderThickness="0 4 0 0"
+            BorderBrush="#CA5100"
+            Padding="16">
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="1*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <!-- 图标 -->
+            <Path Grid.Row="0"
+                  Data="{StaticResource FeatherIcon.Trash}"
+                  Margin="8"
+                  Width="41"
+                  Height="41"
+                  Stroke="#CA5100"
+                  StrokeThickness="3"
+                  Stretch="Uniform" />
+
+            <!-- 标题 -->
+            <TextBlock Grid.Row="1"
+                       Foreground="#CA5100"
+                       Text="{Binding Title,Mode=OneWay,FallbackValue=Delete}"
+                       Style="{StaticResource TextBlock.DialogTitle}"/>
+
+
+            <ScrollViewer Grid.Row="2"
+                          Margin="16">
+                <TextBlock FontSize="16"
+                           HorizontalAlignment="Center"
+                           Text="{Binding Content,Mode=OneWay,FallbackValue=NoData}"
+                           TextWrapping="Wrap" />
+            </ScrollViewer>
+
+            <!-- 按钮 -->
+            <!-- 按钮 -->
+            <f:DialogButton Grid.Row="3"
+                            Icon="{StaticResource FeatherIcon.Checked}"
+                            IconSize="29"
+                            Content="{Binding CompleteButtonText,Mode=OneWay}"
+                            Command="{Binding CompletedCommand}"
+                            Height="48"
+                            Margin="16 16 16 8"
+                            Purpose="Obsolete"/>
+        </Grid>
+    </Border>
+</f:ForestUserControl>

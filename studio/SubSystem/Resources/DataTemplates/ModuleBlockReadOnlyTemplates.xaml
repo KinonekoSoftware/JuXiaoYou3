@@ -1,0 +1,10 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:mb="clr-namespace:Acorisoft.FutureGL.MigaDB.Data.Templates.Modules;assembly=MigaDB"
+                    xmlns:subTemp="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models.Modules"
+                    xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                    xmlns:color="clr-namespace:ColorPicker;assembly=Forest.Controls"
+                    xmlns:f="urn:acorisoft/forest/ui"
+                    xmlns:studio="urn:acorisoft/studio">
+    
+</ResourceDictionary>

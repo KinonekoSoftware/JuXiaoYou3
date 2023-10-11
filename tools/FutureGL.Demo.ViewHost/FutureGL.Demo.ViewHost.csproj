@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <UseWPF>true</UseWPF>
+        <OutDir>../../Builds/Tools/prototype</OutDir>
+        <RootNamespace>Acorisoft.FutureGL.Demo.ViewHost</RootNamespace>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\frameworks\MigaDB.Share\MigaDB.Share.csproj" />
+      <ProjectReference Include="..\..\frameworks\MigaDB\MigaDB.csproj" />
+      <ProjectReference Include="..\..\frameworks\MigaUtils\MigaUtils.csproj" />
+      <ProjectReference Include="..\..\generators\MigaGen.App\MigaGen.App.csproj" OutputItemType="analyzer" ReferenceOutputAssembly="false" />
+      <ProjectReference Include="..\..\studio\MigaStudio.UI\MigaStudio.UI.csproj" />
+      <ProjectReference Include="..\..\studio\SubSystem\SubSystem.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Controls\Forest.Controls.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest\Forest.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="cn.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+</Project>

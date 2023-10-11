@@ -1,0 +1,57 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <OutDir>../../Builds/Plugins</OutDir>
+        <RootNamespace>Acorisoft.FutureGL.MigaStudio.Inspiration</RootNamespace>
+        <UseWPF>true</UseWPF>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <AssemblyVersion>3.0.0</AssemblyVersion>
+        <FileVersion>3.0.0.0</FileVersion>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <LangVersion>latest</LangVersion>
+        <Deterministic>False</Deterministic>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+        <NoWarn>CS7035</NoWarn>
+    </PropertyGroup>
+
+
+    <ItemGroup>
+        <ProjectReference Include="..\..\frameworks\MigaDB\MigaDB.csproj" />
+        <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj" />
+        <ProjectReference Include="..\..\ui\Forest\Forest\Forest.csproj" />
+        <ProjectReference Include="..\MigaStudio.UI\MigaStudio.UI.csproj" />
+        <ProjectReference Include="..\SubSystem.Core\SubSystem.Core.csproj" />
+        <ProjectReference Condition="'$(Configuration)'=='DEBUG'" Include="..\..\generators\MigaStudio.TestGen\MigaStudio.TestGen.csproj" OutputItemType="analyzer" ReferenceOutputAssembly="false" />
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <None Remove="Languages\cn.ini" />
+        <EmbeddedResource Include="Languages\cn.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <None Remove="Languages\en.ini" />
+        <EmbeddedResource Include="Languages\en.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <None Remove="Languages\fr.ini" />
+        <EmbeddedResource Include="Languages\fr.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <None Remove="Languages\jp.ini" />
+        <EmbeddedResource Include="Languages\jp.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <None Remove="Languages\kr.ini" />
+        <EmbeddedResource Include="Languages\kr.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+        <None Remove="Languages\ru.ini" />
+        <EmbeddedResource Include="Languages\ru.ini">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </EmbeddedResource>
+    </ItemGroup>
+    <Import Project="..\..\frameworks\MigaStudio.Version\MigaStudio.Version.projitems" Label="Shared" />
+</Project>

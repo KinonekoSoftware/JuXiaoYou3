@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Authors>罗易斯（Luoyisi）</Authors>
+        <Nullable>disable</Nullable>
+        <UseWPF>true</UseWPF> 
+        <OutDir>../../Builds/Tools/prototype</OutDir>
+        <RootNamespace>Acorisoft.FutureGL.MigaStudio</RootNamespace>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <ApplicationIcon>icon_repair.ico</ApplicationIcon>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.0</FileVersion>
+        <NeutralLanguage>zh</NeutralLanguage>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\..\studio\MigaStudio.UI\MigaStudio.UI.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Controls\Forest.Controls.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest\Forest.csproj" />
+    </ItemGroup>
+    <ItemGroup>
+      <PackageReference Include="GraphShape.Controls" Version="1.2.2" />
+    </ItemGroup>
+
+</Project>

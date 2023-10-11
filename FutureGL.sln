@@ -1,0 +1,42 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutureGL.Version", "scraffolds\FutureGL.Version\FutureGL.Version.csproj", "{A904FE54-2A74-45B0-ABD4-B610E59E13FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigaDB.Share", "frameworks\MigaDB.Share\MigaDB.Share.csproj", "{4112CD44-49C6-4C11-A17F-740E2C1F2686}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigaDB", "frameworks\MigaDB\MigaDB.csproj", "{6C93C19E-C4E7-476A-85C4-339651397585}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigaDB.Tests", "tests\MigaDB.Tests\MigaDB.Tests.csproj", "{CCC0F69E-F143-4734-A3FB-CBAE327244B6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MigaUtils", "frameworks\MigaUtils\MigaUtils.csproj", "{27843C90-3F9E-4D5B-8632-F46DE1C56A9A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A904FE54-2A74-45B0-ABD4-B610E59E13FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A904FE54-2A74-45B0-ABD4-B610E59E13FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A904FE54-2A74-45B0-ABD4-B610E59E13FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A904FE54-2A74-45B0-ABD4-B610E59E13FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4112CD44-49C6-4C11-A17F-740E2C1F2686}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{4112CD44-49C6-4C11-A17F-740E2C1F2686}.Debug|Any CPU.Build.0 = Debug|x86
+		{4112CD44-49C6-4C11-A17F-740E2C1F2686}.Release|Any CPU.ActiveCfg = Release|x86
+		{4112CD44-49C6-4C11-A17F-740E2C1F2686}.Release|Any CPU.Build.0 = Release|x86
+		{6C93C19E-C4E7-476A-85C4-339651397585}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6C93C19E-C4E7-476A-85C4-339651397585}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6C93C19E-C4E7-476A-85C4-339651397585}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{6C93C19E-C4E7-476A-85C4-339651397585}.Debug|Any CPU.Build.0 = Debug|x86
+		{CCC0F69E-F143-4734-A3FB-CBAE327244B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCC0F69E-F143-4734-A3FB-CBAE327244B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCC0F69E-F143-4734-A3FB-CBAE327244B6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{CCC0F69E-F143-4734-A3FB-CBAE327244B6}.Debug|Any CPU.Build.0 = Debug|x86
+		{27843C90-3F9E-4D5B-8632-F46DE1C56A9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27843C90-3F9E-4D5B-8632-F46DE1C56A9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27843C90-3F9E-4D5B-8632-F46DE1C56A9A}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{27843C90-3F9E-4D5B-8632-F46DE1C56A9A}.Debug|Any CPU.Build.0 = Debug|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+	EndGlobalSection
+EndGlobal

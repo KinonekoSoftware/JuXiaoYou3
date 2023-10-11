@@ -1,0 +1,148 @@
+﻿<f:ForestUserControl x:Class="ViewHost.Views.CharacterDocumentView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:local="clr-namespace:ViewHost.Views"
+                     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+                     xmlns:c="clr-namespace:Acorisoft.FutureGL.Forest.Controls;assembly=Forest.Controls"
+                     xmlns:studio="urn:acorisoft/studio"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300"
+                     d:DesignWidth="300">
+    <UserControl.Resources>
+    </UserControl.Resources>
+    <Grid Background="Transparent"
+          Margin="0 36 0 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ContextMenu>
+            <f:ContextMenu>
+                <f:MenuItem Header="TopItem" />
+                <f:MenuItem Header="TopHeader">
+                    <f:MenuItem Header="SubItem" />
+                    <Separator />
+                    <f:MenuItem Header="SubHeader">
+                        <f:MenuItem Header="Test" />
+                    </f:MenuItem>
+                    <f:MenuItem Header="SubItemWithIcon"
+                                Icon="{StaticResource FeatherIcon.Plus}" />
+                    <f:MenuItem Header="SubHeaderWithIcon"
+                                Icon="{StaticResource FeatherIcon.Plus}">
+                        <f:MenuItem Header="TestWithIcon"
+                                    Icon="{StaticResource FeatherIcon.Plus}" />
+                    </f:MenuItem>
+                </f:MenuItem>
+                <f:MenuItem Header="TopItemCheckable"
+                            IsCheckable="True" />
+                <f:MenuItem Header="TopItemWithIcon"
+                            Icon="{StaticResource FeatherIcon.Plus}" />
+                <f:MenuItem Header="TopHeaderWithIcon"
+                            Icon="{StaticResource FeatherIcon.Plus}">
+                    <f:MenuItem Header="SubItemWithIcon"
+                                Icon="{StaticResource FeatherIcon.Plus}" />
+                    <f:MenuItem Header="SubHeaderWithIcon"
+                                Icon="{StaticResource FeatherIcon.Plus}">
+                        <f:MenuItem Header="TestWithIcon"
+                                    Icon="{StaticResource FeatherIcon.Plus}" />
+                    </f:MenuItem>
+                </f:MenuItem>
+                <f:MenuItem Header="TopItemCheckable"
+                            IsCheckable="True" />
+
+
+                <MenuItem Header="TopItem" />
+                <MenuItem Header="TopHeader">
+                    <MenuItem Header="SubItem" />
+                    <Separator />
+                    <MenuItem Header="SubHeader">
+                        <MenuItem Header="Test" />
+                    </MenuItem>
+                    <MenuItem Header="TopItemCheckable"
+                              IsCheckable="True" />
+                </MenuItem>
+                <MenuItem Header="TopItemCheckable"
+                          IsCheckable="True" />
+                <MenuItem Header="TopItemWithIcon"
+                          Icon="{StaticResource FeatherIcon.Plus}" />
+                <MenuItem Header="TopHeaderWithIcon"
+                          Icon="{StaticResource FeatherIcon.Plus}">
+                    <MenuItem Header="SubItemWithIcon"
+                              Icon="{StaticResource FeatherIcon.Plus}" />
+                    <MenuItem Header="SubHeaderWithIcon"
+                              Icon="{StaticResource FeatherIcon.Plus}">
+                        <MenuItem Header="TestWithIcon"
+                                  Icon="{StaticResource FeatherIcon.Plus}" />
+                    </MenuItem>
+                </MenuItem>
+            </f:ContextMenu>
+        </Grid.ContextMenu>
+
+        <StackPanel Grid.Row="1">
+            <f:ToggleSwitch Grid.Row="1" Content="Test" IsChecked="False"
+                            Margin="8"/>
+            
+            <studio:ActionButton Grid.Row="1" Content="Test" Icon="{StaticResource FeatherIcon.Chat}"
+                            Margin="8"/>
+            <studio:ReferenceControl Margin="8" 
+                                     Icon="{StaticResource FeatherIcon.Chat}"
+                                     IsFilled="True"/>
+            <f:SplitButton Margin="8">
+                <f:SplitButtonItem Content="Test 1"/>
+                <f:SplitButtonItem Content="Test 2"/>
+                <f:SplitButtonItem Content="Test 3"/>
+            </f:SplitButton>
+        </StackPanel>
+        <f:Menu>
+            <f:MenuItem Header="TopItem" />
+            <f:MenuItem Header="TopHeader">
+                <f:MenuItem Header="SubItem" />
+                <Separator />
+                <f:MenuItem Header="SubHeader">
+                    <f:MenuItem Header="Test" />
+                </f:MenuItem>
+                <f:MenuItem Header="TopItemCheckable"
+                            IsCheckable="True" />
+                <f:MenuItem Header="SubItemWithIcon"
+                                Icon="{StaticResource FeatherIcon.Plus}" />
+                <f:MenuItem Header="SubHeaderWithIcon"
+                                Icon="{StaticResource FeatherIcon.Plus}">
+                    <f:MenuItem Header="TestWithIcon"
+                                    Icon="{StaticResource FeatherIcon.Plus}" />
+                </f:MenuItem>
+            </f:MenuItem>
+            <f:MenuItem Header="TopItemCheckable"
+                        IsCheckable="True" />
+            <f:MenuItem Header="TopItemWithIcon"
+                        Icon="{StaticResource FeatherIcon.Plus}" />
+            <f:MenuItem Header="TopHeaderWithIcon"
+                        Icon="{StaticResource FeatherIcon.Plus}">
+                <f:MenuItem Header="SubItemWithIcon"
+                            Icon="{StaticResource FeatherIcon.Plus}" />
+                <f:MenuItem Header="SubHeaderWithIcon"
+                            Icon="{StaticResource FeatherIcon.Plus}">
+                    <f:MenuItem Header="TestWithIcon"
+                                Icon="{StaticResource FeatherIcon.Plus}" />
+                </f:MenuItem>
+            </f:MenuItem>
+
+
+            <MenuItem Header="TopItem" />
+            <MenuItem Header="TopHeader">
+                <MenuItem Header="SubItem" />
+                <Separator />
+                <MenuItem Header="SubHeader">
+                    <MenuItem Header="Test" />
+                </MenuItem>
+                <MenuItem Header="TopItemCheckable"
+                          IsCheckable="True" />
+            </MenuItem>
+            <MenuItem Header="TopItemCheckable"
+                      IsCheckable="True" />
+        </f:Menu>
+    </Grid>
+</f:ForestUserControl>

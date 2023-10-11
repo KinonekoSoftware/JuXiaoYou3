@@ -1,0 +1,24 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Views.LaunchView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:vm="clr-namespace:Acorisoft.FutureGL.MigaStudio.ViewModels"
+             xmlns:f="urn:acorisoft/forest/ui"
+             mc:Ignorable="d"
+             Background="{f:Brush HighlightA4}"
+             d:DesignHeight="720" 
+             d:DesignWidth="1280"
+             d:DataContext="{d:DesignInstance Type={x:Type vm:LaunchViewController}, IsDesignTimeCreatable=True}">
+    <StackPanel HorizontalAlignment="Center"
+                VerticalAlignment="Center">
+        <TextBlock Foreground="{f:ForegroundInHighlightBrush}"
+                   FontSize="48"
+                   FontWeight="Bold"
+                   FontFamily="华康勘亭流W9(P)"
+                   Text="橘小柚"/>
+        
+        <TextBlock FontSize="14"
+                   Text="{Binding Caption,Mode=OneWay}"/>
+    </StackPanel>
+</f:ForestUserControl>

@@ -1,0 +1,49 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <RootNamespace>Acorisoft.FutureGL.Forest</RootNamespace>
+        <OutDir>../../../Builds/Forest</OutDir>
+        <UseWPF>true</UseWPF>
+        <Configurations>Debug;Release</Configurations>
+        <Authors>罗易斯（Luoyisi）</Authors>
+        <AssemblyVersion>1.0.0</AssemblyVersion>
+        <FileVersion>1.0.0.beta1</FileVersion>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <LangVersion>latest</LangVersion>
+        <Description>Forest是一个UI框架，用于JuXiaoYou</Description>
+        <Copyright>all copy rights reserved by Luoyisi</Copyright>
+        <PackageIcon>橘小柚_9.png</PackageIcon>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Include="F:\Repository\FutureGL\assets\橘小柚_9.png">
+            <Pack>True</Pack>
+            <PackagePath>\</PackagePath>
+        </None>
+    </ItemGroup>
+    <ItemGroup>
+        <PackageReference Include="DryIoc.dll" Version="4.8.2" />
+        <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.39" />
+        <PackageReference Include="System.Reactive" Version="5.0.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Effects" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Effects\Bitmaps\GrayBitmapEffect.ps" />
+      <Resource Include="Effects\Bitmaps\GrayBitmapEffect.ps" />
+      <None Update="ico.png">
+        <Pack>True</Pack>
+      </None>
+      <None Remove="Effects\Bitmaps\TintEffect.ps" />
+      <Resource Include="Effects\Bitmaps\TintEffect.ps" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\frameworks\MigaUtils\MigaUtils.csproj" />
+    </ItemGroup>
+
+</Project>

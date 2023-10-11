@@ -1,0 +1,26 @@
+﻿<studio:TabApp x:Class="Acorisoft.FutureGL.Tools.ModuleEditor.App"
+               x:TypeArguments="vm:AppViewModel, vm:TabShell,v:TabShellView"
+               xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+               xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:local="clr-namespace:Acorisoft.FutureGL.Tools.ModuleEditor"
+               xmlns:vm="clr-namespace:Acorisoft.FutureGL.Tools.ModuleEditor.ViewModels"
+               xmlns:v="clr-namespace:Acorisoft.FutureGL.Tools.ModuleEditor.Views"
+               xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+               xmlns:fs="urn:acorisoft/forest/shell"
+               xmlns:f="urn:acorisoft/forest/ui"
+               xmlns:studio="urn:acorisoft/studio"
+               StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/BasicIcon.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/MaterialDesignIcon.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MigaStudio.UI;component/Resources/ContentTemplates/ListBoxItem.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Forest.Controls;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/Generic.xaml" />
+                <ui:ThemesDictionary Theme="Light" />
+                <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Styles/Wpf.Ui.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</studio:TabApp>

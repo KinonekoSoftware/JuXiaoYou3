@@ -1,0 +1,111 @@
+﻿<UserControl x:Class="Acorisoft.FutureGL.MigaStudio.Resources.EmptyState.CollectionEmptyStateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:f="urn:acorisoft/forest/ui"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.EmptyState"
+             mc:Ignorable="d"
+             d:DesignHeight="300" 
+             d:DesignWidth="300"
+             Height="420"
+             Width="480">
+    <UserControl.Resources>
+        <DrawingImage x:Key="EmptyState_Image">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V632.17383 H647.63626 V0 H0 Z">
+                    <DrawingGroup Transform="1,0,0,1,-276.18187,-133.91309">
+                        <GeometryDrawing Brush="#FFF2F2F2" Geometry="F1 M647.63626,632.17383z M0,0z M687.3279,276.08691L512.81813,276.08691A15.01828,15.01828,0,0,0,497.81813,291.08691L497.81813,678.93691 495.81813,679.54696 453.00807,692.65696A8.00676,8.00676,0,0,1,443.01833,687.34696L315.678,271.39691A8.00313,8.00313,0,0,1,320.98806,261.40691L386.95828,241.20691 578.20828,182.66691 644.178,162.46691A7.98927,7.98927,0,0,1,654.16824,167.76691L686.71804,274.08691z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-276.18187,-133.91309">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M647.63626,632.17383z M0,0z M725.408,274.08691L686.178,145.94691A16.99368,16.99368,0,0,0,664.948,134.66691L572.198,163.05691 380.95827,221.60693 288.20827,250.00693A17.0152,17.0152,0,0,0,276.92799,271.23693L411.00807,709.16693A17.02661,17.02661,0,0,0,427.26833,721.19693A16.78926,16.78926,0,0,0,432.23805,720.44693L495.81813,700.98693 497.81813,700.36693 497.81813,698.27693 495.81813,698.88693 431.64821,718.53693A15.01489,15.01489,0,0,1,412.91821,708.58693L278.84838,270.64693A14.97935,14.97935,0,0,1,288.79809,251.91693L381.54809,223.51693 572.78833,164.97693 665.53833,136.57693A15.15551,15.15551,0,0,1,669.94799,135.91693A15.01461,15.01461,0,0,1,684.26831,146.52693L723.31811,274.08693 723.93823,276.08693 726.01831,276.08693z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-276.18187,-133.91309">
+                        <GeometryDrawing Brush="#FFBEC936" Geometry="F1 M647.63626,632.17383z M0,0z M398.86279,261.73389A9.0157,9.0157,0,0,1,390.25146,255.36719L377.37109,213.29541A8.99884,8.99884,0,0,1,383.34229,202.05518L559.28129,148.19141A9.00867,9.00867,0,0,1,570.52201,154.16211L583.40238,196.23438A9.01029,9.01029,0,0,1,577.43168,207.4751L401.49219,261.33887A8.976,8.976,0,0,1,398.86279,261.73389z" />
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="20" RadiusY="20" Center="190.1535,24.9546" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFFFFFFF">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="12.6646" RadiusY="12.6646" Center="190.1535,24.9546" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,-276.18187,-133.91309">
+                        <GeometryDrawing Brush="#FFE6E6E6" Geometry="F1 M647.63626,632.17383z M0,0z M878.81836,716.08691L540.81836,716.08691A8.50981,8.50981,0,0,1,532.31836,707.58691L532.31836,302.58691A8.50951,8.50951,0,0,1,540.81836,294.08691L878.81836,294.08691A8.50982,8.50982,0,0,1,887.31836,302.58691L887.31836,707.58691A8.51013,8.51013,0,0,1,878.81836,716.08691z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-276.18187,-133.91309">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M647.63626,632.17383z M0,0z M723.31813,274.08691L512.81813,274.08691A17.02411,17.02411,0,0,0,495.81813,291.08691L495.81813,698.88691 497.81813,698.27691 497.81813,291.08691A15.01828,15.01828,0,0,1,512.81813,276.08691L723.93825,276.08691z M906.81813,274.08691L512.81813,274.08691A17.02411,17.02411,0,0,0,495.81813,291.08691L495.81813,749.08691A17.0241,17.0241,0,0,0,512.81813,766.08691L906.81813,766.08691A17.0241,17.0241,0,0,0,923.81813,749.08691L923.81813,291.08691A17.02411,17.02411,0,0,0,906.81813,274.08691z M921.81813,749.08691A15.01828,15.01828,0,0,1,906.81813,764.08691L512.81813,764.08691A15.01828,15.01828,0,0,1,497.81813,749.08691L497.81813,291.08691A15.01828,15.01828,0,0,1,512.81813,276.08691L906.81813,276.08691A15.01828,15.01828,0,0,1,921.81813,291.08691z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-276.18187,-133.91309">
+                        <GeometryDrawing Brush="#FFBEC936" Geometry="F1 M647.63626,632.17383z M0,0z M801.81836,318.08691L617.81836,318.08691A9.01015,9.01015,0,0,1,608.81836,309.08691L608.81836,265.08691A9.01016,9.01016,0,0,1,617.81836,256.08691L801.81836,256.08691A9.01016,9.01016,0,0,1,810.81836,265.08691L810.81836,309.08691A9.01015,9.01015,0,0,1,801.81836,318.08691z" />
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="20" RadiusY="20" Center="433.6363,105.1738" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFFFFFFF">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="12.1819" RadiusY="12.1819" Center="433.6363,105.1738" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Source="{StaticResource EmptyState_Image}"
+               Stretch="Uniform"/>
+        
+        <TextBlock Grid.Row="1"
+                   FontSize="24"
+                   Margin="0 32 0 16"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap">
+            <TextBlock.Text>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:CollectionEmptyStateView},Mode=FindAncestor}"
+                         Path="Title"
+                         Mode="OneWay"/>
+            </TextBlock.Text>
+        </TextBlock>
+
+        <TextBlock Grid.Row="2"
+                   Foreground="{f:Brush ForegroundLevel3}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap">
+            <TextBlock.Text>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:CollectionEmptyStateView},Mode=FindAncestor}"
+                         Path="SubTitle"
+                         Mode="OneWay"/>
+            </TextBlock.Text>
+        </TextBlock>
+
+        <f:CallToAction Grid.Row="3"
+                        Content="{f:Language global.add}"
+                        CornerRadius="24"
+                        Margin="0 16"
+                        Height="48"
+                        Width="160"
+                        HorizontalAlignment="Center"
+                        Icon="{StaticResource FeatherIcon.Plus}"
+                        Palette="Success">
+            <f:CallToAction.Command>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:CollectionEmptyStateView},Mode=FindAncestor}"
+                         Path="Command"
+                         Mode="OneWay"/>
+            </f:CallToAction.Command>
+        </f:CallToAction>
+    </Grid>
+</UserControl>

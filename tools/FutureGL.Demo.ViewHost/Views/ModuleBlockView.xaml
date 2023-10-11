@@ -1,0 +1,31 @@
+﻿<f:ForestUserControl x:Class="ViewHost.Views.ModuleBlockView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:local="clr-namespace:ViewHost.Views"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:mb="clr-namespace:Acorisoft.FutureGL.MigaDB.Data.Templates.Modules;assembly=MigaDB"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300"
+                     d:DesignWidth="300">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MigaStudio.UI;component/Themes/Generic.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/SubSystem;component/Resources/DataTemplates/ModuleBlockDataTemplates.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/SubSystem;component/Resources/DataTemplates/ModuleBlockEditTemplates.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <ScrollViewer>
+        <Border Background="{f:BackgroundBrush}"
+                HorizontalAlignment="Left"
+                Width="702">
+            <ItemsControl Background="{f:BackgroundBrush}"
+                          Margin="32"
+                          ItemsSource="{Binding Blocks}">
+            </ItemsControl>
+        </Border>
+    </ScrollViewer>
+</f:ForestUserControl>

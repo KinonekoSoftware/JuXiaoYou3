@@ -1,0 +1,218 @@
+﻿<UserControl x:Class="Acorisoft.FutureGL.Demo.ViewHost.Views.TimelineView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.Demo.ViewHost.Views"
+                 xmlns:f="urn:acorisoft/forest/ui"
+                 xmlns:fs="urn:acorisoft/forest/shell"
+             xmlns:ftk="urn:acorisoft/forest/toolkits"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300">
+    <ScrollViewer CanContentScroll="True" 
+                  HorizontalScrollBarVisibility="Visible"
+                  VerticalScrollBarVisibility="Visible">
+        <Canvas Height="1920"
+                Width="1920">
+            <Rectangle Canvas.Left="32" 
+                       Canvas.Top="0"
+                       Fill="{f:Brush BackgroundLevel2}"
+                       Height="1920"
+                       Width="2"/>
+
+            <DockPanel Canvas.Left="27" 
+                       Canvas.Top="32">
+                <Ellipse Stroke="{f:Brush HighlightA4}"
+                         StrokeThickness="2"
+                         Fill="{f:Brush BackgroundLevel3}"
+                         Height="12"
+                         Width="12">
+
+                </Ellipse>
+
+                <Border Background="{f:Brush HighlightA4}"
+                        CornerRadius="8"
+                        Padding="8"
+                        Margin="16 0 0 0"
+                        Width="192">
+                    <TextBlock Text="世界观开始"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                </Border>
+            </DockPanel>
+
+            <DockPanel Canvas.Left="27" 
+                       Canvas.Top="96">
+                <Ellipse Stroke="{f:Brush BackgroundLevel1}"
+                         StrokeThickness="2"
+                         Fill="{f:Brush BackgroundLevel3}"
+                         Height="12"
+                         Width="12">
+
+                </Ellipse>
+
+                <Border Background="{f:Brush BackgroundLevel1}"
+                        CornerRadius="8"
+                        Padding="8"
+                        Margin="16 0 0 0"
+                        Width="192">
+                    <TextBlock Text="太古时期"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                </Border>
+            </DockPanel>
+
+            <DockPanel Canvas.Left="27" 
+                       Canvas.Top="256">
+                <Ellipse Stroke="{f:Brush BackgroundLevel1}"
+                         StrokeThickness="2"
+                         Fill="{f:Brush BackgroundLevel3}"
+                         Height="12"
+                         Width="12">
+
+                </Ellipse>
+
+                <Border Background="{f:Brush BackgroundLevel1}"
+                        CornerRadius="8"
+                        Padding="8"
+                        Margin="16 0 0 0"
+                        Width="192">
+                    <TextBlock Text="远古时期"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                </Border>
+            </DockPanel>
+
+            <DockPanel Canvas.Left="27" 
+                       Canvas.Top="640">
+                <Ellipse Stroke="{f:Brush BackgroundLevel1}"
+                         StrokeThickness="2"
+                         Fill="{f:Brush BackgroundLevel3}"
+                         Height="12"
+                         Width="12">
+
+                </Ellipse>
+
+                <Border Background="{f:Brush BackgroundLevel1}"
+                        CornerRadius="8"
+                        Padding="8"
+                        Margin="16 0 0 0"
+                        Width="192">
+                    <TextBlock Text="近代时期"
+                               HorizontalAlignment="Left"
+                               VerticalAlignment="Center"/>
+                </Border>
+            </DockPanel>
+
+            <Grid Canvas.Left="256" 
+                  Canvas.Top="96"
+                  Background="Transparent"
+                  Height="512"
+                  Width="320">
+                <Rectangle StrokeDashArray="6 2"
+                           Stroke="#90da532c"
+                           StrokeThickness="1"
+                           RadiusX="3"
+                           RadiusY="3"
+                           Fill="#20da532c"/>
+                
+                <TextBlock Margin="16 16 0 0"
+                           Foreground="#da532c"
+                           Text="故事1"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+            </Grid>
+
+            <Grid Canvas.Left="620" 
+                  Canvas.Top="160"
+                  Background="Transparent"
+                  Height="640"
+                  Width="320">
+                <Rectangle StrokeDashArray="6 2"
+                           Stroke="#90603cba"
+                           StrokeThickness="1"
+                           RadiusX="3"
+                           RadiusY="3"
+                           Fill="#20603cba"/>
+
+                <TextBlock Margin="16 16 0 0"
+                           Foreground="#603cba"
+                           Text="故事1"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+            </Grid>
+
+            <Grid Canvas.Left="1000" 
+                  Canvas.Top="480"
+                  Background="Transparent"
+                  Height="384"
+                  Width="320">
+                <Rectangle StrokeDashArray="6 2"
+                           Stroke="#90603cba"
+                           StrokeThickness="1"
+                           RadiusX="3"
+                           RadiusY="3"
+                           Fill="#20603cba"/>
+
+                <TextBlock Margin="16 16 0 0"
+                           Foreground="#603cba"
+                           Text="故事1"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+            </Grid>
+
+            <Grid Canvas.Left="1400" 
+                  Canvas.Top="1000"
+                  Background="Transparent"
+                  Height="384"
+                  Width="320">
+                <Rectangle StrokeDashArray="6 2"
+                           Stroke="#90603cba"
+                           StrokeThickness="1"
+                           RadiusX="3"
+                           RadiusY="3"
+                           Fill="#20603cba"/>
+
+                <TextBlock Margin="16 16 0 0"
+                           Foreground="#603cba"
+                           Text="故事1"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+            </Grid>
+
+            <Border Canvas.Left="280" 
+                    Canvas.Top="144"
+                    Background="#99b433"
+                    CornerRadius="24"
+                    Height="48"
+                    Width="256">
+                <TextBlock Margin="32 16 0 0"
+                           Text="故事1"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+            </Border>
+            <Border Canvas.Left="280" 
+                    Canvas.Top="210"
+                    Background="#7e3878"
+                    CornerRadius="24"
+                    Height="48"
+                    Width="640">
+                <TextBlock Margin="32 16 0 0"
+                           Text="故事2"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+            </Border>
+            <Border Canvas.Left="640" 
+                    Canvas.Top="640"
+                    Background="#99b433"
+                    CornerRadius="24"
+                    Height="48"
+                    Width="640">
+                <TextBlock Margin="32 16 0 0"
+                           Text="故事3"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Top"/>
+            </Border>
+        </Canvas>
+    </ScrollViewer>
+</UserControl>

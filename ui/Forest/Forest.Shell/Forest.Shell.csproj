@@ -1,0 +1,58 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <RootNamespace>Acorisoft.FutureGL.Forest</RootNamespace>
+        <OutDir>../../../Builds/Forest</OutDir>
+        <UseWPF>true</UseWPF>
+        <Configurations>Debug;Release</Configurations>
+        <Authors>罗易斯（Luoyisi）</Authors>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <AssemblyVersion>1.0.3</AssemblyVersion>
+        <Version>1.0.3</Version>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <Title>Forest</Title>
+        <Description>Forest是一个UI框架，用于JuXiaoYou</Description>
+        <Copyright>All copy reserved by Luoyisi</Copyright>
+        <PackageProjectUrl>https://gitee.com/acorisoft/juxiaoyou</PackageProjectUrl>
+        <PackageLicenseUrl>https://gitee.com/acorisoft/juxiaoyou</PackageLicenseUrl>
+        <PackageIcon>橘小柚_9.png</PackageIcon>
+        <LangVersion>latest</LangVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="F:\Repository\FutureGL\assets\橘小柚_9.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\Forest.Controls\Forest.Controls.csproj" />
+      <ProjectReference Include="..\Forest\Forest.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="NLog" Version="5.1.2" />
+        <PackageReference Include="System.Reactive" Version="5.0.0" />
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Update="Themes\Generic.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Themes\BasicIcon.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+      <Page Update="Themes\MaterialDesignIcon.xaml">
+        <Generator>MSBuild:Compile</Generator>
+        <XamlRuntime>Wpf</XamlRuntime>
+        <SubType>Designer</SubType>
+      </Page>
+    </ItemGroup>
+</Project>

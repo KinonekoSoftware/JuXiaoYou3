@@ -1,0 +1,42 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.UniversePage"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:m="clr-namespace:Acorisoft.FutureGL.MigaDB.Data.DataParts;assembly=MigaDB"
+                     xmlns:studio="urn:acorisoft/studio"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters;assembly=SubSystem"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     mc:Ignorable="d"
+             UseLayoutRounding="True"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:UniverseViewModel}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+        <thisVM:UniverseViewModelProxy x:Key="ViewModel" ViewModel="{Binding}"/>
+
+        <Style TargetType="{x:Type f:TreeViewItem}" BasedOn="{StaticResource ClearType.TreeViewItem}">
+            <Setter Property="Padding" Value="8 6" />
+        </Style>
+    </UserControl.Resources>
+    <ftk:TabControl Margin="0 16 0 0"
+                    Padding="0 16 0 0">
+        <ftk:TabItem Header="基础信息">
+            <this:UniverseBasicView/>
+        </ftk:TabItem>
+        <ftk:TabItem Header="图库">
+            <this:UniverseAlbumView/>
+        </ftk:TabItem>
+        <ftk:TabItem Header="时间线">
+            <this:UniverseTimelineView/>
+        </ftk:TabItem>
+        <ftk:TabItem Header="稀有度">
+            <this:ColorServicePage/>
+        </ftk:TabItem>
+        <ftk:TabItem Header="更多">
+            <this:UniverseMoreView/>
+        </ftk:TabItem>
+    </ftk:TabControl>
+</f:ForestUserControl>

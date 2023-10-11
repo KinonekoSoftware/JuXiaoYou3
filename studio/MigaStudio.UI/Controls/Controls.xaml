@@ -1,0 +1,976 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:ctrl="clr-namespace:Acorisoft.FutureGL.MigaStudio.Controls"
+                    xmlns:f="urn:acorisoft/forest/ui"
+                    xmlns:ftk="urn:acorisoft/forest/toolkits">
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/Forest.Controls;component/UI/Tools/Themes.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+
+    <SolidColorBrush x:Key="Transparent" Color="Transparent" />
+    <Geometry x:Key="ArrowLeft">M 16 8 L 16 8 0 0 128 0</Geometry>
+    <Geometry x:Key="ArrowRight">M 0 8 L 0 8 128 8 112 0</Geometry>
+    <ctrl:DoubleToLog10Converter x:Key="Log10Converter" />
+    <ctrl:EqualityToBooleanConverter x:Key="EqualityConverter" />
+
+    <Style TargetType="{x:Type ctrl:ActionButton}">
+        <Setter Property="Background" Value="{f:BackgroundBrush}" />
+        <Setter Property="Foreground" Value="{f:ForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="{f:Brush BorderBrush}" />
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="Border.CornerRadius" Value="3" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:ActionButton}">
+                    <Border x:Name="ContentBorder"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Width="{TemplateBinding Width}"
+                            Height="{TemplateBinding Height}"
+                            MinWidth="{TemplateBinding MinWidth}"
+                            MinHeight="{TemplateBinding MinHeight}"
+                            Padding="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                        <Grid HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Path x:Name="ControlIcon"
+                                  Grid.Column="0"
+                                  Height="{TemplateBinding IconSize}"
+                                  Width="{TemplateBinding IconSize}"
+                                  Stretch="Uniform"
+                                  Data="{TemplateBinding Icon}"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center" />
+
+                            <ContentPresenter x:Name="ContentPresenter"
+                                              Grid.Column="1"
+                                              Margin="8 0"
+                                              VerticalAlignment="Center"
+                                              Content="{TemplateBinding Content}"
+                                              TextElement.Foreground="{TemplateBinding Foreground}" />
+
+                            <Path x:Name="ChevronIcon"
+                                  Grid.Column="2"
+                                  Height="{TemplateBinding IconSize}"
+                                  Width="{TemplateBinding IconSize}"
+                                  Stroke="{f:ForegroundBrush}"
+                                  StrokeThickness="1"
+                                  Stretch="Uniform"
+                                  Data="F1 M24,24z M0,0z M9,18L9,18 15,12 9,6"
+                                  HorizontalAlignment="Center"
+                                  VerticalAlignment="Center"
+                                  Visibility="Collapsed"/>
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="ShowArrow" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="ChevronIcon" />
+                            <Setter Property="Margin" Value="14 0 0 0"  TargetName="ChevronIcon" />
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" Value="{f:Brush BackgroundLevel2}" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Background" Value="{f:Brush BackgroundLevel1}" />
+                        </Trigger>
+                        <Trigger Property="IsFilled" Value="True">
+                            <Setter Property="Fill" Value="{f:ForegroundBrush}" TargetName="ControlIcon" />
+                            <Setter Property="StrokeThickness" Value="0" TargetName="ControlIcon" />
+                            <Setter Property="Stroke" Value="{x:Null}" TargetName="ControlIcon" />
+                        </Trigger>
+                        <Trigger Property="IsFilled" Value="False">
+                            <Setter Property="Stroke" Value="{f:ForegroundBrush}" TargetName="ControlIcon" />
+                            <Setter Property="StrokeThickness" Value="1" TargetName="ControlIcon" />
+                            <Setter Property="Fill" Value="{x:Null}" TargetName="ControlIcon" />
+                        </Trigger>
+
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="IsFilled" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{f:Brush BackgroundLevel5}" />
+                            <Setter TargetName="ContentPresenter" Value="{f:Brush ForegroundDisabled}" Property="TextElement.Foreground" />
+                            <Setter TargetName="ControlIcon" Value="{f:Brush ForegroundDisabled}" Property="Stroke" />
+                            <Setter TargetName="ChevronIcon" Value="{f:Brush ForegroundDisabled}" Property="Stroke" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False" />
+                                <Condition Property="IsFilled" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{f:Brush BackgroundLevel5}" />
+                            <Setter TargetName="ContentPresenter" Value="{f:Brush ForegroundDisabled}" Property="TextElement.Foreground" />
+                            <Setter TargetName="ControlIcon" Value="{f:Brush ForegroundDisabled}" Property="Fill" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:DegreeControl}">
+        <Setter Property="Height" Value="32" />
+        <Setter Property="MaxWidth" Value="240" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:DegreeControl}">
+                    <Grid>
+                        <ItemsControl x:Name="Items"
+                                      HorizontalAlignment="Left"
+                                      Margin="1 0 0 0"
+                                      SnapsToDevicePixels="True"
+                                      VerticalAlignment="Center"
+                                      UseLayoutRounding="True"
+                                      Width="240">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"
+                                                SnapsToDevicePixels="True"
+                                                UseLayoutRounding="True" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:RatingControl}">
+        <Setter Property="Height" Value="32" />
+        <Setter Property="MaxWidth" Value="240" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:RatingControl}">
+                    <Grid>
+                        <ItemsControl x:Name="Items"
+                                      HorizontalAlignment="Left"
+                                      SnapsToDevicePixels="True"
+                                      VerticalAlignment="Center"
+                                      UseLayoutRounding="True"
+                                      Width="240">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"
+                                                SnapsToDevicePixels="True"
+                                                UseLayoutRounding="True" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:FavoriteControl}">
+        <Setter Property="Height" Value="32" />
+        <Setter Property="MaxWidth" Value="240" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:FavoriteControl}">
+                    <Grid>
+                        <ItemsControl x:Name="Items"
+                                      HorizontalAlignment="Left"
+                                      SnapsToDevicePixels="True"
+                                      VerticalAlignment="Center"
+                                      UseLayoutRounding="True"
+                                      Width="240">
+                            <ItemsControl.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal"
+                                                SnapsToDevicePixels="True"
+                                                UseLayoutRounding="True" />
+                                </ItemsPanelTemplate>
+                            </ItemsControl.ItemsPanel>
+                        </ItemsControl>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type ctrl:BinaryControl}">
+        <Setter Property="Header" Value="36" />
+        <Setter Property="IsThreeState" Value="False" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="Background" Value="{StaticResource Transparent}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="0 0 0 0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:BinaryControl}">
+                    <Border x:Name="bd"
+                            Background="{TemplateBinding Background}"
+                            BorderBrush="{TemplateBinding BorderBrush}"
+                            BorderThickness="{TemplateBinding BorderThickness}"
+                            Padding="{TemplateBinding Padding}">
+                        <Grid Background="Transparent">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="18" />
+                                <ColumnDefinition />
+                                <ColumnDefinition Width="18" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+
+                            <ContentPresenter x:Name="PART_Negative"
+                                              Grid.Column="0"
+                                              Content="{TemplateBinding Negative}"
+                                              ContentTemplate="{TemplateBinding NegativeTemplate}"
+                                              ContentStringFormat="{TemplateBinding NegativeStringFormat}"
+                                              ContentTemplateSelector="{TemplateBinding NegativeTemplateSelector}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              TextElement.Foreground="{f:Brush ForegroundLevel3}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              Margin="0 0 16 0"
+                                              SnapsToDevicePixels="True" />
+
+                            <Rectangle Grid.Column="1"
+                                       Grid.ColumnSpan="3"
+                                       Fill="{f:Brush AdaptiveLevel3}"
+                                       Height="2"
+                                       VerticalAlignment="Center"
+                                       HorizontalAlignment="Stretch" />
+
+                            <Border x:Name="PART_Thumb"
+                                    Grid.Column="2"
+                                    CornerRadius="999"
+                                    Background="LightGray"
+                                    Height="18"
+                                    Width="18"
+                                    VerticalAlignment="Center" />
+
+                            <ContentPresenter x:Name="PART_Positive"
+                                              Grid.Column="4"
+                                              Content="{TemplateBinding Positive}"
+                                              ContentTemplate="{TemplateBinding PositiveTemplate}"
+                                              ContentStringFormat="{TemplateBinding PositiveStringFormat}"
+                                              ContentTemplateSelector="{TemplateBinding PositiveTemplateSelector}"
+                                              TextElement.Foreground="{f:ForegroundBrush}"
+                                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              SnapsToDevicePixels="True"
+                                              Margin="16 0 0 0" />
+                        </Grid>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Opacity" Value=".45" TargetName="bd" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Grid.Column" Value="1" TargetName="PART_Thumb" />
+                            <Setter Property="TextElement.Foreground" Value="{f:ForegroundBrush}" TargetName="PART_Positive" />
+                            <Setter Property="Background" Value="{f:Brush AdaptiveLevel3}" TargetName="PART_Thumb" />
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" Value="{f:Brush AdaptiveLevel2}" TargetName="PART_Thumb" />
+                        </MultiTrigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Grid.Column" Value="3" TargetName="PART_Thumb" />
+                            <Setter Property="TextElement.Foreground" Value="{f:Brush HighlightB4}"
+                                    TargetName="PART_Positive" />
+                            <Setter Property="Background" Value="{f:Brush HighlightB4}" TargetName="PART_Thumb" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type ctrl:SwitchOnControl}">
+        <Setter Property="Height" Value="32" />
+        <Setter Property="MaxWidth" Value="240" />
+        <Setter Property="Foreground" Value="Crimson" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="IsThreeState" Value="False" />
+        <Setter Property="IsChecked" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:SwitchOnControl}">
+                    <Grid Background="Transparent">
+                        <Path x:Name="Icon"
+                              Data="{TemplateBinding Icon}"
+                              Height="24"
+                              HorizontalAlignment="Center"
+                              Stretch="Uniform"
+                              Stroke="Gray"
+                              StrokeThickness="1"
+                              Width="24"
+                              VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsMouseOver" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Stroke" TargetName="Icon" Value="Gray" />
+                        </MultiTrigger>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Stroke" TargetName="Icon" Value="Gray" />
+                        </Trigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Stroke" TargetName="Icon" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Foreground}" />
+                            <Setter Property="Fill" TargetName="Icon" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Foreground}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:HighlightControl}">
+        <Setter Property="Height" Value="32" />
+        <Setter Property="MaxWidth" Value="240" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="IsThreeState" Value="False" />
+        <Setter Property="IsChecked" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:HighlightControl}">
+                    <Grid Background="{f:Brush BackgroundLevel2}">
+                        <Path x:Name="Icon"
+                              Height="24"
+                              HorizontalAlignment="Center"
+                              Stretch="None"
+                              Stroke="Gray"
+                              StrokeThickness="1"
+                              Width="24"
+                              VerticalAlignment="Center" />
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="False">
+                            <Setter Property="Stroke" TargetName="Icon" Value="Gray" />
+                            <Setter Property="Data" TargetName="Icon" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Off}" />
+                        </Trigger>
+
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Stroke" TargetName="Icon" Value="Crimson" />
+                            <Setter Property="Data" TargetName="Icon" Value="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=On}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style x:Key="ClearStyle.ForestIconButton" TargetType="{x:Type f:ForestIconButton}">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="{f:Brush BackgroundDisabled}" />
+        <Setter Property="Foreground" Value="{f:Brush ForegroundLevel1}" />
+        <Setter Property="MinHeight" Value="24" />
+        <Setter Property="MinWidth" Value="24" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type f:ForestIconButton}">
+                    <Border x:Name="PART_Bd"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter x:Name="PART_Content"
+                                          Grid.Column="1"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                          TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <Style TargetType="{x:Type ctrl:ReferenceControl}">
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:ReferenceControl}">
+                    <Border Background="{f:Brush BackgroundLevel3}"
+                            BorderBrush="{f:Brush BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="3">
+                        <DockPanel LastChildFill="True">
+                            <f:ForestIconButton DockPanel.Dock="Right" 
+                                               Command="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=OpenCommand,Mode=OneWay}"
+                                               Height="72"
+                                               Icon="F1 M24,24z M0,0z M10,4L2,4 2,20 22,20 22,6 12,6 10,4z"
+                                                   IconSize="23"
+                                                   IsFilled="True"
+                                                   Width="72">
+                            </f:ForestIconButton>
+
+                            <f:ForestIconButton DockPanel.Dock="Left"
+                                               Command="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=SelectCommand,Mode=OneWay}"
+                                                Style="{StaticResource ClearStyle.ForestIconButton}"
+                                               HorizontalAlignment="Stretch">
+
+                                <DockPanel>
+                                    <Path Data="{TemplateBinding Icon}"
+                                          Fill="LightGray"
+                                          Margin="16 0 0 0"
+                                          Stretch="Uniform"
+                                          Height="31"
+                                          Width="31"/>
+                                    <DockPanel DockPanel.Dock="Right"
+                                               Margin="16 0 0 0"
+                                               VerticalAlignment="Center">
+                                        <TextBlock DockPanel.Dock="Top"
+                                               FontSize="14"
+                                               Margin="0 0 0 4"
+                                               Text="{TemplateBinding DisplayName}"
+                                               VerticalAlignment="Center" />
+                                        <TextBlock FontSize="12"
+                                               Text="{TemplateBinding Source}"
+                                               VerticalAlignment="Center" />
+                                    </DockPanel>
+                                </DockPanel>
+                            </f:ForestIconButton>
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:TitledControl}">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="Margin" Value="8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:TitledControl}">
+                    <Border>
+                        <DockPanel VerticalAlignment="Top">
+                            <TextBlock FontSize="15"
+                                       Text="{TemplateBinding Title}"
+                                       VerticalAlignment="Center"
+                                       Width="84" />
+                            <ContentPresenter ContentSource="Content"
+                                              HorizontalAlignment="Stretch" />
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:QuickStartPane}">
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="UseLayoutRounding" Value="True" />
+        <Setter Property="HeaderTemplate">
+            <Setter.Value>
+                <DataTemplate>
+                    <TextBlock Foreground="{f:ForegroundInHighlightBrush}"
+                               FontSize="14"
+                               Text="{Binding Mode=OneWay}"
+                               HorizontalAlignment="Center"
+                               VerticalAlignment="Center" />
+                </DataTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:QuickStartPane}">
+                    <f:StretchPanel>
+                        <DockPanel>
+                            <Border DockPanel.Dock="Bottom"
+                                    Background="{TemplateBinding Accent}"
+                                    CornerRadius="0 0 16 16"
+                                    MinHeight="84">
+                                <ContentPresenter ContentSource="Header"
+                                                  HorizontalAlignment="Stretch" />
+
+                            </Border>
+                            <Border Background="White"
+                                    CornerRadius="16 16 0 0"
+                                    Padding="8">
+                                <ContentPresenter ContentSource="Content"
+                                                  HorizontalAlignment="Stretch" />
+                            </Border>
+                        </DockPanel>
+                        <Border x:Name="mask"
+                                CornerRadius="16"
+                                Visibility="Collapsed" />
+                    </f:StretchPanel>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Visibility" TargetName="mask" Value="Visible" />
+                            <Setter Property="Background" TargetName="mask" Value="#30FFFFFF" />
+                        </Trigger>
+                        <Trigger Property="IsPressed" Value="True">
+                            <Setter Property="Visibility" TargetName="mask" Value="Visible" />
+                            <Setter Property="Background" TargetName="mask" Value="#50FFFFFF" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:NumberBox}">
+        <Setter Property="FocusVisualStyle">
+            <Setter.Value>
+                <Style>
+                    <Setter Property="Control.Template">
+                        <Setter.Value>
+                            <ControlTemplate>
+                                <Rectangle
+                                    RadiusX="4"
+                                    RadiusY="4"
+                                    SnapsToDevicePixels="True"
+                                    Stroke="{DynamicResource Brushes.ForegroundInAccent}"
+                                    StrokeThickness="1" />
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Foreground" Value="{f:ForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="{x:Null}" />
+        <Setter Property="FontSize" Value="14" />
+        <Setter Property="IsReadOnly" Value="False" />
+        <Setter Property="ScrollViewer.CanContentScroll" Value="False" />
+        <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Disabled" />
+        <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Auto" />
+        <Setter Property="ScrollViewer.IsDeferredScrollingEnabled" Value="False" />
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Stretch" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Top" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Padding" Value="8" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:NumberBox}">
+                    <Grid HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+                          VerticalAlignment="{TemplateBinding VerticalAlignment}">
+                        <Border x:Name="PART_Bd"
+                                BorderBrush="{x:Null}"
+                                BorderThickness="1"
+                                CornerRadius="3"
+                                MinWidth="{TemplateBinding MinWidth}"
+                                MinHeight="{TemplateBinding MinHeight}"
+                                Padding="2"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch">
+                            <Grid HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition />
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+
+                                <ScrollViewer x:Name="PART_ContentHost"
+                                              Grid.Column="0"
+                                              VerticalAlignment="Center"
+                                              CanContentScroll="{TemplateBinding ScrollViewer.CanContentScroll}"
+                                              HorizontalScrollBarVisibility="{TemplateBinding ScrollViewer.HorizontalScrollBarVisibility}"
+                                              IsDeferredScrollingEnabled="{TemplateBinding ScrollViewer.IsDeferredScrollingEnabled}"
+                                              IsTabStop="{TemplateBinding ScrollViewer.IsTabStop}"
+                                              Style="{StaticResource Base.ScrollViewer}"
+                                              VerticalScrollBarVisibility="{TemplateBinding ScrollViewer.VerticalScrollBarVisibility}" />
+
+                                <TextBlock x:Name="PART_Watermark"
+                                           Grid.Column="1"
+                                           FontSize="{TemplateBinding FontSize}"
+                                           Foreground="{f:Brush ForegroundInAdaptive}"
+                                           Text="{TemplateBinding Watermark}"
+                                           Margin="{TemplateBinding Padding}"
+                                           HorizontalAlignment="Left"
+                                           VerticalAlignment="Center"
+                                           Visibility="Collapsed" />
+
+                                <ftk:ToolButton x:Name="PART_Up"
+                                                Grid.Column="1"
+                                                IconSize="23"
+                                                Icon="F1 M24,24z M0,0z M18,15L18,15 12,9 6,15" />
+
+                                <ftk:ToolButton x:Name="PART_Down"
+                                                Grid.Column="2"
+                                                IconSize="23"
+                                                Icon="F1 M24,24z M0,0z M6,9L6,9 12,15 18,9" />
+                            </Grid>
+                        </Border>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasText" Value="False">
+                            <Setter Property="Visibility" TargetName="PART_Watermark" Value="Visible" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:ZoomControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:ZoomControl}">
+                    <Grid>
+                        <Border BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                ClipToBounds="{TemplateBinding ClipToBounds}">
+                            <ctrl:ZoomContentPresenter x:Name="PART_Presenter"
+                                                       ClipToBounds="False" />
+                        </Border>
+                        <Canvas>
+                            <!-- Controls -->
+                            <Border Padding="5"
+                                    CornerRadius="5"
+                                    Background="#88C0C0C0"
+                                    Canvas.Left="20"
+                                    Canvas.Top="20"
+                                    ToolTipService.InitialShowDelay="0">
+                                <Border.ToolTip>
+                                    <StackPanel Orientation="Vertical">
+                                        <TextBlock><Run FontWeight="Bold">CTRL + Wheel:</Run> Zoom In / Out</TextBlock>
+                                        <TextBlock><Run FontWeight="Bold">ALT + Drag:</Run> ZoomBox</TextBlock>
+                                        <TextBlock><Run FontWeight="Bold">(SHIFT +) Drag:</Run> Pan</TextBlock>
+                                    </StackPanel>
+                                </Border.ToolTip>
+                                <StackPanel Orientation="Vertical">
+                                    <StackPanel.Resources>
+                                        <Style TargetType="{x:Type RadioButton}">
+                                            <Setter Property="Template">
+                                                <Setter.Value>
+                                                    <ControlTemplate TargetType="{x:Type RadioButton}">
+                                                        <Border x:Name="border"
+                                                                BorderBrush="Black"
+                                                                Background="Silver"
+                                                                BorderThickness="1"
+                                                                CornerRadius="5"
+                                                                Width="40"
+                                                                Height="40"
+                                                                Margin="2"
+                                                                HorizontalAlignment="Center"
+                                                                VerticalAlignment="Center">
+                                                            <ContentPresenter HorizontalAlignment="Center"
+                                                                              VerticalAlignment="Center" />
+                                                        </Border>
+
+                                                        <ControlTemplate.Triggers>
+                                                            <Trigger Property="IsMouseOver" Value="True">
+                                                                <Setter TargetName="border" Property="Background"
+                                                                        Value="WhiteSmoke" />
+                                                            </Trigger>
+                                                            <Trigger Property="IsChecked" Value="True">
+                                                                <Setter TargetName="border" Property="Background"
+                                                                        Value="DarkGray" />
+                                                                <Setter TargetName="border"
+                                                                        Property="TextBlock.FontWeight" Value="Bold" />
+                                                            </Trigger>
+                                                        </ControlTemplate.Triggers>
+                                                    </ControlTemplate>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Style>
+                                    </StackPanel.Resources>
+                                    <Slider Height="150"
+                                            Minimum="{TemplateBinding MinZoom, Converter={StaticResource Log10Converter}}"
+                                            Maximum="{TemplateBinding MaxZoom, Converter={StaticResource Log10Converter}}"
+                                            Value="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Zoom, Mode=TwoWay, Converter={StaticResource Log10Converter}}"
+                                            HorizontalAlignment="Center"
+                                            Ticks="0.1, 0.25, 0.5, 0.75, 1.0, 1.25, 1.5, 2"
+                                            AutoToolTipPlacement="BottomRight"
+                                            AutoToolTipPrecision="1"
+                                            TickPlacement="BottomRight"
+                                            TickFrequency="1"
+                                            LargeChange="1"
+                                            SmallChange="0.1"
+                                            Orientation="Vertical" />
+                                    <TextBlock Text="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Zoom, StringFormat='{}{0:F2}x'}"
+                                               HorizontalAlignment="Center"
+                                               FontWeight="Bold" />
+                                    <RadioButton Content="1:1"
+                                                 GroupName="rbgZoomMode"
+                                                 IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Mode, Mode=TwoWay, Converter={StaticResource EqualityConverter}, ConverterParameter={x:Static ctrl:ZoomControlModes.Original}}" />
+                                    <RadioButton Content="{f:Language text.zoom.fill}"
+                                                 GroupName="rbgZoomMode"
+                                                 IsChecked="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=Mode, Mode=TwoWay, Converter={StaticResource EqualityConverter}, ConverterParameter={x:Static ctrl:ZoomControlModes.Fill}}" />
+                                </StackPanel>
+                            </Border>
+
+                            <!-- ZoomBox -->
+                            <Border BorderBrush="{TemplateBinding ZoomBoxBorderBrush}"
+                                    BorderThickness="{TemplateBinding ZoomBoxBorderThickness}"
+                                    Canvas.Left="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ZoomBox.X}"
+                                    Canvas.Top="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ZoomBox.Y}"
+                                    Opacity="{TemplateBinding ZoomBoxOpacity}"
+                                    Background="{TemplateBinding ZoomBoxBackground}"
+                                    Width="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ZoomBox.Width}"
+                                    Height="{Binding RelativeSource={RelativeSource TemplatedParent}, Path=ZoomBox.Height}" />
+                        </Canvas>
+                    </Grid>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="White" />
+        <Setter Property="ZoomBoxBackground">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0.0, 0.0" EndPoint="1.0, 1.0">
+                    <GradientStop Color="Silver" Offset="0.0" />
+                    <GradientStop Color="DarkGray" Offset="1.0" />
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="ZoomBoxBorderBrush" Value="Black" />
+        <Setter Property="ZoomBoxBorderThickness" Value="1" />
+        <Setter Property="ClipToBounds" Value="True" />
+        <Style.Triggers>
+            <Trigger Property="ModifierMode" Value="Pan">
+                <Setter Property="Cursor" Value="SizeAll" />
+            </Trigger>
+            <Trigger Property="ModifierMode" Value="ZoomBox">
+                <Setter Property="Cursor" Value="Hand" />
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style TargetType="{x:Type ctrl:Avatar}">
+        <Setter Property="CornerRadius" Value="6" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:Avatar}">
+                    <DockPanel>
+                        <Border DockPanel.Dock="Top"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                ClipToBounds="True"
+                                CornerRadius="{TemplateBinding CornerRadius}"
+                                Padding="{TemplateBinding Padding}"
+                                HorizontalAlignment="Stretch"
+                                VerticalAlignment="Stretch"
+                                Height="64"
+                                Width="64">
+                            <Border.Background>
+                                <ImageBrush ImageSource="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Image,Mode=OneWay}" />
+                            </Border.Background>
+                        </Border>
+
+                        <TextBlock HorizontalAlignment="Center"
+                                   Margin="0 8 0 0"
+                                   Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=AvatarName,Mode=OneWay}"
+                                   TextWrapping="Wrap"
+                                   TextTrimming="CharacterEllipsis" />
+                    </DockPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type ctrl:RelationshipCard}">
+        <Setter Property="Background" Value="{f:Brush BackgroundLevel2}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:RelationshipCard}">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="12"
+                            Margin="0 4">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="64" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="64" />
+                            </Grid.ColumnDefinitions>
+
+                            <ctrl:Avatar Grid.Column="0"
+                                         Image="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=SourceImage,Mode=OneWay}"
+                                         AvatarName="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path= SourceName,Mode=OneWay}" />
+
+
+                            <UniformGrid Grid.Column="1"
+                                         Rows="2"
+                                         VerticalAlignment="Center">
+                                <DockPanel Margin="0 0 0 2">
+                                    <TextBlock DockPanel.Dock="Top"
+                                               Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=TopName,Mode=OneWay}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Top" />
+                                    <Path Data="{StaticResource ArrowRight}"
+                                          Stroke="{f:ForegroundBrush}"
+                                          StrokeThickness="2"
+                                          Stretch="Uniform"
+                                          Width="128"
+                                          Height="16" />
+                                </DockPanel>
+
+                                <DockPanel Margin="0 2 0 0">
+                                    <TextBlock DockPanel.Dock="Bottom"
+                                               Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=BottomName,Mode=OneWay}"
+                                               HorizontalAlignment="Center"
+                                               VerticalAlignment="Top" />
+
+                                    <Path Data="{StaticResource ArrowLeft}"
+                                          Stroke="{f:ForegroundBrush}"
+                                          StrokeThickness="2"
+                                          Stretch="Uniform"
+                                          Width="128"
+                                          Height="16" />
+                                </DockPanel>
+                            </UniformGrid>
+
+                            <ctrl:Avatar Grid.Column="2"
+                                         Image="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=TargetImage,Mode=OneWay}"
+                                         AvatarName="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path= TargetName,Mode=OneWay}" />
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type ctrl:DocumentCard}">
+        <Setter Property="Background" Value="{f:Brush BackgroundLevel3}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="Width" Value="500" />
+        <Setter Property="Height" Value="160" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:DocumentCard}">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="6"
+                            Padding="{TemplateBinding Padding}">
+                        <DockPanel>
+                            <f:LooklessButton DockPanel.Dock="Top"
+                                              Command="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Command,Mode=OneWay}"
+                                              CommandParameter="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=CommandParameter,Mode=OneWay}">
+                                <DockPanel>
+                                    <TextBlock DockPanel.Dock="Top"
+                                               FontSize="20"
+                                               FontWeight="Bold"
+                                               Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Title,Mode=OneWay}" />
+
+                                    <TextBlock FontSize="13"
+                                               Foreground="{f:Brush ForegroundLevel3}"
+                                               Margin="0 8"
+                                               Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Id,Mode=OneWay}" />
+                                </DockPanel>
+                            </f:LooklessButton>
+                            <UniformGrid Columns="3"
+                                         Margin="0 4">
+                                <DockPanel>
+                                    <TextBlock DockPanel.Dock="Top"
+                                               Margin="0 8"
+                                               Text="{f:Language global.TimeOfCreated}" />
+                                    <TextBlock Foreground="{f:Brush ForegroundLevel3}"
+                                               Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=TimeOfCreated,Mode=OneWay,StringFormat={}{0:yyyy-MM-dd HH\:mm}}" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBlock DockPanel.Dock="Top"
+                                               Margin="0 8"
+                                               Text="{f:Language global.TimeOfModified}" />
+                                    <TextBlock Foreground="{f:Brush ForegroundLevel3}"
+                                               Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=TimeOfModified,Mode=OneWay,StringFormat={}{0:yyyy-MM-dd HH\:mm}}" />
+                                </DockPanel>
+                                <DockPanel>
+                                    <TextBlock DockPanel.Dock="Top"
+                                               Margin="0 8"
+                                               Text="{f:Language global.Length}" />
+                                    
+                                    <TextBlock Foreground="{f:Brush ForegroundLevel3}"
+                                               Text="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=ContentLength,Mode=OneWay}" />
+                                </DockPanel>
+                            </UniformGrid>
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="{x:Type ctrl:SettingControl}">
+        <Setter Property="Background" Value="{f:Brush BackgroundLevel1}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Padding" Value="16" />
+        <Setter Property="Margin" Value="4"/>
+        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="MinHeight" Value="128" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ctrl:SettingControl}">
+                    <Border Background="{TemplateBinding Background}"
+                            CornerRadius="12"
+                            Padding="32 20 32 16"
+                            Margin="0 0 0 10"
+                            MinHeight="100">
+                        <DockPanel>
+
+                            <StackPanel DockPanel.Dock="Left"
+                                        Width="480">
+                                <TextBlock FontSize="20"
+                                           FontWeight="Bold"
+                                           Text="{Binding Title,RelativeSource={RelativeSource Mode=TemplatedParent},Mode=OneWay}" />
+
+                                <TextBlock Foreground="{f:Brush Theme=ForegroundLevel2}"
+                                           FontFamily="{TemplateBinding SubTitleFontFamily}"
+                                           FontSize="14"
+                                           Margin="0 8 0 0"
+                                           Text="{Binding Intro,RelativeSource={RelativeSource Mode=TemplatedParent},Mode=OneWay}"  />
+                            </StackPanel>
+                            
+                            <ContentPresenter DockPanel.Dock="Right"
+                                              VerticalAlignment="Stretch"
+                                              Content="{TemplateBinding Content}"
+                                              HorizontalAlignment="Stretch"/>
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>

@@ -1,0 +1,85 @@
+﻿<UserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.UniverseBasicView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:f="urn:acorisoft/forest/ui"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Universe"
+             xmlns:m="clr-namespace:Acorisoft.FutureGL.MigaDB.Data.DataParts;assembly=MigaDB"
+             xmlns:ftk="urn:acorisoft/forest/toolkits"
+             xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+             xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters;assembly=SubSystem"
+             xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+             mc:Ignorable="d"
+             Padding="16"
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance Type={x:Type thisVM:UniverseViewModel}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+
+        <Style TargetType="{x:Type f:TreeViewItem}" BasedOn="{StaticResource ClearType.TreeViewItem}">
+            <Setter Property="Padding" Value="8 6" />
+        </Style>
+    </UserControl.Resources>
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <DockPanel Margin="0 0 0 8">
+                    <!-- 头像 -->
+                    <f:LooklessButton Command="{Binding ChangeAvatarCommand}"
+                                      Height="160"
+                                      Width="160">
+                        <Border>
+                            <Border.Background>
+                                <ImageBrush>
+                                    <ImageBrush.ImageSource>
+                                        <MultiBinding Converter="{x:Static thisConverters:ConverterPool.Avatar}">
+                                            <Binding Path="Icon" Mode="OneWay" />
+                                            <Binding Path="Type" />
+                                        </MultiBinding>
+                                    </ImageBrush.ImageSource>
+                                </ImageBrush>
+                            </Border.Background>
+                        </Border>
+                    </f:LooklessButton>
+                    <UniformGrid Columns="2"
+                                 Margin="32 0 0 0"
+                                 VerticalAlignment="Top">
+                        <f:HeaderedSingleLine Header="{f:Language global.Name}"
+                                              Margin="8"
+                                              Text="{Binding Name,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                        <f:HeaderedSingleLine Header="{f:Language global.Author}"
+                                              Margin="8"
+                                              Text="{Binding Author,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                        <f:HeaderedSingleLine Header="{f:Language global.foreignName}"
+                                              Margin="8"
+                                              Text="{Binding ForeignName,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+
+                    </UniformGrid>
+
+                </DockPanel>
+
+                <f:ForestSection HeaderBrush="{f:Brush BackgroundLevel5}"
+                                 Header="说明">
+                    <f:MultiLine Height="200"
+                                 Margin="8"
+                                 Text="{Binding Intro,Mode=TwoWay,UpdateSourceTrigger=PropertyChanged}" />
+                </f:ForestSection>
+
+                <UniformGrid Visibility="Collapsed">
+                    <f:ToggleSwitch Content="是否有神明?"
+                                    Margin="8" />
+                    <f:ToggleSwitch Content="存在魔法?"
+                                Margin="8" />
+                    <f:ToggleSwitch Content="存在魔法?"
+                                Margin="8" />
+                    <f:ToggleSwitch Content="存在魔法?"
+                                Margin="8" />
+                    <f:ToggleSwitch Content="存在魔法?"
+                                Margin="8" />
+                    <f:ToggleSwitch Content="存在魔法?"
+                                Margin="8" />
+                </UniformGrid>
+            </StackPanel>
+        </ScrollViewer>
+    </Grid>
+</UserControl>

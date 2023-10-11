@@ -1,0 +1,67 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.Commons.NewPresentationView"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:ftk="urn:acorisoft/forest/toolkits"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Templates"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Commons"
+                     xmlns:thisModel="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models.Modules"
+                     xmlns:thisModel2="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models.Modules.ViewModels"
+                     xmlns:thisModel3="clr-namespace:Acorisoft.FutureGL.MigaDB.Data.Metadatas;assembly=MigaDB"
+                     xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:NewPresentationViewModel}, IsDesignTimeCreatable=True}"
+                     Height="540"
+                     Width="768">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/SubSystem;component/Resources/DataTemplates/ModuleBlockDataTemplates.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+
+            <thisConverters:TranslationConverter x:Key="Name"/>
+
+            <DataTemplate DataType="{x:Type thisModel3:MetadataKind}">
+                <TextBlock Margin="8"
+                       Text="{Binding Converter={StaticResource Name}}"/>
+            </DataTemplate>
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <f:DialogPage Title="{Binding Title,Mode=OneWay}"
+                  Accent="{f:Brush HighlightA3}"
+                  CancelCommand="{Binding CancelCommand}"
+                  CompletedCommand="{Binding CompletedCommand}">
+
+        <Grid>
+
+            <!-- 选项 -->
+            <f:TreeView Grid.Column="0"
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                        BindableSelectedItem="{Binding MaybeMetadataKind,Mode=TwoWay}">
+                <f:TreeViewItem Header="{f:Language __GroupPresentation}"
+                                Padding="8"
+                                ItemsSource="{x:Static thisModel2:ModuleBlockFactory.BasicMetadataKinds}">
+                    <f:TreeViewItem.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Margin="0 8"
+                                       ItemWidth="230"/>
+                        </ItemsPanelTemplate>
+                    </f:TreeViewItem.ItemsPanel>
+                </f:TreeViewItem>
+                <f:TreeViewItem Header="{f:Language __ComplexPresentation}"
+                                Padding="8"
+                                ItemsSource="{x:Static thisModel2:ModuleBlockFactory.AdvancedMetadataKinds}">
+                    <f:TreeViewItem.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel Margin="0 8"
+                                       ItemWidth="230"/>
+                        </ItemsPanelTemplate>
+                    </f:TreeViewItem.ItemsPanel>
+                </f:TreeViewItem>
+            </f:TreeView>
+        </Grid>
+    </f:DialogPage>
+</f:ForestUserControl>

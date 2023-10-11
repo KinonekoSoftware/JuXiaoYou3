@@ -1,0 +1,575 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:f="urn:acorisoft/forest/ui"
+                    xmlns:b="clr-namespace:Acorisoft.FutureGL.Forest.Controls.Buttons">
+    <Style x:Key="FocusVisualInAccent">
+        <Setter Property="Control.Template">
+            <Setter.Value>
+                <ControlTemplate>
+                    <Rectangle Margin="5"
+                               RadiusX="24"
+                               RadiusY="24"
+                               StrokeDashArray="4 4"
+                               StrokeThickness="1   "
+                               Stroke="{f:ForegroundInHighlightBrush}" />
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type b:DialogButton}">
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualInAccent}" />
+        <Setter Property="Margin" Value="10 0 0 0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type b:DialogButton}">
+                    <Border x:Name="PART_Bd"
+                            Background="{f:BackgroundBrush}"
+                            CornerRadius="24"
+                            Padding="16 0">
+                        <DockPanel HorizontalAlignment="Center">
+                            <Path x:Name="PART_Icon"
+                                  Data="{TemplateBinding Icon}"
+                                  Stroke="#4F5B66"
+                                  StrokeThickness="2"
+                                  Stretch="Uniform"
+                                  Width="{TemplateBinding IconSize}"
+                                  Height="{TemplateBinding IconSize}" />
+
+                            <ContentPresenter x:Name="PART_Content"
+                                              TextElement.FontSize="14"
+                                              TextElement.Foreground="#4F5B66"
+                                              Content="{TemplateBinding Content}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                              ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                              Margin="10 0 0 0"
+                                              VerticalAlignment="Center" />
+                        </DockPanel>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- -->
+    <!-- <Style TargetType="{x:Type b:PrimaryButton}">  -->
+    <!--     <Setter Property="HorizontalContentAlignment" Value="Center" />  -->
+    <!--     <Setter Property="VerticalContentAlignment" Value="Center" />  -->
+    <!--     <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualInAccent}" />  -->
+    <!--     <Setter Property="Padding" Value="8" />  -->
+    <!--     <Setter Property="Template">  -->
+    <!--         <Setter.Value>  -->
+    <!--             <ControlTemplate TargetType="{x:Type b:PrimaryButton}">  -->
+    <!--                 <Border x:Name="PART_Bd"  -->
+    <!--                         Background="{f:Brush HighlightB1}"  -->
+    <!--                         BorderThickness="1"  -->
+    <!--                         BorderBrush="{f:Brush HighlightB3}"  -->
+    <!--                         CornerRadius="3"  -->
+    <!--                         Padding="{TemplateBinding Padding}">  -->
+    <!--                     <ContentPresenter x:Name="PART_Content"  -->
+    <!--                                       TextElement.FontSize="14"  -->
+    <!--                                       TextElement.Foreground="#4F5B66"  -->
+    <!--                                       Content="{TemplateBinding Content}"  -->
+    <!--                                       ContentTemplate="{TemplateBinding ContentTemplate}"  -->
+    <!--                                       ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"  -->
+    <!--                                       ContentStringFormat="{TemplateBinding ContentStringFormat}"  -->
+    <!--                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"  -->
+    <!--                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>  -->
+    <!--                 </Border>  -->
+    <!--             </ControlTemplate>  -->
+    <!--         </Setter.Value>  -->
+    <!--     </Setter>  -->
+    <!-- </Style>  -->
+    <!-- -->
+    <!-- <Style TargetType="{x:Type b:PrimaryIconButton}">  -->
+    <!--     <Setter Property="HorizontalContentAlignment" Value="Center" />  -->
+    <!--     <Setter Property="VerticalContentAlignment" Value="Center" />  -->
+    <!--     <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualInAccent}" />  -->
+    <!--     <Setter Property="Padding" Value="8" />  -->
+    <!--     <Setter Property="Template">  -->
+    <!--         <Setter.Value>  -->
+    <!--             <ControlTemplate TargetType="{x:Type b:PrimaryIconButton}">  -->
+    <!--                 <Border x:Name="PART_Bd"  -->
+    <!--                         Background="{f:Brush HighlightB1}"  -->
+    <!--                         BorderThickness="1"  -->
+    <!--                         BorderBrush="{f:Brush HighlightB3}"  -->
+    <!--                         CornerRadius="3"  -->
+    <!--                         Padding="{TemplateBinding Padding}">  -->
+    <!--                     <DockPanel VerticalAlignment="{TemplateBinding VerticalContentAlignment}"  -->
+    <!--                                HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">  -->
+    <!--                         <Path x:Name="PART_Icon"  -->
+    <!--                               Data="{TemplateBinding Icon}"  -->
+    <!--                               Margin="8 0"  -->
+    <!--                               Stroke="#4F5B66"  -->
+    <!--                               StrokeThickness="1"  -->
+    <!--                               Stretch="Uniform"  -->
+    <!--                               Width="{TemplateBinding IconSize}"  -->
+    <!--                               Height="{TemplateBinding IconSize}" />  -->
+    <!--                           -->
+    <!--                         <ContentPresenter x:Name="PART_Content"  -->
+    <!--                                           TextElement.FontSize="14"  -->
+    <!--                                           TextElement.Foreground="#4F5B66"  -->
+    <!--                                           Content="{TemplateBinding Content}"  -->
+    <!--                                           ContentTemplate="{TemplateBinding ContentTemplate}"  -->
+    <!--                                           ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"  -->
+    <!--                                           ContentStringFormat="{TemplateBinding ContentStringFormat}"  -->
+    <!--                                           VerticalAlignment="Center"  -->
+    <!--                                           HorizontalAlignment="Center"/>  -->
+    <!--                     </DockPanel>  -->
+    <!--                 </Border>  -->
+    <!--             </ControlTemplate>  -->
+    <!--         </Setter.Value>  -->
+    <!--     </Setter>  -->
+    <!-- </Style>  -->
+    <!-- -->
+    <!-- <Style TargetType="{x:Type b:SecondaryButton}">  -->
+    <!--     <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualInAccent}" />  -->
+    <!--     <Setter Property="HorizontalContentAlignment" Value="Center" />  -->
+    <!--     <Setter Property="VerticalContentAlignment" Value="Center" />  -->
+    <!--     <Setter Property="Padding" Value="8" />  -->
+    <!--     <Setter Property="Template">  -->
+    <!--         <Setter.Value>  -->
+    <!--             <ControlTemplate TargetType="{x:Type b:SecondaryButton}">  -->
+    <!--                 <Border x:Name="PART_Bd"  -->
+    <!--                         Background="{f:Brush HighlightB1}"  -->
+    <!--                         BorderThickness="1"  -->
+    <!--                         BorderBrush="{f:Brush HighlightB3}"  -->
+    <!--                         CornerRadius="3"  -->
+    <!--                         Padding="{TemplateBinding Padding}">  -->
+    <!--                     <ContentPresenter x:Name="PART_Content"  -->
+    <!--                                       TextElement.FontSize="14"  -->
+    <!--                                       TextElement.Foreground="#4F5B66"  -->
+    <!--                                       Content="{TemplateBinding Content}"  -->
+    <!--                                       ContentTemplate="{TemplateBinding ContentTemplate}"  -->
+    <!--                                       ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"  -->
+    <!--                                       ContentStringFormat="{TemplateBinding ContentStringFormat}"  -->
+    <!--                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"  -->
+    <!--                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>  -->
+    <!--                 </Border>  -->
+    <!--             </ControlTemplate>  -->
+    <!--         </Setter.Value>  -->
+    <!--     </Setter>  -->
+    <!-- </Style>  -->
+    <!-- -->
+    <!-- <Style TargetType="{x:Type b:SecondaryIconButton}">  -->
+    <!--     <Setter Property="HorizontalContentAlignment" Value="Center" />  -->
+    <!--     <Setter Property="VerticalContentAlignment" Value="Center" />  -->
+    <!--     <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualInAccent}" />  -->
+    <!--     <Setter Property="Padding" Value="8" />  -->
+    <!--     <Setter Property="Template">  -->
+    <!--         <Setter.Value>  -->
+    <!--             <ControlTemplate TargetType="{x:Type b:SecondaryIconButton}">  -->
+    <!--                 <Border x:Name="PART_Bd"  -->
+    <!--                         Background="{f:Brush HighlightB1}"  -->
+    <!--                         BorderThickness="1"  -->
+    <!--                         BorderBrush="{f:Brush HighlightB3}"  -->
+    <!--                         CornerRadius="3"  -->
+    <!--                         Padding="{TemplateBinding Padding}">  -->
+    <!--                     <DockPanel HorizontalAlignment="Center">  -->
+    <!--                         <Path x:Name="PART_Icon"  -->
+    <!--                               Data="{TemplateBinding Icon}"  -->
+    <!--                               Stroke="#4F5B66"  -->
+    <!--                               StrokeThickness="2"  -->
+    <!--                               Stretch="Uniform"  -->
+    <!--                               Width="{TemplateBinding IconSize}"  -->
+    <!--                               Height="{TemplateBinding IconSize}" />  -->
+    <!--                           -->
+    <!--                         <ContentPresenter x:Name="PART_Content"  -->
+    <!--                                           TextElement.FontSize="14"  -->
+    <!--                                           TextElement.Foreground="#4F5B66"  -->
+    <!--                                           Content="{TemplateBinding Content}"  -->
+    <!--                                           ContentTemplate="{TemplateBinding ContentTemplate}"  -->
+    <!--                                           ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"  -->
+    <!--                                           ContentStringFormat="{TemplateBinding ContentStringFormat}"  -->
+    <!--                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"  -->
+    <!--                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"/>  -->
+    <!--                     </DockPanel>  -->
+    <!--                 </Border>  -->
+    <!--             </ControlTemplate>  -->
+    <!--         </Setter.Value>  -->
+    <!--     </Setter>  -->
+    <!-- </Style>  -->
+
+    <Style TargetType="{x:Type b:LooklessButton}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="BorderBrush" Value="{x:Null}" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="MinHeight" Value="28" />
+        <Setter Property="MinWidth" Value="28" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type b:LooklessButton}">
+                    <Border x:Name="PART_Bd"
+                            Background="Transparent"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter x:Name="PART_Content"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          SnapsToDevicePixels="True"
+                                          RecognizesAccessKey="False"
+                                          DockPanel.Dock="Right" />
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand" />
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Cursor" Value="No" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type b:SimpleButton}">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="Foreground" Value="{f:ForegroundBrush}" />
+        <Setter Property="MinHeight" Value="32" />
+        <Setter Property="MinWidth" Value="42" />
+        <Setter Property="HoverBackgroundBrush" Value="{f:OverlayBrush}" />
+        <Setter Property="HoverForegroundBrush" Value="{f:ForegroundInHighlightBrush}" />
+        <Setter Property="PressBackgroundBrush" Value="{f:Overlay2Brush}" />
+        <Setter Property="PressForegroundBrush" Value="{f:ForegroundInHighlightBrush}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type b:SimpleButton}">
+                    <Border x:Name="PART_Border"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}">
+                        <ContentPresenter TextElement.FontSize="14"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                          ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Thickness x:Key="ToggleSwitchPadding">8,6,0,0</Thickness>
+    <Thickness x:Key="ToggleSwitchBorderThemeThickness">1</Thickness>
+    <Thickness x:Key="ToggleSwitchContentMargin">8,0,0,0</Thickness>
+
+
+    <Style TargetType="{x:Type f:ToggleSwitch}">
+        <Setter Property="Background" Value="{f:BackgroundBrush}" />
+        <Setter Property="Foreground" Value="{f:ForegroundBrush}" />
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="BorderThickness" Value="{StaticResource ToggleSwitchBorderThemeThickness}" />
+        <Setter Property="Padding" Value="{StaticResource ToggleSwitchPadding}" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="FontWeight" Value="Normal" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type f:ToggleSwitch}">
+                    <Grid Background="Transparent">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                        </Grid.ColumnDefinitions>
+                        <Grid Grid.Column="0"
+                              Width="40"
+                              Height="20">
+                            <Rectangle x:Name="ToggleRectangle"
+                                       Width="40"
+                                       Height="20"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"
+                                       Fill="Transparent"
+                                       RadiusX="10"
+                                       RadiusY="10"
+                                       StrokeThickness="1"
+                                       Stroke="{f:Brush AdaptiveLevel2}" />
+                            <Rectangle x:Name="ActiveToggleRectangle"
+                                       Width="40"
+                                       Height="20"
+                                       HorizontalAlignment="Center" 
+                                       VerticalAlignment="Center"
+                                       Fill="{f:Brush HighlightA4}" 
+                                       Opacity="0.0" 
+                                       RadiusX="10"
+                                       RadiusY="10"
+                                       StrokeThickness="0" />
+                            <Ellipse x:Name="ToggleEllipse"
+                                         Width="12"
+                                         Height="12"
+                                         Margin="0"
+                                         HorizontalAlignment="Center"
+                                         VerticalAlignment="Center"
+                                         RenderTransformOrigin="0.5, 0.5"
+                                         Fill="{f:Brush AdaptiveLevel2}">
+                                <Ellipse.RenderTransform>
+                                    <TranslateTransform X="-9"/>
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                            <Ellipse x:Name="ActiveToggleEllipse"
+                                     Width="12" Height="12"
+                                     Margin="0"
+                                     HorizontalAlignment="Center"
+                                     VerticalAlignment="Center"
+                                     Opacity="0.0"
+                                     RenderTransformOrigin="0.5, 0.5"
+                                     Fill="White" >
+                                <Ellipse.RenderTransform>
+                                    <TranslateTransform X="-9"/>
+                                </Ellipse.RenderTransform>
+                            </Ellipse>
+                        </Grid>
+                        <ContentPresenter x:Name="ContentPresenter"
+                                          Grid.Column="1"
+                                          Margin="{StaticResource ToggleSwitchContentMargin}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </Grid>
+
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Trigger.EnterActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="ToggleRectangle"
+                                                         Storyboard.TargetProperty="(Rectangle.Opacity)" 
+                                                         From="1" 
+                                                         To="0"
+                                                         Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ActiveToggleRectangle"
+                                                         Storyboard.TargetProperty="(Rectangle.Opacity)"
+                                                         From="0.0"
+                                                         To="1.0" Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ToggleEllipse"
+                                                         Storyboard.TargetProperty="(Ellipse.Opacity)"
+                                                         From="1.0"
+                                                         To="0.0" Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ActiveToggleEllipse"
+                                                         Storyboard.TargetProperty="(Ellipse.Opacity)"
+                                                         From="0.0"
+                                                         To="1.0"
+                                                         Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ToggleEllipse"
+                                                         Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)"
+                                                         From="-9"
+                                                         To="9"
+                                                         Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ActiveToggleEllipse"
+                                                         Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)"
+                                                         From="-9"
+                                                         To="9"
+                                                         Duration="00:00:00.167" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.EnterActions>
+                            <Trigger.ExitActions>
+                                <BeginStoryboard>
+                                    <Storyboard>
+                                        <DoubleAnimation Storyboard.TargetName="ToggleRectangle"
+                                                         Storyboard.TargetProperty="(Rectangle.Opacity)" 
+                                                         From="0.0" 
+                                                         To="1.0"
+                                                         Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ActiveToggleRectangle" 
+                                                         Storyboard.TargetProperty="(Rectangle.Opacity)"
+                                                         From="1.0" 
+                                                         To="0.0" 
+                                                         Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ToggleEllipse"
+                                                         Storyboard.TargetProperty="(Ellipse.Opacity)" 
+                                                         From="0.0" 
+                                                         To="1.0" 
+                                                         Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ActiveToggleEllipse"
+                                                         Storyboard.TargetProperty="(Ellipse.Opacity)"
+                                                         From="1.0"
+                                                         To="0.0" 
+                                                         Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ToggleEllipse" 
+                                                         Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)"
+                                                         From="9" 
+                                                         To="-9"
+                                                         Duration="00:00:00.167" />
+                                        <DoubleAnimation Storyboard.TargetName="ActiveToggleEllipse" 
+                                                         Storyboard.TargetProperty="(Ellipse.RenderTransform).(TranslateTransform.X)" 
+                                                         From="9" 
+                                                         To="-9"
+                                                         Duration="00:00:00.167" />
+                                    </Storyboard>
+                                </BeginStoryboard>
+                            </Trigger.ExitActions>
+                        </Trigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True" />
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsEnabled" Value="True" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="ToggleRectangle" 
+                                        Property="Fill" 
+                                        Value="{f:Brush BackgroundLevel4}" />
+                            <Setter TargetName="ToggleEllipse" 
+                                        Property="Fill" 
+                                        Value="{f:Brush AdaptiveLevel1}" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsChecked" Value="False" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="ToggleRectangle" Value="{f:Brush AdaptiveLevel1}" Property="Stroke" />
+                            <Setter TargetName="ToggleRectangle" Value="{f:Brush AdaptiveLevel1}" Property="Fill" />
+                            <Setter TargetName="ToggleEllipse" Value="{f:Brush BackgroundDisabled}" Property="Fill" />
+                            <Setter Value="{f:Brush ForegroundDisabled}" Property="Foreground" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="ToggleButton.IsChecked" Value="True" />
+                                <Condition Property="IsEnabled" Value="False" />
+                            </MultiTrigger.Conditions>
+                            <Setter TargetName="ActiveToggleRectangle"
+                                    Property="Fill" 
+                                    Value="{f:Brush HighlightA1}" />
+                            <Setter TargetName="ActiveToggleEllipse" 
+                                    Property="Fill"
+                                    Value="{f:Brush HighlightA2}" />
+                            <Setter Value="{f:Brush ForegroundDisabled}" 
+                                    Property="Foreground" />
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+
+    <Style TargetType="{x:Type b:ForestIconButton}">
+        <Setter Property="CornerRadius" Value="0" />
+        <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+        <Setter Property="VerticalContentAlignment" Value="Stretch" />
+        <Setter Property="Background" Value="{f:Brush BackgroundDisabled}" />
+        <Setter Property="Foreground" Value="{f:Brush ForegroundLevel1}" />
+        <Setter Property="MinHeight" Value="24" />
+        <Setter Property="MinWidth" Value="24" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type b:ForestIconButton}">
+                    <Border x:Name="PART_Bd"
+                            Background="{TemplateBinding Background}"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}">
+                        <Path x:Name="PART_Icon"
+                              Data="{TemplateBinding Icon}"
+                              Width="{TemplateBinding IconSize}"
+                              Height="{TemplateBinding IconSize}"
+                              Stretch="Uniform"
+                              HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    
+
+    <!-- <Style TargetType="{x:Type b:HighlightButton}"> -->
+    <!--     <Setter Property="CornerRadius" Value="8" /> -->
+    <!--     <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualInAccent}" /> -->
+    <!--     <Setter Property="Foreground" Value="{f:AdaptiveLevel1Brush}" /> -->
+    <!--     <Setter Property="HorizontalContentAlignment" Value="Center" /> -->
+    <!--     <Setter Property="VerticalContentAlignment" Value="Center" /> -->
+    <!--     <Setter Property="Padding" Value="8" /> -->
+    <!--     <Setter Property="Template"> -->
+    <!--         <Setter.Value> -->
+    <!--             <ControlTemplate TargetType="{x:Type b:HighlightButton}"> -->
+    <!--                 <Border x:Name="PART_Bd" -->
+    <!--                         Background="{TemplateBinding Background}" -->
+    <!--                         CornerRadius="{TemplateBinding CornerRadius}" -->
+    <!--                         SnapsToDevicePixels="true" -->
+    <!--                         Padding="{TemplateBinding Padding}"> -->
+    <!--                     <ContentPresenter x:Name="PART_Content" -->
+    <!--                                       TextElement.FontSize="14" -->
+    <!--                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}" -->
+    <!--                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" -->
+    <!--                                       RecognizesAccessKey="True" -->
+    <!--                                       SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" /> -->
+    <!--                 </Border> -->
+    <!--             </ControlTemplate> -->
+    <!--         </Setter.Value> -->
+    <!--     </Setter> -->
+    <!-- </Style> -->
+
+
+    <Style TargetType="{x:Type b:CallToAction}">
+        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="FocusVisualStyle" Value="{StaticResource FocusVisualInAccent}" />
+        <Setter Property="Foreground" Value="{f:ForegroundInHighlightBrush}" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="12 8" />
+        <Setter Property="MinHeight" Value="32" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type b:CallToAction}">
+                    <Border x:Name="PART_Bd"
+                            CornerRadius="{TemplateBinding CornerRadius}"
+                            Padding="{TemplateBinding Padding}">
+                        <DockPanel VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}">
+                            <Path x:Name="PART_Icon"
+                                  Data="{TemplateBinding Icon}"
+                                  Stroke="#4F5B66"
+                                  StrokeThickness="1"
+                                  Stretch="Uniform"
+                                  Width="{TemplateBinding IconSize}"
+                                  Height="{TemplateBinding IconSize}"
+                                  Visibility="Collapsed" />
+
+                            <ContentPresenter x:Name="PART_Content"
+                                              TextElement.FontSize="14"
+                                              TextElement.Foreground="#4F5B66"
+                                              Content="{TemplateBinding Content}"
+                                              ContentTemplate="{TemplateBinding ContentTemplate}"
+                                              ContentTemplateSelector="{TemplateBinding ContentTemplateSelector}"
+                                              ContentStringFormat="{TemplateBinding ContentStringFormat}"
+                                              VerticalAlignment="Center"
+                                              HorizontalAlignment="Center" />
+                        </DockPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="HasIcon" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="PART_Icon" />
+                            <Setter Property="Margin" Value="8 0" TargetName="PART_Icon" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+</ResourceDictionary>

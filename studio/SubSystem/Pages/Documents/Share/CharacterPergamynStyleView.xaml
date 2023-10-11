@@ -1,0 +1,42 @@
+﻿<UserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.Documents.Share.CharacterPergamynStyleView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Documents.Share"
+             xmlns:f="urn:acorisoft/forest/ui"
+             mc:Ignorable="d"
+             d:DesignHeight="300" 
+             d:DesignWidth="300">
+    <UserControl.DataContext>
+        <local:CharacterPergamynStyleViewModel/>
+    </UserControl.DataContext>
+    <Grid VerticalAlignment="Top"
+          HorizontalAlignment="Left">
+        <Viewbox>
+            <Grid>
+                
+            </Grid>
+        </Viewbox>
+        <Border Background="WhiteSmoke"
+                CornerRadius="16"
+                Margin="0 160 320 0"
+                Height="800"
+                Width="640">
+
+        </Border>
+        <Border>
+            <Border.Effect>
+                <BlurEffect Radius="3"
+                            KernelType="Gaussian"/>
+            </Border.Effect>
+            <Image Source="E:\企划\橘小柚\社区\美术\图片设定_透明.png">
+                <Image.Effect>
+                    <f:TintEffect Tint="Peru"/>
+                </Image.Effect>
+            </Image>
+        </Border>
+        <Image Source="E:\企划\橘小柚\社区\美术\图片设定_透明.png"
+               Margin="20 16 20 12"/>
+    </Grid>
+</UserControl>

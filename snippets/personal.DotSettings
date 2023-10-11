@@ -1,0 +1,278 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:Boolean x:Key="/Default/Environment/XamlPreview/WpfPreviewEnabled/@EntryValue">False</s:Boolean>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=0576D37125E06E44BDF356E5F1394D13/Position/@EntryValue">5</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=1413FE2BDD2D35429C91F3F1C6A11BCF/Position/@EntryValue">3</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=1D53CE9255A65D468F1C0CC3391F75A4/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=1D53CE9255A65D468F1C0CC3391F75A4/EntryName/@EntryValue">Forest UI</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=1D53CE9255A65D468F1C0CC3391F75A4/Position/@EntryValue">9</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=CD61AADE5CC302459B8F69842EEE17F6/Position/@EntryValue">1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=DCE2B537F04E224599B099ED5C694FBB/Position/@EntryValue">4</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=E86FFC4DDF68794DBEA79D17669D7153/Position/@EntryValue">7</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=EF1D5DFC66A9604AA88DEC8E06B78488/Position/@EntryValue">2</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=F5A94B826E116646921666E505F10390/Position/@EntryValue">6</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=F9670F79B1A25A40B622B4CE2CE909EC/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=F9670F79B1A25A40B622B4CE2CE909EC/EntryName/@EntryValue">User Control</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=2FBEA98F8AB8294B87A62E4CCD2CC3E3/Entry/=F9670F79B1A25A40B622B4CE2CE909EC/Position/@EntryValue">8</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=2CBD6971A7955044AD2624B84FB49E38/Position/@EntryValue">9</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=567DCF4B487C244A9F6BB46E4E9F3B84/Position/@EntryValue">6</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=584F352E1E30354DB0A7724DF4374347/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=584F352E1E30354DB0A7724DF4374347/EntryName/@EntryValue">Class</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=584F352E1E30354DB0A7724DF4374347/Position/@EntryValue">10</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=7F2A1BE8D0078241A9AE7802038BAD3C/Position/@EntryValue">7</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/EntryName/@EntryValue">TabViewModel</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Position/@EntryValue">12</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=C4795E57DDEC1C4F97BBC8C7173EBBCA/Position/@EntryValue">8</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=CBFE2D1EFF4D8E4F8B631905B3B84395/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=CBFE2D1EFF4D8E4F8B631905B3B84395/EntryName/@EntryValue">Class</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=CBFE2D1EFF4D8E4F8B631905B3B84395/Position/@EntryValue">11</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=E091BE1BA741C549BBA97125E4CD95B1/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=E091BE1BA741C549BBA97125E4CD95B1/EntryName/@EntryValue">DialogViewModel</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/QuickList/=F0CA621CDF5AB24282D8CDC11C520997/Entry/=E091BE1BA741C549BBA97125E4CD95B1/Position/@EntryValue">13</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/CustomProperties/=Extension/@EntryIndexedValue">xaml</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/CustomProperties/=FileName/@EntryIndexedValue">ForestPage</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Description/@EntryValue">Forest Page</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Image/@EntryValue">Xaml</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Text/@EntryValue">&lt;f:ForestUserControl x:Class="$NAMESPACE$.$CLASS$"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:this="clr-namespace:$NAMESPACE$"
+             xmlns:thisVM="clr-namespace:$NAMESPACE$"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance Type={x:Type thisVM:$CLASS$Model}, IsDesignTimeCreatable=True}"&gt;
+    &lt;Grid&gt;
+	    $END$
+    &lt;/Grid&gt;
+&lt;/UserControl&gt;
+</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/UITag/@EntryValue">Forest UI</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=CLASS/InitialSection/@EntryValue">2E89AF12FF3FBA4DA5823CE9D7F6EB5B</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=CLASS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=HEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=HEADER/InitialSection/@EntryValue">2E89AF12FF3FBA4DA5823CE9D7F6EB5B</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=NAMESPACE/InitialSection/@EntryValue">2E89AF12FF3FBA4DA5823CE9D7F6EB5B</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Field/=NAMESPACE/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Scope/=1F4DBD605BD33C409AE7328D8C5965C3/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Scope/=1F4DBD605BD33C409AE7328D8C5965C3/Type/@EntryValue">InWpfCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Section/=2E89AF12FF3FBA4DA5823CE9D7F6EB5B/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Section/=2E89AF12FF3FBA4DA5823CE9D7F6EB5B/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="$FULLNAME$.cs" /&gt;</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Section/=2E89AF12FF3FBA4DA5823CE9D7F6EB5B/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Section/=2E89AF12FF3FBA4DA5823CE9D7F6EB5B/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=1D53CE9255A65D468F1C0CC3391F75A4/Section/=2E89AF12FF3FBA4DA5823CE9D7F6EB5B/SectionPlain/Text/@EntryValue">$HEADER$using System.Windows.Controls;&#xD;
+&#xD;
+namespace $NAMESPACE$&#xD;
+{&#xD;
+
+    [Connected(View = typeof($CLASS$), ViewModel = typeof($CLASS$Model))]&#xD;
+    public partial class $CLASS$ : UserControl&#xD;
+    {&#xD;
+        public $CLASS$()&#xD;
+        {&#xD;
+            InitializeComponent();&#xD;
+        }&#xD;
+    }&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/CustomProperties/=Category/@EntryIndexedValue">Primary</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/CustomProperties/=FileName/@EntryIndexedValue">Model</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Description/@EntryValue">Forest Model</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Image/@EntryValue">CSharp</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Text/@EntryValue">$HEADER$namespace $NAMESPACE$
+{
+  public class $CLASS$ : ObservableObject {$END$}
+}</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/UITag/@EntryValue">Forest UI</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=CLASS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Field/=NAMESPACE/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=584F352E1E30354DB0A7724DF4374347/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/CustomProperties/=Category/@EntryIndexedValue">Primary</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/CustomProperties/=FileName/@EntryIndexedValue">ForestDialogViewModel</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Description/@EntryValue">Forest DialogVM</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Image/@EntryValue">CSharp</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Text/@EntryValue">$HEADER$namespace $NAMESPACE$
+{
+  public class $CLASS$ : DialogViewModel {$END$}
+}</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/UITag/@EntryValue">Forest UI</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=CLASS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Field/=NAMESPACE/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=A4289557CC6D5C4A8B3CFAF4EBC8DB30/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/CustomProperties/=Category/@EntryIndexedValue">Primary</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/CustomProperties/=FileName/@EntryIndexedValue">ForestTabViewModel</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Description/@EntryValue">Forest TabVM</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Image/@EntryValue">CSharp</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Text/@EntryValue">$HEADER$namespace $NAMESPACE$
+{
+  public class $CLASS$ : TabViewModel {$END$}
+}</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/UITag/@EntryValue">Forest UI</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=CLASS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Field/=NAMESPACE/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=CBFE2D1EFF4D8E4F8B631905B3B84395/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/CustomProperties/=Category/@EntryIndexedValue">Primary</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/CustomProperties/=Extension/@EntryIndexedValue">cs</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/CustomProperties/=FileName/@EntryIndexedValue">ForestPageViewModel</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Description/@EntryValue">Forest PageVM</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Image/@EntryValue">CSharp</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Text/@EntryValue">$HEADER$namespace $NAMESPACE$
+{
+  public class $CLASS$ : PageViewModel {$END$}
+}</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/UITag/@EntryValue">Forest UI</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=CLASS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Field/=NAMESPACE/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Scope/=E8F0594528C33E45BBFEC6CFE851095D/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=E091BE1BA741C549BBA97125E4CD95B1/Scope/=E8F0594528C33E45BBFEC6CFE851095D/Type/@EntryValue">InCSharpProjectFile</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/@KeyIndexDefined">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Applicability/=File/@EntryIndexedValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/CustomProperties/=Extension/@EntryIndexedValue">xaml</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/CustomProperties/=FileName/@EntryIndexedValue">ForestDialog</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/CustomProperties/=ValidateFileName/@EntryIndexedValue">True</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Description/@EntryValue">Forest Dialog</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Image/@EntryValue">Xaml</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Reformat/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/ShortenQualifiedReferences/@EntryValue">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Text/@EntryValue">&lt;f:ForestUserControl x:Class="$NAMESPACE$.$CLASS$"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:this="clr-namespace:$NAMESPACE$"
+             xmlns:thisVM="clr-namespace:$NAMESPACE$"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance Type={x:Type thisVM:$CLASS$Model}, IsDesignTimeCreatable=True}"&gt;
+    &lt;Grid&gt;
+	    $END$
+    &lt;/Grid&gt;
+&lt;/UserControl&gt;
+</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/UITag/@EntryValue">Forest UI</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=CLASS/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=CLASS/Expression/@EntryValue">getAlphaNumericFileNameWithoutExtension()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=CLASS/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=CLASS/InitialSection/@EntryValue">495D0FBF9E1F83419E11565366FDE6B1</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=CLASS/Order/@EntryValue">1</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=HEADER/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=HEADER/Expression/@EntryValue">fileheader()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=HEADER/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=HEADER/InitialSection/@EntryValue">495D0FBF9E1F83419E11565366FDE6B1</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=HEADER/Order/@EntryValue">0</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=NAMESPACE/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=NAMESPACE/Expression/@EntryValue">fileDefaultNamespace()</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=NAMESPACE/InitialRange/@EntryValue">-1</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=NAMESPACE/InitialSection/@EntryValue">495D0FBF9E1F83419E11565366FDE6B1</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Field/=NAMESPACE/Order/@EntryValue">2</s:Int64>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Scope/=1F4DBD605BD33C409AE7328D8C5965C3/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Scope/=1F4DBD605BD33C409AE7328D8C5965C3/Type/@EntryValue">InWpfCSharpProject</s:String>
+	<s:Boolean x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Section/=495D0FBF9E1F83419E11565366FDE6B1/@KeyIndexDefined">True</s:Boolean>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Section/=495D0FBF9E1F83419E11565366FDE6B1/LocationSelectorConfig/@EntryValue">&lt;RelativeConfig File="$FULLNAME$.cs" /&gt;</s:String>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Section/=495D0FBF9E1F83419E11565366FDE6B1/LocationSelectorName/@EntryValue">manual</s:String>
+	<s:Int64 x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Section/=495D0FBF9E1F83419E11565366FDE6B1/Order/@EntryValue">0</s:Int64>
+	<s:String x:Key="/Default/PatternsAndTemplates/LiveTemplates/Template/=F9670F79B1A25A40B622B4CE2CE909EC/Section/=495D0FBF9E1F83419E11565366FDE6B1/SectionPlain/Text/@EntryValue">$HEADER$using System.Windows.Controls;&#xD;
+&#xD;
+namespace $NAMESPACE$&#xD;
+{&#xD;
+    [Connected(View = typeof($CLASS$), ViewModel = typeof($CLASS$Model))]&#xD;
+    public partial class $CLASS$ : UserControl&#xD;
+    {&#xD;
+        public $CLASS$()&#xD;
+        {&#xD;
+            InitializeComponent();&#xD;
+        }&#xD;
+    }&#xD;
+}&#xD;
+</s:String>
+	<s:Boolean x:Key="/Default/ReSpeller/DontCheckVerbatimStrings/@EntryValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=_041E_0442_043C_0435_043D_0430/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=_0420_0443_0441_0441_043A_0438_0439/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Adorner/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Adorners/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Annuler/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=colorunits/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Doujinshi/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Dragablz/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Fran_00E7ais/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=juxiaoyou/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Kichiku/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Lookless/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UserDictionary/Words/=Miga/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

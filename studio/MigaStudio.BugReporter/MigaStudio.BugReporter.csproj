@@ -1,0 +1,50 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net6.0</TargetFramework>
+        <Authors>罗易斯（Luoyisi）</Authors>
+        <Nullable>disable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+        <OutDir>../../Builds/JuXiaoYou</OutDir>
+        <RootNamespace>Acorisoft.FutureGL.MigaStudio</RootNamespace>
+        <GenerateAssemblyInfo>False</GenerateAssemblyInfo>
+        <Platforms>AnyCPU;x86;x64</Platforms>
+        <AssemblyVersion>3.0.0</AssemblyVersion>
+        <FileVersion>3.0.0.0</FileVersion>
+        <NeutralLanguage>zh</NeutralLanguage>
+        <LangVersion>latest</LangVersion>
+        <ApplicationIcon>icon_repair.ico</ApplicationIcon>
+        <Deterministic>False</Deterministic>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Colorful.Console" Version="1.2.15" />
+        <PackageReference Include="SharpZipLib" Version="1.4.2" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\frameworks\MigaUtils\MigaUtils.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Crashes\cn.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Crashes\en.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Crashes\fr.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Crashes\jp.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Crashes\kr.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="Crashes\ru.ini">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+</Project>

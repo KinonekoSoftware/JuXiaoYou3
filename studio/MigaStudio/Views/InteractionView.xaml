@@ -1,0 +1,100 @@
+﻿<f:ForestUserControl x:Class="Acorisoft.FutureGL.MigaStudio.Views.InteractionViewPage"
+                     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                     xmlns:f="urn:acorisoft/forest/ui"
+                     xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Views"
+                     xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.ViewModels"
+                     xmlns:fs="urn:acorisoft/forest/shell"
+                     xmlns:vm="clr-namespace:Acorisoft.FutureGL.MigaStudio.ViewModels"
+                     xmlns:pages="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+                     xmlns:vm2="clr-namespace:Acorisoft.FutureGL.MigaStudio.ViewModels;assembly=SubSystem.Core"
+                     xmlns:s="urn:acorisoft/studio"
+                     xmlns:i="http://schemas.microsoft.com/xaml/behaviors"
+                     xmlns:proxy="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Proxy"
+                     mc:Ignorable="d"
+                     d:DesignHeight="300" d:DesignWidth="300"
+                     d:DataContext="{d:DesignInstance Type={x:Type thisVM:InteractionController}, IsDesignTimeCreatable=True}"           
+                     SnapsToDevicePixels="True"
+                     UseLayoutRounding="True">
+    <UserControl.Resources>
+        <f:BooleanTrueToVisibilityConverter x:Key="bt2Visibility"/>
+        <proxy:ShellCoreBindingProxy x:Key="Shell" ViewModel="{Binding}" />
+
+        <DataTemplate DataType="{x:Type vm2:TabViewModel}">
+            <Border Background="Transparent"
+                    Padding="8 4 8 0"
+                    WindowChrome.IsHitTestVisibleInChrome="True">
+                <DockPanel>
+                    <Button DockPanel.Dock="Right"
+                            Command="{Binding Source={StaticResource Shell},Path=ViewModel.RemoveTabCommand}"
+                            CommandParameter="{Binding}"
+                            MinHeight="20"
+                            MinWidth="20"
+                            Style="{StaticResource CloseButtonStyle}"
+                            Height="20"
+                            Width="20" 
+                            Visibility="{Binding Removable, Converter={StaticResource bt2Visibility}}"/>
+                    <TextBlock DockPanel.Dock="Left"
+                               FontSize="13"
+                               Text="{Binding Title,Mode=OneWay}"
+                               TextTrimming="CharacterEllipsis"
+                               VerticalAlignment="Center" />
+                </DockPanel>
+            </Border>
+        </DataTemplate>
+    </UserControl.Resources>
+    <DockPanel>
+        <Grid DockPanel.Dock="Top"
+              WindowChrome.IsHitTestVisibleInChrome="False"
+              Background="{f:Brush BackgroundLevel5}"
+              Height="36">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="16" />
+                <ColumnDefinition Width="1*" />
+                <ColumnDefinition Width="144" />
+                <ColumnDefinition Width="64" />
+                <ColumnDefinition Width="144" />
+            </Grid.ColumnDefinitions>
+
+            <f:ChromeListBox x:Name="Shell"
+                             Grid.Column="1"
+                             WindowChrome.IsHitTestVisibleInChrome="False"
+                             ScrollViewer.CanContentScroll="False"
+                             ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                             Margin="0 2 0 0"
+                             ItemsSource="{Binding Workspace,Mode=OneWay}"
+                             SelectedItem="{Binding CurrentViewModel,Mode=TwoWay}"
+                             VerticalAlignment="Stretch">
+                <f:ChromeListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <s:TabItemPanel />
+                    </ItemsPanelTemplate>
+                </f:ChromeListBox.ItemsPanel>
+
+            </f:ChromeListBox>
+
+            <!-- 新建标签页按钮 -->
+            <f:ForestIconButton Grid.Column="2"
+                                WindowChrome.IsHitTestVisibleInChrome="True"
+                                Command="{Binding AddTabCommand}"
+                                Icon="{StaticResource FeatherIcon.Plus}"
+                                IconSize="19"
+                                Width="48"
+                                Visibility="Collapsed"/>
+
+            <Border Grid.Column="3"
+                    Background="{f:Brush BackgroundLevel5}"/>
+
+            <!-- 标题栏 -->
+            <fs:TitleBar Grid.Column="4"
+                         WindowChrome.IsHitTestVisibleInChrome="True"
+                         Background="{f:Brush BackgroundLevel5}"
+                         WindowState="{Binding WindowState,Mode=OneWay}" />
+        </Grid>
+
+        <fs:ViewHost ClipToBounds="True"
+                     ViewModel="{Binding CurrentViewModel,Mode=OneWay}" />
+    </DockPanel>
+</f:ForestUserControl>

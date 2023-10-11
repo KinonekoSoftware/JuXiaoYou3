@@ -1,0 +1,145 @@
+﻿<fs:ForestWindow x:Class="Acorisoft.FutureGL.Forest.MainWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:local="clr-namespace:Acorisoft.FutureGL.Forest"
+                 xmlns:demo="clr-namespace:Acorisoft.FutureGL.Forest.Demos"
+                 xmlns:vm="clr-namespace:Acorisoft.FutureGL.Forest.ViewModels"
+                 xmlns:cp="clr-namespace:ColorPicker;assembly=Forest.Controls"
+                 xmlns:f="urn:acorisoft/forest/ui"
+                 xmlns:fs="urn:acorisoft/forest/shell"
+                 xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+                 mc:Ignorable="d"
+                 f:Language.Root="Home"
+                 Title="MainWindow"
+                 WindowState="Maximized"
+                 MinWidth="1280"
+                 MinHeight="640">
+    <fs:ForestWindow.TitleBar>
+        <fs:TitleBar HorizontalAlignment="Right"/>
+    </fs:ForestWindow.TitleBar>
+    <Window.Resources>
+        <ResourceDictionary>
+            <Geometry x:Key="Icon">F1 M24,24z M0,0z M20.84,4.61A5.5,5.5,0,0,0,13.06,4.61L12,5.67 10.94,4.61A5.5,5.5,0,0,0,3.16,12.39L4.22,13.45 12,21.23 19.78,13.45 20.84,12.39A5.5,5.5,0,0,0,20.84,4.61z</Geometry>
+        </ResourceDictionary>
+    </Window.Resources>
+    <f:ForestTabControl TabStripPlacement="Left">
+        <f:HighlightTabItem Header="按钮展示"
+                         Icon="{StaticResource Icon}"
+                         f:Language.Name="Test">
+            <demo:ButtonDemo />
+        </f:HighlightTabItem>
+        <f:HighlightTabItem Header="首屏页面" IsEnabled="True" Icon="{StaticResource Icon}">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right"
+                            Width="320">
+                    <Button Content="Danger"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:DangerViewModel}" />
+                    <Button Content="Warning"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:WarningViewModel}" />
+                    <Button Content="Info"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:InfoViewModel}" />
+                    <Button Content="Success"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:SuccessViewModel}" />
+                    <Button Content="Obsolete"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:ObsoleteViewModel}" />
+                </StackPanel>
+                <fs:DialogHost x:Name="DialogHost" />
+            </DockPanel>
+        </f:HighlightTabItem>
+        <f:HighlightTabItem Header="ContentHost" Icon="{StaticResource Icon}">
+            <DockPanel>
+                <StackPanel DockPanel.Dock="Right"
+                            Width="320">
+                    <Button Content="Danger"
+                            Click="ButtonBase_OnClick2"
+                            Tag="{x:Type fs:DangerViewModel}" />
+                    <Button Content="Warning"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:WarningViewModel}" />
+                    <Button Content="Info"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:InfoViewModel}" />
+                    <Button Content="Success"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:SuccessViewModel}" />
+                    <Button Content="Obsolete"
+                            Click="ButtonBase_OnClick"
+                            Tag="{x:Type fs:ObsoleteViewModel}" />
+                </StackPanel>
+                <fs:EmptyContentHost x:Name="ViewHost">
+                    <fs:EmptyContentHost.EmptyState>
+                        <Grid>
+                            <TextBlock Text="空"
+                                       FontSize="48"
+                                       HorizontalAlignment="Center"
+                                       VerticalAlignment="Center"/>
+                        </Grid>
+                    </fs:EmptyContentHost.EmptyState>
+                </fs:EmptyContentHost>
+            </DockPanel>
+        </f:HighlightTabItem>
+        <f:HighlightTabItem Header="ColorPicker" Icon="{StaticResource Icon}">
+           <ScrollViewer>
+               <WrapPanel>
+                   <cp:PortableColorPicker Height="64" Width="64"/>
+                   <cp:StandardColorPicker Margin="16" Height="418" Width="220"/>
+               </WrapPanel>
+           </ScrollViewer>
+        </f:HighlightTabItem>
+        <f:HighlightTabItem Header="按钮组" Icon="{StaticResource Icon}">
+        <WrapPanel Background="#F1F1F1">
+            <Border Background="White"
+                        Margin="8"
+                        MinWidth="280"
+                        MinHeight="64"
+                        Padding="14 16 16 16">
+                <DockPanel>
+                    <f:HighlightButton DockPanel.Dock="Top"
+                                           Content="添加" />
+                    <f:SpacingUniformGrid Columns="4"
+                                              Gap="2"
+                                     Margin="0 8 0 0">
+                        <ui:Button Icon="Edit16" HorizontalAlignment="Stretch"/>
+                        <ui:Button Icon="Delete16" HorizontalAlignment="Stretch"/>
+                        <ui:Button Icon="ArrowUp16" HorizontalAlignment="Stretch"/>
+                        <ui:Button Icon="ArrowDown16" HorizontalAlignment="Stretch"/>
+                    </f:SpacingUniformGrid>
+                </DockPanel>
+            </Border>
+
+            <Border Background="White"
+                        Margin="8"
+                        MinWidth="280"
+                        MinHeight="64"
+                        Padding="14 16 16 16">
+                <DockPanel>
+                    <DockPanel DockPanel.Dock="Top">
+                        <ui:Button DockPanel.Dock="Right"
+                                       Icon="Edit16"
+                                       HorizontalAlignment="Stretch"
+                                       Margin="8 0 0 0"
+                                       VerticalAlignment="Stretch" />
+
+                        <f:HighlightButton Content="添加" />
+                    </DockPanel>
+
+                    <UniformGrid Columns="4"
+                                     Margin="0 8 0 0">
+                        <ui:Button Icon="Edit16" HorizontalAlignment="Stretch" Margin="2 0 2 0" />
+                        <ui:Button Icon="Delete16" HorizontalAlignment="Stretch" Margin="2 0 2 0" />
+                        <ui:Button Icon="ArrowUp16" HorizontalAlignment="Stretch" Margin="2 0 2 0" />
+                        <ui:Button Icon="ArrowDown16" HorizontalAlignment="Stretch" Margin="2 0 2 0" />
+                    </UniformGrid>
+                </DockPanel>
+            </Border>
+        </WrapPanel>
+        </f:HighlightTabItem>
+    </f:ForestTabControl>
+</fs:ForestWindow>

@@ -1,0 +1,15 @@
+﻿<Application x:Class="Acorisoft.FutureGL.Tools.MusicPlayer.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.Tools.MusicPlayer"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/FutureGL.Tools.MusicPlayer;component/MusicIconPack.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Forest.Controls;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/Generic.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

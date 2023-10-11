@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>disable</Nullable>
+		<OutDir>../../Builds/Base</OutDir>
+		<RootNamespace>Acorisoft.FutureGL.MigaDB</RootNamespace>
+		<PackageId>MigaDB.Share</PackageId>
+		<Authors>Luoyisi</Authors>
+		<Platforms>x86;x64</Platforms>
+		<Platforms>x86</Platforms>
+		<Title>MigaDB</Title>
+		<Description>可公开的文档层Api</Description>
+		<Copyright>All right reseved by Luoyisi</Copyright>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='RELEASE|x86'" />
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DEBUG|x86'" />
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='NUGET|x86'">
+	  <LangVersion>preview</LangVersion>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="DryIoc.dll" Version="4.8.2" />
+		<PackageReference Include="LiteDB" Version="5.0.15" />
+		<PackageReference Include="MediatR" Version="11.1.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.2" />
+		<PackageReference Include="System.IO.Hashing" Version="7.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\MigaUtils\MigaUtils.csproj" />
+	</ItemGroup>
+
+</Project>

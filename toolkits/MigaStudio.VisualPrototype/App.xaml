@@ -1,0 +1,21 @@
+﻿<fs:ForestApp x:Class="Acorisoft.FutureGL.MigaStudio.Repairs.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio"
+             xmlns:shell="urn:acorisoft/forest/shell"
+             xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+             xmlns:f="urn:acorisoft/forest/ui"
+             xmlns:fs="urn:acorisoft/forest/shell"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/Forest.Controls;component/Themes/Generic.xaml"/>
+                <ResourceDictionary Source="pack://application:,,,/Forest.Shell;component/Themes/Generic.xaml"/>
+                <!-- <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Styles/Wpf.Ui.xaml" /> -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Styles/Controls/ProgressBar.xaml" /> -->
+                <!-- <ResourceDictionary Source="pack://application:,,,/Wpf.Ui;component/Styles/Controls/ComboBox.xaml" /> -->
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</fs:ForestApp>

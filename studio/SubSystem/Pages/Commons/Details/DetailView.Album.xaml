@@ -1,0 +1,95 @@
+﻿<UserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.Commons.AlbumPartView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Commons"
+             xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters"
+             xmlns:m="clr-namespace:Acorisoft.FutureGL.MigaDB.Models;assembly=MigaDB.Share"
+             xmlns:f="urn:acorisoft/forest/ui"
+             xmlns:ftk="urn:acorisoft/forest/toolkits"
+             xmlns:studio="urn:acorisoft/studio"
+             xmlns:gu="https://github.com/GuOrg/Gu.Wpf.FlipView"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance Type={x:Type local:AlbumPartViewModel}, IsDesignTimeCreatable=True}">
+    <UserControl.Resources>
+    </UserControl.Resources>
+
+    <f:EmptyContentControl NotEmpty="{Binding HasElement,Mode=OneWay}">
+        <f:EmptyContentControl.EmptyState>
+            <studio:AlbumEmptyStateView Command="{Binding AddCommand}"
+                                        Width="384" />
+        </f:EmptyContentControl.EmptyState>
+        <DockPanel>
+            <StackPanel DockPanel.Dock="Top"
+                        Orientation="Horizontal">
+                <ftk:ToolButton Content="{f:Language global.Add}"
+                                Command="{Binding AddCommand}"
+                                Icon="{StaticResource FeatherIcon.PlusCircle}"
+                                ShowText="True" />
+
+                <ftk:ToolButton Content="{f:Language global.edit}"
+                                Command="{Binding EditCommand}"
+                                CommandParameter="{Binding Selected,Mode=OneWay}"
+                                Icon="{StaticResource FeatherIcon.Edit}"
+                                ShowText="True" />
+
+                <ftk:ToolButton Content="{f:Language global.Remove}"
+                                Command="{Binding RemoveCommand}"
+                                CommandParameter="{Binding Selected,Mode=OneWay}"
+                                Icon="{StaticResource FeatherIcon.MinusCircle}"
+                                ShowText="True" />
+
+                <ftk:ToolButton Content="{f:Language global.Up}"
+                                Command="{Binding ShiftUpCommand}"
+                                CommandParameter="{Binding Selected,Mode=OneWay}"
+                                Icon="{StaticResource FeatherIcon.ArrowUp}"
+                                ShowText="True" />
+
+                <ftk:ToolButton Content="{f:Language global.Down}"
+                                Command="{Binding ShiftDownCommand}"
+                                CommandParameter="{Binding Selected,Mode=OneWay}"
+                                Icon="{StaticResource FeatherIcon.ArrowDown}"
+                                ShowText="True" />
+
+                <ftk:ToolButton Content="{f:Language global.open}"
+                                Command="{Binding OpenCommand}"
+                                CommandParameter="{Binding Selected,Mode=OneWay}"
+                                Icon="{StaticResource FeatherIcon.Upload}"
+                                ShowText="True" />
+            </StackPanel>
+
+            <DockPanel>
+                <f:ListBox DockPanel.Dock="Right"
+                           ItemsSource="{Binding Collection,Mode=OneWay}"
+                           SelectedItem="{Binding Selected,Mode=TwoWay}"
+                           Style="{StaticResource ClearStyle.ListBox}"
+                           Width="280">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type m:Album}">
+                            <TextBlock Margin="8"
+                                       Text="{Binding Name,Mode=OneWay}"
+                                       TextTrimming="CharacterEllipsis"
+                                       VerticalAlignment="Center" />
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </f:ListBox>
+
+                <ScrollViewer Padding="12">
+                    <Viewbox>
+                        <ContentControl Content="{Binding Selected,Mode=OneWay}">
+                            <ContentControl.ContentTemplate>
+                                <DataTemplate DataType="{x:Type m:Album}">
+                                    <Image Stretch="None"
+                                           Source="{Binding Mode=OneWay, Converter={x:Static thisConverters:ConverterPool.Image}}" />
+                                </DataTemplate>
+                            </ContentControl.ContentTemplate>
+                        </ContentControl>
+                    </Viewbox>
+                </ScrollViewer>
+            </DockPanel>
+        </DockPanel>
+    </f:EmptyContentControl>
+</UserControl>

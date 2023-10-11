@@ -1,0 +1,26 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net7.0-windows</TargetFramework>
+        <Nullable>disable</Nullable>
+        <UseWPF>true</UseWPF>
+        <RootNamespace>Acorisoft.FutureGL.Tools.MusicPlayer</RootNamespace>
+		<OutDir>../../Builds/Tools/Music</OutDir>
+		<Platforms>AnyCPU;x86</Platforms>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\frameworks\MigaUtils\MigaUtils.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Controls\Forest.Controls.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest.Shell\Forest.Shell.csproj" />
+      <ProjectReference Include="..\..\ui\Forest\Forest\Forest.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="gong-wpf-dragdrop" Version="3.2.1" />
+      <PackageReference Include="NAudio" Version="2.1.0" />
+      <PackageReference Include="TagLibSharp" Version="2.3.0" />
+    </ItemGroup>
+
+</Project>

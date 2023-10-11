@@ -1,0 +1,230 @@
+﻿<shell:ForestWindow x:Class="Acorisoft.FutureGL.MigaStudio.Repairs.MainWindow"
+                    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                    xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Repairs"
+                    xmlns:shell="urn:acorisoft/forest/shell"
+                    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+                    xmlns:f="urn:acorisoft/forest/ui"
+                    Style="{StaticResource ForestWindow}"
+                    MouseDoubleClick="Window_AddNumber"
+                    mc:Ignorable="d"
+                    Title="MainWindow"
+                    Height="450"
+                    Width="800"
+                    MinWidth="1440"
+                    UseLayoutRounding="True">
+    <Window.Resources>
+        <ImageBrush x:Key="Avatar" ImageSource="E:\2.png" />
+        <Geometry x:Key="Quote">F1 M24,24z M0,0z M3.691,6.292C5.094,4.771,7.217,4,10,4L11,4 11,6.819 10.196,6.98C8.826,7.254,7.873,7.793,7.363,8.584A2.902,2.902,0,0,0,6.925,10L10,10A1,1,0,0,1,11,11L11,18C11,19.103,10.103,20,9,20L3,20A1,1,0,0,1,2,19L2,14 2.003,11.081C1.994,10.97,1.804,8.34,3.691,6.292z M20,20L14,20A1,1,0,0,1,13,19L13,14 13.003,11.081C12.994,10.97 12.804,8.34 14.691,6.292 16.094,4.771 18.217,4 21,4L22,4 22,6.819 21.196,6.98C19.826,7.254,18.873,7.793,18.363,8.584A2.902,2.902,0,0,0,17.925,10L21,10A1,1,0,0,1,22,11L22,18C22,19.103,21.103,20,20,20z</Geometry>
+    </Window.Resources>
+    <Window.DataContext>
+        <local:MainWindowViewModel />
+    </Window.DataContext>
+    <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="320" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Canvas>
+            <Rectangle Canvas.Left="54"
+                     Canvas.Top="4"
+                     Fill="SeaGreen" 
+                     Height="300"
+                     Width="4"/>
+            <Rectangle Canvas.Left="118"
+                     Canvas.Top="120"
+                     Fill="GhostWhite" 
+                     Height="300"
+                     Width="4"/>
+            <Rectangle Canvas.Left="54"
+                     Canvas.Top="120"
+                     Fill="GhostWhite" 
+                     Height="4"
+                     Width="84"/>
+
+            <Rectangle Canvas.Left="54"
+                     Canvas.Top="4"
+                     Fill="SeaGreen" 
+                     Height="300"
+                     Width="4"/>
+
+            <Ellipse Canvas.Left="32"
+                     Canvas.Top="0"
+                     Fill="DarkSeaGreen" 
+                     Height="48"
+                     Width="48"/>
+
+            <Ellipse Canvas.Left="32"
+                     Canvas.Top="96"
+                     Fill="DarkSeaGreen" 
+                     Height="48"
+                     Width="48"/>
+
+            <Ellipse Canvas.Left="32"
+                     Canvas.Top="160"
+                     Fill="DarkSeaGreen" 
+                     Height="48"
+                     Width="48"/>
+
+
+            <Ellipse Canvas.Left="96"
+                     Canvas.Top="96"
+                     Fill="NavajoWhite" 
+                     Height="48"
+                     Width="48"/>
+
+            <Ellipse Canvas.Left="96"
+                     Canvas.Top="190"
+                     Fill="NavajoWhite" 
+                     Height="48"
+                     Width="48"/>
+
+            <Ellipse Canvas.Left="96"
+                     Canvas.Top="320"
+                     Fill="NavajoWhite" 
+                     Height="48"
+                     Width="48"/>
+
+            <Ellipse Canvas.Left="200"
+                     Canvas.Top="200"
+                     Fill="NavajoWhite" 
+                     Height="8"
+                     Width="8"/>
+
+            <Ellipse Canvas.Left="300"
+                     Canvas.Top="300"
+                     Fill="NavajoWhite" 
+                     Height="8"
+                     Width="8"/>
+
+            <Path Canvas.Left="200"
+                  Canvas.Top="200"
+                  Stroke="Crimson" 
+                  StrokeThickness="4"
+                  Stretch="None">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigureCollection>
+                                <PathFigure StartPoint="0,0">
+                                    <PathFigure.Segments>
+                                        <PathSegmentCollection>
+                                            <QuadraticBezierSegment Point1="100,000" Point2="100,100" />
+                                            <QuadraticBezierSegment Point1="300,000" Point2="300,100" />
+                                        </PathSegmentCollection>
+                                    </PathFigure.Segments>
+                                </PathFigure>
+                            </PathFigureCollection>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+        </Canvas>
+        <StackPanel Grid.Column="2"
+                    Margin="16">
+            <this:TimelineNode/>
+            <this:TimelineNode/>
+            <this:TimelineNode/>
+        </StackPanel>-->
+    <local:NumberItemsControl x:Name="ItemsControl"
+                              ScrollViewer.CanContentScroll="True"
+                              VirtualizingPanel.IsVirtualizing="True"
+                              VirtualizingPanel.IsVirtualizingWhenGrouping="True"
+                              VirtualizingPanel.ScrollUnit="Item"
+                              VirtualizingPanel.VirtualizationMode="Recycling"
+                              AnchoredItem="{Binding Anchor,Mode=TwoWay}"
+                              Margin="32"
+                              ItemsSource="{Binding Items,Mode=OneWay}"
+                              Style="{StaticResource ClearStyle.AnchoredItemsControl}">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <Border Background="CornflowerBlue"
+                        Margin="4">
+                    <TextBlock Text="{Binding Content}" />
+                </Border>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+        <!-- <studio:PlainChatMessage CharacterName="QuadraticBezierSegment" -->
+        <!--                          CharacterAvatar="{StaticResource Avatar}" -->
+        <!--                          CharacterTitle="Test" -->
+        <!--                          CharacterTitleBrush="CornflowerBlue" -->
+        <!--                          Content="QuadraticBezierSegment" -->
+        <!--                          Layout="QQ"/> -->
+        <!-- -->
+        <!-- <studio:PlainChatMessage CharacterName="QuadraticBezierSegment" -->
+        <!--                          CharacterAvatar="{StaticResource Avatar}" -->
+        <!--                          CharacterTitle="Test" -->
+        <!--                          CharacterTitleBrush="CornflowerBlue" -->
+        <!--                          Content="QuadraticBezierSegment" -->
+        <!--                          IsSelf="True" -->
+        <!--                          Layout="QQ"/> -->
+        <!-- -->
+        <!-- <studio:PlainChatMessage CharacterName="QuadraticBezierSegment" -->
+        <!--                          CharacterAvatar="{StaticResource Avatar}" -->
+        <!--                          CharacterTitle="Test" -->
+        <!--                          CharacterTitleBrush="CornflowerBlue" -->
+        <!--                          Content="QuadraticBezierSegment" -->
+        <!--                          IsSelf="True" -->
+        <!--                          Layout="Wechat"/> -->
+        <!-- -->
+        <!-- <studio:PlainChatMessage CharacterName="QuadraticBezierSegment" -->
+        <!--                          CharacterAvatar="{StaticResource Avatar}" -->
+        <!--                          CharacterTitle="Test" -->
+        <!--                          CharacterTitleBrush="CornflowerBlue" -->
+        <!--                          Content="QuadraticBezierSegment" -->
+        <!--                          Layout="Wechat"/> -->
+        <!-- -->
+        <!-- ~1~ 时间戳 @1@ -->
+        <!-- <Border HorizontalAlignment="Center" -->
+        <!--         Margin="0 8" -->
+        <!--         Padding="8 4"> -->
+        <!--     <TextBlock Foreground="#777777" Text="昨天 晚上9:31"/> -->
+        <!-- </Border> -->
+        <!-- -->
+        <!-- ~1~ 撤回 @1@ -->
+        <!-- <Border HorizontalAlignment="Center" -->
+        <!--         Margin="0 8" -->
+        <!--         Padding="8 4"> -->
+        <!--     <DockPanel> -->
+        <!--         <TextBlock Foreground="#777777" Text="QuadraticBezierSegment"/> -->
+        <!--         <TextBlock Foreground="#777777" Text="撤回了一条消息，因为有错别字。"/> -->
+        <!--     </DockPanel> -->
+        <!-- </Border> -->
+        <!-- -->
+        <!-- ~1~ 加群 @1@ -->
+        <!-- <Border HorizontalAlignment="Center" -->
+        <!--         Margin="0 8" -->
+        <!--         Padding="8 4"> -->
+        <!--     <StackPanel Orientation="Horizontal"> -->
+        <!--         <TextBlock Foreground="#3fa0ff" Text="QuadraticBezierSegment"/> -->
+        <!--         <TextBlock Foreground="#777777" Margin="4 0 0 0" -->
+        <!--                    Text="加入了本群，"/> -->
+        <!--         <TextBlock Foreground="#3fa0ff" Text="点击欢迎"/> -->
+        <!--     </StackPanel> -->
+        <!-- </Border> -->
+        <!-- -->
+        <!-- ~1~ 踢群 @1@ -->
+        <!-- <Border HorizontalAlignment="Center" -->
+        <!--         Margin="0 8" -->
+        <!--         Padding="8 4"> -->
+        <!--     <StackPanel Orientation="Horizontal"> -->
+        <!--         <TextBlock Foreground="#3fa0ff" Text="QuadraticBezierSegment"/> -->
+        <!--         <TextBlock Foreground="#777777" Margin="4 0 0 0" -->
+        <!--                    Text="已被移除群聊"/> -->
+        <!--     </StackPanel> -->
+        <!-- </Border> -->
+        <!-- -->
+        <!-- ~1~ 禁言 @1@ -->
+        <!-- <Border HorizontalAlignment="Center" -->
+        <!--         Margin="0 8" -->
+        <!--         Padding="8 4"> -->
+        <!--     <StackPanel Orientation="Horizontal"> -->
+        <!--         <TextBlock Foreground="#3fa0ff" Text="QuadraticBezierSegment"/> -->
+        <!--         <TextBlock Foreground="#777777" Margin="4 0" -->
+        <!--                    Text="被你禁言了10分钟"/> -->
+        <!--     </StackPanel> -->
+        <!-- </Border> -->
+    </local:NumberItemsControl>
+</shell:ForestWindow>

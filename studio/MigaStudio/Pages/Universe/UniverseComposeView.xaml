@@ -1,0 +1,39 @@
+﻿<UserControl x:Class="Acorisoft.FutureGL.MigaStudio.Pages.UniverseComposeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:f="urn:acorisoft/forest/ui"
+             xmlns:m="clr-namespace:Acorisoft.FutureGL.MigaDB.Models;assembly=MigaDB.Share"
+             xmlns:ftk="urn:acorisoft/forest/toolkits"
+             xmlns:studio="urn:acorisoft/studio"
+             xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+             xmlns:thisConverters="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.Converters;assembly=SubSystem"
+             xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages"
+             mc:Ignorable="d"
+             d:DesignHeight="300" d:DesignWidth="300"
+             d:DataContext="{d:DesignInstance Type={x:Type thisVM:UniverseViewModel}, IsDesignTimeCreatable=True}">
+    <Grid Margin="16 0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0"
+                    HorizontalAlignment="Right"
+                    Orientation="Horizontal">
+            <ftk:ToolButton Content="{f:Language global.Add}"
+                            Icon="{StaticResource FeatherIcon.PlusCircle}"
+                            ShowText="True" />
+            <ftk:ToolButton Content="{f:Language global.Remove}"
+                            CommandParameter="{Binding SelectedAlbum,Mode=OneWay}"
+                            Icon="{StaticResource FeatherIcon.MinusCircle}"
+                            ShowText="True" />
+        </StackPanel>
+        <f:EmptyStateListBox Grid.Row="1">
+            <f:EmptyStateListBox.EmptyState>
+                <studio:CollectionEmptyStateView Title="在这里添加基于您的世界观创建的小说、漫画、影视、动画、手书！"
+                                                 Width="768"/>
+            </f:EmptyStateListBox.EmptyState>
+        </f:EmptyStateListBox>
+    </Grid>
+</UserControl>

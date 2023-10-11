@@ -1,0 +1,94 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:f="urn:acorisoft/forest/ui">
+    <Style x:Key="ClearStyle.RadioButton" TargetType="{x:Type RadioButton}">
+        <Setter Property="Background" Value="{f:BackgroundBrush}"/>
+        <Setter Property="Foreground" Value="{f:ForegroundBrush}"/>
+        <Setter Property="BorderBrush" Value="Transparent" />
+        <Setter Property="Margin" Value="0" />
+        <Setter Property="Padding" Value="0" />
+        <Setter Property="Cursor" Value="Hand" />
+        <Setter Property="HorizontalAlignment" Value="Left" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="MinWidth" Value="32" />
+        <Setter Property="IsTabStop" Value="True" />
+        <Setter Property="Focusable" Value="True" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="OverridesDefaultStyle" Value="True" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type RadioButton}">
+                    <DockPanel Background="Transparent">
+                        <Border x:Name="PART_Bd"
+                                Background="Transparent"
+                                BorderThickness="2"
+                                CornerRadius="16"
+                                Margin="0 0 8 0"
+                                Height="20"
+                                Width="20"
+                                Padding="3">
+                            <Border x:Name="PART_Icon"
+                                    CornerRadius="16"/>
+                        </Border>
+                        <ContentPresenter x:Name="ContentPresenter"
+                                          Margin="{TemplateBinding Padding}"
+                                          HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          Content="{TemplateBinding Content}"
+                                          ContentTemplate="{TemplateBinding ContentTemplate}"
+                                          TextElement.Foreground="{TemplateBinding Foreground}" />
+                    </DockPanel>
+                    <ControlTemplate.Triggers>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="True"/>
+                                <Condition Property="IsChecked" Value="False"/>
+                                <Condition Property="IsEnabled" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="PART_Icon" Value="{f:Brush AdaptiveLevel2}"/>
+                            <Setter Property="BorderBrush" TargetName="PART_Bd" Value="{f:Brush AdaptiveLevel2}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="True"/>
+                                <Condition Property="IsChecked" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="PART_Icon" Value="{f:Brush HighlightA4}"/>
+                            <Setter Property="BorderBrush" TargetName="PART_Bd" Value="{f:Brush HighlightA4}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsMouseOver" Value="False"/>
+                                <Condition Property="IsEnabled" Value="True"/>
+                                <Condition Property="IsChecked" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="PART_Icon" Value="{f:Brush AdaptiveLevel2}"/>
+                            <Setter Property="BorderBrush" TargetName="PART_Bd" Value="{f:Brush AdaptiveLevel2}"/>
+                            <Setter Property="Visibility" Value="Collapsed" TargetName="PART_Icon" />
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False"/>
+                                <Condition Property="IsChecked" Value="True"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="PART_Icon" Value="{f:Brush HighlightA2}"/>
+                            <Setter Property="BorderBrush" TargetName="PART_Bd" Value="{f:Brush HighlightA2}"/>
+                        </MultiTrigger>
+                        <MultiTrigger>
+                            <MultiTrigger.Conditions>
+                                <Condition Property="IsEnabled" Value="False"/>
+                                <Condition Property="IsChecked" Value="False"/>
+                            </MultiTrigger.Conditions>
+                            <Setter Property="Background" TargetName="PART_Icon" Value="{f:Brush Overlay100}"/>
+                            <Setter Property="BorderBrush" TargetName="PART_Bd" Value="{f:Brush Overlay100}"/>
+                        </MultiTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    
+    <Style TargetType="RadioButton" BasedOn="{StaticResource ClearStyle.RadioButton}"></Style>
+</ResourceDictionary>

@@ -1,0 +1,5 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <FontFamily x:Key="SongTi">pack://application:,,,/Forest.Fonts;component/SourceHanSerifCN.otf#Source Han Serif CN</FontFamily>
+    <FontFamily x:Key="ShouXieTi">pack://application:,,,/Forest.Fonts;component/清松手寫體1.ttf#清松手寫體1</FontFamily>
+</ResourceDictionary>

@@ -1,0 +1,379 @@
+﻿<UserControl x:Class="Acorisoft.FutureGL.MigaStudio.Resources.EmptyState.AlbumEmptyStateView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:f="urn:acorisoft/forest/ui"
+             xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Resources.EmptyState"
+             mc:Ignorable="d"
+             d:DesignHeight="300"
+             d:DesignWidth="300"
+             Height="420"
+             Width="480">
+    <UserControl.Resources>
+        <DrawingImage x:Key="EmptyState_Image">
+            <DrawingImage.Drawing>
+                <DrawingGroup ClipGeometry="M0,0 V771.24242 H756.4834 V0 H0 Z">
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FFE6E6E6" Geometry="F1 M756.4834,771.24242z M0,0z M721.52783,375.35584A2.659,2.659,0,0,0,718.87158,378.01209L718.87158,560.37244A2.659,2.659,0,0,0,721.52783,563.02869L975.58545,563.02869A2.659,2.659,0,0,0,978.2417,560.37244L978.2417,378.01209A2.659,2.659,0,0,0,975.58545,375.35584z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M756.4834,771.24242z M0,0z M961.555,391.66566L961.555,521.26566A3.26061,3.26061,0,0,1,958.295,524.52566L738.295,524.52566A2.31873,2.31873,0,0,1,737.835,524.48566A3.25569,3.25569,0,0,1,735.035,521.26566L735.035,391.66566A3.26057,3.26057,0,0,1,738.295,388.40566L958.295,388.40566A3.2606,3.2606,0,0,1,961.555,391.66566z" />
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FFFF6584">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="11.8189" RadiusY="11.8189" Center="694.1978,371.5162" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="504.705,317.5298" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="748.3717,317.5298" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="504.705,492.097" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="748.3717,492.097" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="14.1801" RadiusY="14.1801" Center="585.7602,403.733" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M587.127,446.444L587.127,446.444 584.223,446.444 585.547,401.597 587.127,446.444z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M585.803,410.097L585.803,410.097 588.921,405.783 585.76,411.165 585.419,410.567 585.803,410.097z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M585.461,414.454L585.461,414.454 582.343,410.14 585.504,415.521 585.846,414.923 585.461,414.454z" />
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="14.1801" RadiusY="14.1801" Center="715.8365,403.733" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M717.203,446.444L717.203,446.444 714.299,446.444 715.623,401.597 717.203,446.444z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M715.879,410.097L715.879,410.097 718.997,405.783 715.837,411.165 715.495,410.567 715.879,410.097z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M715.538,414.454L715.538,414.454 712.42,410.14 715.58,415.521 715.922,414.923 715.538,414.454z" />
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="20.9429" RadiusY="20.9429" Center="626.8376,391.3633" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M628.856,454.444L628.856,454.444 624.567,454.444 626.522,388.209 628.856,454.444z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M626.901,400.762L626.901,400.762 631.506,394.391 626.838,402.339 626.333,401.456 626.901,400.762z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M626.396,407.197L626.396,407.197 621.791,400.825 626.459,408.774 626.964,407.891 626.396,407.197z" />
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="20.9429" RadiusY="20.9429" Center="677.9105,383.3633" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M679.929,446.444L679.929,446.444 675.64,446.444 677.595,380.209 679.929,446.444z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M677.974,392.762L677.974,392.762 682.578,386.391 677.91,394.339 677.406,393.456 677.974,392.762z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M677.469,399.197L677.469,399.197 672.864,392.825 677.532,400.774 678.037,399.891 677.469,399.197z" />
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="20.9429" RadiusY="20.9429" Center="545.4402,383.3633" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M547.459,446.444L547.459,446.444 543.169,446.444 545.125,380.209 547.459,446.444z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M545.503,392.762L545.503,392.762 550.108,386.391 545.44,394.339 544.935,393.456 545.503,392.762z" />
+                    <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M544.999,399.197L544.999,399.197 540.394,392.825 545.062,400.774 545.566,399.891 544.999,399.197z" />
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M849.765,524.52565L738.295,524.52565A2.31873,2.31873,0,0,1,737.835,524.48565A3.25569,3.25569,0,0,1,735.035,521.26565L735.035,493.43565A189.75911,189.75911,0,0,1,766.775,490.85565C806.345,490.85565,839.445,502.19565,847.745,517.37565A15.25182,15.25182,0,0,1,849.765,524.52565z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M961.555,514.95564L961.555,521.26564A3.26061,3.26061,0,0,1,958.295,524.52564L834.965,524.52564A62.86069,62.86069,0,0,1,847.745,517.37564C862.85505,510.89564 884.165,506.85564 907.775,506.85564 928.295,506.85566 947.065,509.89564 961.555,514.95564z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FFE6E6E6" Geometry="F1 M756.4834,771.24242z M0,0z M862.88232,64.37879A2.64744,2.64744,0,0,0,861.63818,64.69129L637.33838,184.00229A2.66049,2.66049,0,0,0,636.2417,187.59506L721.88135,348.59506A2.66021,2.66021,0,0,0,725.4751,349.6932L949.77393,230.3822A2.66,2.66,0,0,0,950.87158,226.78943L865.23096,65.78943A2.63828,2.63828,0,0,0,863.66162,64.49597A2.66893,2.66893,0,0,0,862.88232,64.37879z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M756.4834,771.24242z M0,0z M856.91328,85.67873L917.77411,200.09426A3.26168,3.26168,0,0,1,916.42579,204.50711L722.1983,307.82217A2.75021,2.75021,0,0,1,721.76839,308.00965A3.25969,3.25969,0,0,1,717.78546,306.47385L656.92462,192.05832A3.26164,3.26164,0,0,1,658.27296,187.6455L852.50044,84.33044A3.26167,3.26167,0,0,1,856.91328,85.67873z" />
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FFFF6584">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="28.6244" RadiusY="28.6244" Center="505.3377,141.5137" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M847.77,241.61551L723.7954,307.5611A2.86449,2.86449,0,0,1,723.3126,307.77083L727.92266,175.01856A4.6501,4.6501,0,0,1,735.06905,171.21719L810.67447,218.442 814.29447,220.70049z" />
+                    </DrawingGroup>
+                    <GeometryDrawing Geometry="F1 M756.4834,771.24242z M0,0z M626.012,177.237L626.012,177.237 583.684,199.752 588.408,158.518 588.747,155.548 588.916,154.063 592.536,156.322 626.012,177.237z">
+                        <GeometryDrawing.Brush>
+                            <SolidColorBrush Color="#FF000000" Opacity="0.2" />
+                        </GeometryDrawing.Brush>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M916.79823,204.89747L809.57036,261.935 814.29449,220.70048 814.63327,217.73087 820.78759,163.99551C821.1915,160.47344,825.37651,158.04136,828.66152,159.18337A5.54073,5.54073,0,0,1,829.31005,159.46218z" />
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="423.0158,123.0912" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="638.1412,8.6599" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="504.9964,277.2109" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="720.1218,162.7796" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FFE6E6E6" Geometry="F1 M756.4834,771.24242z M0,0z M917.19287,835.53162A2.66049,2.66049,0,0,0,920.44287,833.64686L967.32373,657.41541A2.65676,2.65676,0,0,0,965.43896,654.16541L719.91943,588.85291A2.65795,2.65795,0,0,0,716.66943,590.73768L669.78955,766.96912A2.65591,2.65591,0,0,0,671.67432,770.21912z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M756.4834,771.24242z M0,0z M947.68743,666.32033L914.3705,791.56463A3.26061,3.26061,0,0,1,910.382,793.877L697.77587,737.32049A2.31951,2.31951,0,0,1,697.34159,737.1636A3.25569,3.25569,0,0,1,695.4635,733.33198L728.78042,608.08767A3.26057,3.26057,0,0,1,732.76893,605.77529L945.37505,662.33181A3.26061,3.26061,0,0,1,947.68743,666.32033z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M919.10325,773.77339L914.3705,791.56463A3.26061,3.26061,0,0,1,910.382,793.877L697.77587,737.32049A2.31951,2.31951,0,0,1,697.34159,737.1636A3.25569,3.25569,0,0,1,695.4635,733.33198L700.19624,715.54074z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="0.966391425923142,0.257075109456821,-0.257075109456821,0.966391425923142,0.14887,-246.56624">
+                        <GeometryDrawing Brush="#FFCCCCCC">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="790.238,755.6006,35,4" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <DrawingGroup Transform="0.966391425923142,0.257075109456821,-0.257075109456821,0.966391425923142,-7.78575,-227.26272">
+                        <GeometryDrawing Brush="#FFCCCCCC">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="712.4435,734.9061,35,4" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <DrawingGroup Transform="0.966391425923142,0.257075109456821,-0.257075109456821,0.966391425923142,8.08348,-265.86976">
+                        <GeometryDrawing Brush="#FFCCCCCC">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="868.0325,776.2952,35,4" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="501.2469,532.0762" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="736.7243,594.7168" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="456.37,700.7764" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="3.8966" RadiusY="3.8966" Center="691.8474,763.4171" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="-0.96625,-0.25759,0.25759,-0.96625,1304.40081,1668.89127">
+                        <GeometryDrawing Brush="#FF3F3D56">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="866.8879,765.1229,19.4526,3.0877" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FFBEC936" Geometry="F1 M756.4834,771.24242z M0,0z M731.51554,727.18638L735.15554,729.11538 882.54154,768.4067 884.68859,765.67099A32.257,32.257,0,0,0,891.46426,749.42491C891.96402,744.99076,891.50055,740.32942,888.37691,737.52743L893.42557,692.2182 811.91165,670.378 773.58939,687.4336C773.58939,687.4336,758.77682,683.20674,748.01304,691.12225A24.44966,24.44966,0,0,0,739.60888,702.82082L737.89673,707.9726z" />
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="18.8351" RadiusY="18.8351" Center="542.3273,670.6915" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFCCCCCC">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="9.9132" RadiusY="9.9132" Center="542.3273,670.6915" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="18.8351" RadiusY="18.8351" Center="632.1313,694.6321" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFCCCCCC">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="9.9132" RadiusY="9.9132" Center="632.1313,694.6321" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M756.4834,771.24242z M0,0z M565.159,623.415L565.159,623.415 609.185,635.147 614.56,636.577 623.634,638.998 623.81,638.335 625.939,630.357 628.329,621.398 622.292,619.792 616.918,618.356 607.399,615.817 602.024,614.387 591.034,611.457 565.159,623.415z" />
+                    <GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M756.4834,771.24242z M0,0z M630.796,640.91L630.796,640.91 654.064,647.113 655.285,642.548 657.407,634.569 658.759,629.514 655.352,628.607 649.978,627.171 635.485,623.309 630.796,640.91z" />
+                    <DrawingGroup Transform="-0.96625,-0.25759,0.25759,-0.96625,1244.00411,1565.53343">
+                        <GeometryDrawing Brush="#FF3F3D56">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="838.1017,716.0107,3.0877,5.8667" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <DrawingGroup Transform="-0.257591531450283,0.966253901893854,-0.966253901893854,-0.257591531450283,1450.36994,44.42414">
+                        <GeometryDrawing Brush="#FF3F3D56">
+                            <GeometryDrawing.Geometry>
+                                <RectangleGeometry RadiusX="0" RadiusY="0" Rect="792.7216,693.8469,3.0877,5.8667" />
+                            </GeometryDrawing.Geometry>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <DrawingGroup Transform="-0.966253901893854,-0.257591531450283,0.257591531450283,-0.966253901893854,1160.68699,1496.1095">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M790.043,683.2363L790.38266,683.2363A6.45333,6.45333,0,0,1,796.83599,689.68963L796.83599,689.68963A6.45333,6.45333,0,0,1,790.38266,696.14296L790.043,696.14296A0,0,0,0,1,790.043,696.14296L790.043,683.2363A0,0,0,0,1,790.043,683.2363z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M737.89673,707.97261A9.97473,9.97473,0,0,0,748.013,691.12226A24.44966,24.44966,0,0,0,739.60884,702.82083z" />
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FFF2F2F2" Geometry="F1 M756.4834,771.24242z M0,0z M616.918,618.356L616.918,618.356 623.81,638.335 625.939,630.357 622.292,619.792 616.918,618.356z" />
+                    <GeometryDrawing Brush="#FFF2F2F2" Geometry="F1 M756.4834,771.24242z M0,0z M649.978,627.171L649.978,627.171 655.285,642.548 657.407,634.569 655.352,628.607 649.978,627.171z" />
+                    <GeometryDrawing Brush="#FFF2F2F2" Geometry="F1 M756.4834,771.24242z M0,0z M602.024,614.387L602.024,614.387 609.185,635.147 614.56,636.577 607.399,615.817 602.024,614.387z" />
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="12" RadiusY="12" Center="40.0167,298.3134" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Geometry="F1 M756.4834,771.24242z M0,0z M266.84016,351.82508A11.984,11.984,0,0,1,253.70967,371.55915A11.98967,11.98967,0,1,0,266.84016,351.82508z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF000000" Opacity="0.2" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="29.5" RadiusY="12" Center="348.5167,311.3134" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Geometry="F1 M756.4834,771.24242z M0,0z M570.275,363.6922Q568.75587,363.6922,567.275,363.75367C582.15824,364.36518 593.775,369.47675 593.775,375.6922 593.775,381.90765 582.15824,387.0192 567.275,387.63074Q568.75478,387.69153,570.275,387.6922C586.56742,387.6922 599.775,382.31958 599.775,375.6922 599.775,369.06482 586.56739,363.6922 570.275,363.6922z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF000000" Opacity="0.2" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FF3F3D56" Geometry="F1 M756.4834,771.24242z M0,0z M608.775,375.6922L460.775,375.6922 460.775,359.6922A3,3,0,0,0,457.775,356.6922L375.775,356.6922A3,3,0,0,0,372.775,359.6922L372.775,375.6922 286.775,375.6922 286.775,365.6922A3,3,0,0,0,283.775,362.6922L239.775,362.6922A3,3,0,0,0,236.775,365.6922L236.775,375.6922 224.775,375.6922A2.996,2.996,0,0,0,221.775,378.6922L221.775,575.6922A2.996,2.996,0,0,0,224.775,578.6922L608.775,578.6922A2.996,2.996,0,0,0,611.775,575.6922L611.775,378.6922A2.996,2.996,0,0,0,608.775,375.6922z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Geometry="F1 M756.4834,771.24242z M0,0z M608.7583,564.00037L224.7583,564.00037A2.996,2.996,0,0,1,221.7583,561.00037L221.7583,575.00037A2.996,2.996,0,0,0,224.7583,578.00037L608.7583,578.00037A2.996,2.996,0,0,0,611.7583,575.00037L611.7583,561.00037A2.996,2.996,0,0,1,608.7583,564.00037z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF000000" Opacity="0.2" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <GeometryDrawing>
+                        <GeometryDrawing.Brush>
+                            <SolidColorBrush Color="#FF000000" Opacity="0.2" />
+                        </GeometryDrawing.Brush>
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="0.0167,403.3134,390,38" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing>
+                        <GeometryDrawing.Brush>
+                            <SolidColorBrush Color="#FF000000" Opacity="0.2" />
+                        </GeometryDrawing.Brush>
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="0.0167,384.3134,390,38" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <RectangleGeometry RadiusX="0" RadiusY="0" Rect="0.0167,393.3134,390,38" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <GeometryDrawing Brush="#FFBEC936">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="76" RadiusY="76" Center="195.0167,412.3134" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Geometry="F1 M756.4834,771.24242z M0,0z M475.31532,428.228A75.99569,75.99569,0,0,1,351.23463,515.15635A75.99623,75.99623,0,1,0,475.31532,428.228z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF000000" Opacity="0.2" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                    <GeometryDrawing Brush="#FF3F3D56">
+                        <GeometryDrawing.Geometry>
+                            <EllipseGeometry RadiusX="56.5581" RadiusY="56.5581" Center="195.0167,412.3134" />
+                        </GeometryDrawing.Geometry>
+                    </GeometryDrawing>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Brush="#FFFFFFFF" Geometry="F1 M756.4834,771.24242z M0,0z M460.775,476.6922A43.723,43.723,0,0,1,457.205,494.0622A43.131,43.131,0,0,1,452.455,502.4322A43.99842,43.99842,0,1,1,391.035,441.0122A43.12475,43.12475,0,0,1,399.405,436.2622A44.00517,44.00517,0,0,1,460.775,476.6922z" />
+                    </DrawingGroup>
+                    <DrawingGroup Transform="1,0,0,1,-221.7583,-64.37879">
+                        <GeometryDrawing Geometry="F1 M756.4834,771.24242z M0,0z M460.305,470.28217A43.92832,43.92832,0,0,0,443.85749,442.01679A44.00211,44.00211,0,0,1,447.205,483.0622A43.131,43.131,0,0,1,442.455,491.4322A43.973,43.973,0,0,1,379.68571,500.35072A43.9784,43.9784,0,0,0,452.455,502.4322A43.131,43.131,0,0,0,457.205,494.0622A44.01773,44.01773,0,0,0,460.305,470.2822z">
+                            <GeometryDrawing.Brush>
+                                <SolidColorBrush Color="#FF000000" Opacity="0.2" />
+                            </GeometryDrawing.Brush>
+                        </GeometryDrawing>
+                    </DrawingGroup>
+                </DrawingGroup>
+            </DrawingImage.Drawing>
+        </DrawingImage>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               Source="{StaticResource EmptyState_Image}"
+               Stretch="Uniform" />
+
+        <TextBlock Grid.Row="1"
+                   FontSize="24"
+                   Margin="0 32 0 16"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap">
+            <TextBlock.Text>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:AlbumEmptyStateView},Mode=FindAncestor}"
+                         Path="Title"
+                         Mode="OneWay" />
+            </TextBlock.Text>
+        </TextBlock>
+
+        <TextBlock Grid.Row="2"
+                   Foreground="{f:Brush ForegroundLevel3}"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   TextWrapping="Wrap">
+            <TextBlock.Text>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:AlbumEmptyStateView},Mode=FindAncestor}"
+                         Path="SubTitle"
+                         Mode="OneWay" />
+            </TextBlock.Text>
+        </TextBlock>
+
+        <f:CallToAction Grid.Row="3"
+                        Content="{f:Language global.add}"
+                        CornerRadius="24"
+                        Margin="0 16"
+                        Height="48"
+                        Width="160"
+                        HorizontalAlignment="Center"
+                        Icon="{StaticResource FeatherIcon.Plus}"
+                        Palette="Success">
+            <f:CallToAction.Command>
+                <Binding RelativeSource="{RelativeSource AncestorType={x:Type local:AlbumEmptyStateView},Mode=FindAncestor}"
+                         Path="Command"
+                         Mode="OneWay" />
+            </f:CallToAction.Command>
+        </f:CallToAction>
+    </Grid>
+</UserControl>

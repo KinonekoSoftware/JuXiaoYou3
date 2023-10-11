@@ -1,0 +1,72 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Documents"
+                    xmlns:this="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Documents"
+                    xmlns:thisSubView="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models"
+                    xmlns:thisVM="clr-namespace:Acorisoft.FutureGL.MigaStudio.Pages.Commons"
+                    xmlns:f="urn:acorisoft/forest/ui"
+                    xmlns:ftk="urn:acorisoft/forest/toolkits"
+                    xmlns:studio="urn:acorisoft/studio"
+                    xmlns:thisModel="clr-namespace:Acorisoft.FutureGL.MigaStudio.Models.Presentations">
+    <DataTemplate DataType="{x:Type thisModel:PresentationTextDataUI}">
+            <TextBlock Text="{Binding Value,Mode=OneWay}"
+                       VerticalAlignment="Center" />
+        </DataTemplate>
+
+
+        <DataTemplate DataType="{x:Type thisModel:PresentationProgressDataUI}">
+            <ProgressBar Height="14"
+                         Value="{Binding Value,Mode=OneWay}"
+                         Margin="0 9"
+                         Minimum="0"
+                         Maximum="100"
+                         MinWidth="96"
+                         VerticalAlignment="Center"/>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModel:PresentationSwitchDataUI}">
+            <f:ToggleSwitch Height="32"
+                            IsChecked="{Binding Value,Mode=OneWay}"
+                            VerticalAlignment="Center" />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModel:PresentationRateDataUI}">
+            <studio:RatingControl Maximum="5"
+                                  Value="{Binding Value,Mode=OneWay}" />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModel:PresentationLikabilityDataUI}">
+            <studio:FavoriteControl Maximum="5"
+                                    Value="{Binding Value,Mode=OneWay}" />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModel:PresentationStarDataUI}">
+            <studio:SwitchOnControl DockPanel.Dock="Right"
+                                    Foreground="#FFC107"
+                                    Icon="{StaticResource FeatherIcon.Star}"
+                                    IsChecked="{Binding Value,Mode=OneWay}" />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModel:PresentationHeartDataUI}">
+            <studio:SwitchOnControl DockPanel.Dock="Right"
+                                    Foreground="#FF6699"
+                                    Icon="{StaticResource FeatherIcon.Heart}"
+                                    IsChecked="{Binding Value,Mode=OneWay}" />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModel:PresentationDegreeDataUI}">
+            <studio:DegreeControl DockPanel.Dock="Right"
+                                  ItemWidth="16"
+                                  Maximum="8"
+                                  Value="{Binding Value,Mode=OneWay}" />
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type thisModel:PresentationColorDataUI}">
+            <Border DockPanel.Dock="Right"
+                    Background="{Binding Value, Mode=OneWay}"
+                    CornerRadius="3"
+                    Margin="4"
+                    Height="24"
+                    Width="24" />
+        </DataTemplate>
+</ResourceDictionary>
